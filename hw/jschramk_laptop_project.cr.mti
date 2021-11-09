@@ -1,0 +1,22 @@
+C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Sinusoid
+
+Top level modules:
+	Sinusoid
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Multiplier
+
+Top level modules:
+	Multiplier
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Sinusoid_tb
+
+Top level modules:
+	Sinusoid_tb
+
+} {} {}}

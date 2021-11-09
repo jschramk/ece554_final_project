@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h3>Instructions</h3>
+    <p>This tool is for creating Verilog modules from the specification detailed in the
+        Coding! at the Disco Microarchitecture Review Presentation. It will not work with anything else.</p>
+
+    <p>1) Copy the name of a module from one of the Google Slides and paste it into the "Module Name" input. (do not worry about copying extra spaces)</p>
+    <p>2) Copy the first two columns of the table describing the module ports, making sure to copy all rows containing ports. DO NOT copy the first row containing the column titles.</p>
+    <p>3) Paste the copied data directly into the top text area as it is.</p>
+    <p>4) Click "Convert" and make sure the output in the bottom text area looks correct.</p>
+    <p>5) Repeat steps 1 - 4 for as many modules as needed.</p>
+    <p>6) Click "Download All" to download all the generated Verilog files.</p>
+    <!--<input type="range" min="1" max="10" value="4" id="tableWidth" />
+    <output id="tableWidthOutput">4</output>-->
+    <button id="convertButton">Convert</button>
+    <button id="clearButton">Clear</button>
+    <button id="downloadButton">Download All</button>
+
+    <br>
+
+    <input type="text" id="moduleNameInput" placeholder="Module Name" />
+
+    <br>
+
+    <textarea id="input" style="width: 800px; height: 400px"></textarea>
+
+    <br>
+
+    <textarea readonly id="output" style="width: 800px; height: 400px"></textarea>
+
+</body>
+
+<script type="text/javascript" src="ModuleWriter.js"></script>
+
+</html>
