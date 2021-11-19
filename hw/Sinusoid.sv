@@ -19,7 +19,7 @@ assign numerator = _16 * x * (PI - x);  // 16 + 16 + 17 bits; 24 fractional bits
 assign denom1 = _5 * PI * PI;           // 16 + 16 + 16 bits; 24 fractional bits
 assign denom2 = _4 * x * (PI - x);      // 16 + 16 + 17 bits; 24 fractional bits
 assign denominator = {denom1[47], denom1} - denom2;
-assign y = {numerator[48], numerator} / denominator;
+assign y = numerator / denominator;
 
 endmodule
 
