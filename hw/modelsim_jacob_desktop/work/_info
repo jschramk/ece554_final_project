@@ -1,0 +1,193 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/School/Classes/ECE551/_project_git
+vDivider
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1638213081
+!i10b 1
+!s100 0HlF;n1VSUh:A`H:AN7kA0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IC:Y=6:;`3T]mI_Y33h8CT0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/modelsim_jacob_desktop
+w1637280050
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
+!i122 0
+L0 1 72
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1638213080.000000
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@divider
+vDivider_tb
+R0
+R1
+!i10b 1
+!s100 nF=K?R7[POBAOGZZe[Z1=0
+R2
+IMb668?YPm]C[EoNdD?eW;1
+R3
+S1
+R4
+w1637276810
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv
+!i122 1
+L0 1 63
+R5
+r1
+!s85 0
+31
+Z8 !s108 1638213081.000000
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv|
+!i113 1
+R6
+R7
+n@divider_tb
+vMultiplier
+R0
+R1
+!i10b 1
+!s100 ?]m;`XTJ8V[maN9]MdN0J2
+R2
+ImW<[3Ii=z8;4HZ;ajlPR;1
+R3
+S1
+R4
+w1636494649
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
+!i122 2
+L0 2 15
+R5
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv|
+!i113 1
+R6
+R7
+n@multiplier
+vMultiplier_tb
+R0
+R1
+!i10b 1
+!s100 g@JkeP3iI;KOf_bbDa2:n2
+R2
+IfZF^_L5aYWOmmn6XX<M8_0
+R3
+S1
+R4
+w1636494669
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv
+!i122 3
+L0 1 42
+R5
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv|
+!i113 1
+R6
+R7
+n@multiplier_tb
+vSignedDivider
+R0
+R1
+!i10b 1
+!s100 FcWcgCDQ7aliKMBmMBmhX1
+R2
+Ia^1E^nYoi3`<6lcDmlcF_2
+R3
+S1
+R4
+w1637274935
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv
+!i122 4
+L0 1 57
+R5
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv|
+!i113 1
+R6
+R7
+n@signed@divider
+vSinusoid
+R0
+R1
+!i10b 1
+!s100 YGa?oLQ2nbTgkzFa3H@bX2
+R2
+ImbXdk8IOX5FF<lhUioT2o2
+R3
+S1
+R4
+w1637102592
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
+!i122 5
+L0 1 24
+R5
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
+!i113 1
+R6
+R7
+n@sinusoid
+vSinusoid_tb
+R0
+R1
+!i10b 1
+!s100 XnRaRXdJTZfdTgBz8Z5>_1
+R2
+I1WR7K[4RL^2LhSi2o1ZC51
+R3
+S1
+R4
+w1636494663
+8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+!i122 6
+L0 1 34
+R5
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv|
+!i113 1
+R6
+R7
+n@sinusoid_tb

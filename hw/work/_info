@@ -8,37 +8,109 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/jschr/Documents/GitHub/ece554_miniproject
-vDivider
+vDivide
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1637279934
+!s110 1638313689
 !i10b 1
-!s100 GQNELMS=DW5Xe<zMPfX430
-IeNPe1An>5WeZUa2[G31W73
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-!s105 Divider_sv_unit
+!s100 Mi8n_`X;dPY3j6a>KO7?A3
+I>mNInNG`lUlAeC=i:;[cE1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 !s105 Divider32_sv_unit
 S1
 Z3 dC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw
-w1637279929
-8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
-FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
-L0 1
-Z4 OV;L;10.4d;61
+w1638313667
+Z4 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv
+Z5 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv
+L0 4
+Z6 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1637279934.000000
+!s108 1638313689.000000
+Z7 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv|
+Z8 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv|
+!i113 1
+Z9 o-work work -sv
+n@divide
+vDivider
+R0
+Z10 !s110 1638340209
+!i10b 1
+!s100 7aoI<H<N9KYL];Xlkn2zX1
+IBk>`YhhW;=Zg[LAO4<a_=0
+R1
+!s105 Divider_sv_unit
+S1
+R3
+w1638312061
+8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
+FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
+L0 3
+R6
+r1
+!s85 0
+31
+Z11 !s108 1638340209.000000
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv|
 !i113 1
-Z6 o-work work -sv
+R9
 n@divider
+vDivider32
+R0
+R10
+!i10b 1
+!s100 DOkFMUd37i]=aMlL_nW3R2
+I1QnmlkY5=k`:>13z1D1Oj3
+R1
+R2
+S1
+R3
+w1638313729
+R4
+R5
+L0 4
+R6
+r1
+!s85 0
+31
+R11
+R7
+R8
+!i113 1
+R9
+n@divider32
+vDivider32_tb
+R0
+R10
+!i10b 1
+!s100 71[PN7EIlHhb5GzI9V@2A1
+IYEiG5LX^YKLIReF[A]Tk<0
+R1
+!s105 Divider32_tb_sv_unit
+S1
+R3
+w1638315346
+8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv
+FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv|
+!i113 1
+R9
+n@divider32_tb
 vDivider_tb
 R0
-R1
+R10
 !i10b 1
 !s100 mT^^Wm3hK:CCS7@DaTh0[1
 IG26KJTDTZz2Q8Ta1RgOmh2
-R2
+R1
 !s105 Divider_tb_sv_unit
 S1
 R3
@@ -46,15 +118,15 @@ w1637276810
 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv
 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R5
+R11
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv|
 !i113 1
-R6
+R9
 n@divider_tb
 vMultiplier
 R0
@@ -62,7 +134,7 @@ R0
 !i10b 1
 !s100 Q>lECBPRZ]Q>07;><cCO:0
 IEQa<SfBGcK>UT<S`zCmb63
-R2
+R1
 !s105 Multiplier_sv_unit
 S1
 R3
@@ -70,15 +142,15 @@ w1636068772
 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
 L0 2
-R4
+R6
 r1
 !s85 0
 31
-Z7 !s108 1636068964.000000
+Z12 !s108 1636068964.000000
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv|
 !i113 1
-R6
+R9
 n@multiplier
 vMultiplier_tb
 R0
@@ -86,7 +158,7 @@ R0
 !i10b 1
 !s100 3`KL[;QQATn44Y:BG`@803
 ITP7Z^8GD1aAg5e7SJ=heN3
-R2
+R1
 !s105 Multiplier_tb_sv_unit
 S1
 R3
@@ -94,23 +166,23 @@ w1636068954
 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv
 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R7
+R12
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv|
 !i113 1
-R6
+R9
 n@multiplier_tb
 vSignedDivider
 R0
-R1
+R10
 !i10b 1
 !s100 z=AL<dQcEN<9H@j]7NC?<1
 IBVA8@_;Z<1nzmLOMQ08^`1
-R2
+R1
 !s105 SignedDivider_sv_unit
 S1
 R3
@@ -118,84 +190,108 @@ w1637274935
 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv
 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R5
+R11
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv|
 !i113 1
-R6
+R9
 n@signed@divider
-vSinusoid
+vSineLUT
 R0
-R1
+R10
 !i10b 1
-!s100 l`ZQoI9;8?:ZMVRAA:Pl?1
-IV39hYR>>;0oYifL3oBcT31
-R2
-Z8 !s105 Sinusoid_sv_unit
+!s100 Y[L1XD68LJG6dT62AHY]I1
+IB3@Q2PddOR]T>4Y<PLn`g2
+R1
+!s105 SineLUT_sv_unit
 S1
 R3
-w1637102592
-Z9 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
-Z10 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
+w1638339420
+8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv
+FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R5
-Z11 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
-Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
+R11
+!s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv|
 !i113 1
-R6
-n@sinusoid
+R9
+n@sine@l@u@t
 vsinusoid
 R0
 !s110 1635895036
 !i10b 1
 !s100 3Lg9lShEg0K5eX@g;3H=K1
 Iaj0R7<[XaUGF8PInWPnXG0
-R2
-R8
+R1
+Z13 !s105 Sinusoid_sv_unit
 S1
 R3
 w1635895023
-R9
-R10
+Z14 8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
+Z15 FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
 L0 1
-R4
+R6
 r1
 !s85 0
 31
 !s108 1635895036.000000
-R11
-R12
+Z16 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
+Z17 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv|
 !i113 1
-R6
-vSinusoid_tb
+R9
+vSinusoid
 R0
-R1
+R10
 !i10b 1
-!s100 H<i=;XILj:^X@jVEIL]go2
-IU<d<`iNbf[[kf<j804f0J1
-R2
-!s105 Sinusoid_tb_sv_unit
+!s100 l`ZQoI9;8?:ZMVRAA:Pl?1
+IV39hYR>>;0oYifL3oBcT31
+R1
+R13
 S1
 R3
-w1636494663
-8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
-FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+w1637102592
+R14
+R15
 L0 1
-R4
+R6
 r1
 !s85 0
 31
-R5
+Z18 !s108 1638340208.000000
+R16
+R17
+!i113 1
+R9
+n@sinusoid
+vSinusoid_tb
+R0
+!s110 1638340208
+!i10b 1
+!s100 ;QGTTVeGoI[=BemD2c_FI3
+I]<N7`j^U]RY@Vb^EAc`:A3
+R1
+!s105 Sinusoid_tb_sv_unit
+S1
+R3
+w1638340204
+8C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+FC:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R18
 !s107 C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv|
 !i113 1
-R6
+R9
 n@sinusoid_tb

@@ -1,0 +1,154 @@
+<html>
+
+<body>
+
+    <input type="text" placeholder="input bits" id="bitsInput" />
+
+    <div>
+        <button id="runButton">Write Sine Generator Module</button>
+    </div>
+
+    <div>
+        <textarea id="outputArea" readonly style="width: 100%; height: 1000px"></textarea>
+    </div>
+
+</body>
+
+<script>
+
+    const runButton = document.querySelector("#runButton");
+    const inputBitsInput = document.querySelector("#bitsInput");
+    const outputArea = document.querySelector("#outputArea");
+
+    var inputBits = 0;
+
+    inputBitsInput.addEventListener("input", (e) => {
+        inputBits = parseInt(e.target.value);
+        console.log("bits: " + inputBits);
+    });
+
+    function radToBinary(rad, bits) {
+        return Math.round(Math.pow(2, bits) / (2 * Math.PI));
+    }
+
+    function binaryToRadians(binary, bits) {
+        return binary * (2 * Math.PI) / Math.pow(2, bits);
+    }
+
+    function toFixedPoint(value, bits, fractionBits, signed) {
+
+        let neg = value < 0;
+
+        if (neg) value = -value;
+
+        let bitArray = new Array(bits + 1);
+
+        bitArray[bits] = false;
+
+        for (let i = bits - 1; i >= 0; i--) {
+
+            let comp = Math.pow(2, i - fractionBits);
+
+            if (value >= comp) {
+
+                bitArray[i] = true;
+
+                value -= comp;
+
+            } else {
+
+                bitArray[i] = false;
+
+            }
+
+        }
+
+        // super gross way of doing this, but oh well...
+        if (neg) {
+
+            // flip all bits
+            for (let i = 0; i < bits; i++) {
+                bitArray[i] = !bitArray[i];
+            }
+
+            // add 1
+            for (let i = 0; i < bits - 1; i++) {
+
+                if(!bitArray[i]) {
+                    bitArray[i] = true;
+                    break;
+                } else {
+                    bitArray[i] = false;
+                }
+
+            }
+
+        }
+
+        let string = "";
+
+        for (let i = bits - 1; i >= 0; i--) {
+
+            if (fractionBits && i == (bits - fractionBits - 1)) string += "_";
+
+            string += bitArray[i] ? "1" : "0";
+
+        }
+
+        return bits + "'" + (signed ? "sb" : "b") + string;
+
+    }
+
+    runButton.addEventListener("click", () => {
+
+        inputBits = Math.min(inputBits, 11); // max of 11 bits to keep page from crashing
+
+        let inputEnd = Math.pow(2, inputBits);
+
+        let outputString = "";
+
+        let outputBits = 16;
+        let fractionBits = 8;
+
+        outputString += "module SineLUT (\n";
+        outputString += `    input [${inputBits - 1}:0] in, // mapping the sine function from [0, 2pi] to [0, ${inputEnd - 1}]\n`;
+        outputString += `    output reg [${outputBits - 1}:0] out\n`;
+        outputString += ");";
+
+        outputString += "\n\n";
+
+        outputString += "always @(in) begin\n";
+        outputString += "    case(in)\n";
+
+        for (let i = 0; i < inputEnd; i++) {
+
+            let radians = binaryToRadians(i, inputBits);
+
+            let value = Math.sin(radians);
+
+            //console.log(value);
+
+            let inString = toFixedPoint(i, inputBits, 0, false);
+
+            let outString = toFixedPoint(value, outputBits, fractionBits, true);
+
+            //console.log(outString);
+
+            outputString += "        " + inString + " : out <= " + outString + "; // " + value.toFixed(5) + "\n";
+
+        }
+
+        outputString += "        default : out <= 0;\n";
+        outputString += "    endcase\n";
+        outputString += "end\n\n"
+
+        outputString += "endmodule";
+
+        outputArea.innerHTML = outputString;
+
+    });
+
+
+</script>
+
+</html>

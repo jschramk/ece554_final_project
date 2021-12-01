@@ -1,0 +1,8 @@
+vsim -gui work.Divider_tb
+# vsim -gui work.Divider_tb 
+# Start time: 13:59:51 on Nov 29,2021
+# Loading sv_std.std
+# Loading work.Divider_tb
+# Loading work.Divider
+# End time: 16:15:20 on Nov 29,2021, Elapsed time: 2:15:29
+# Errors: 0, Warnings: 1
