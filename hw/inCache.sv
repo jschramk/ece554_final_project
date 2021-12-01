@@ -1,4 +1,4 @@
-module inCache
+module InCache
   #(
     parameter TIMESTEPS=2048,
     parameter DATAW=16,

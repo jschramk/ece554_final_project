@@ -1,4 +1,4 @@
-module outCache
+module OutCache
   #(
     parameter TIMESTEPS=2048,
     parameter DATAW=16,
