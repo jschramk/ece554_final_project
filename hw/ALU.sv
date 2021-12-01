@@ -9,6 +9,6 @@ module ALU
     );
 
     assign alu_out = (alu_op) ? a + 1 : a + b;
-    assign p_flag = (alu_op) ? : (a > b) : alu_out > 0;
+    assign p_flag = (alu_op) ? (a > b) : alu_out > 0;
 
 endmodule
