@@ -1,27 +1,25 @@
 module Sinusoid_tb;
 
 reg clk;
-reg [15:0] in;
-wire [15:0] out;
+reg [11:0] in;
+wire [11:0] out;
 
-Sinusoid SIN(
-    .clk(clk),
-    .mode(0), // 0: sine
-    .x(in),
-    .y(out)
+SineLUT SIN(
+    .in(in),
+    .out(out)
 );
 
 initial begin
 
     clk = 0;
 
-    for (int i = 0; i < 65535; i++) begin
+    for (int i = 0; i < 2**11; i++) begin
         
         @(posedge clk);
 
-        in = i;
+        in = {i[0], 10'b0};
 
-        $display("sin(%f) = %b", in/256, out);
+        $display("sin(%f) = %b", in * 0.0245436926, out);
 
     end
 

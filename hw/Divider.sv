@@ -1,3 +1,5 @@
+//https://ncalculators.com/digital-computation/binary-division-calculator.htm
+
 module Divider #(
     parameter SIZE = 16
 ) (
