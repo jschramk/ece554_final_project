@@ -1,14 +1,14 @@
 module ProgramCounter
   #(
-    parameter DATAW=32
+    parameter PCW=32
    )
    (
     input rst_n, clk, halt, stall, branch,
-    input [DATAW-1:0] PC_branch,
-    output [DATAW-1:0] PC_out
+    input [PCW-1:0] PC_branch,
+    output [PCW-1:0] PC_out
    );
 
-    reg [DATAW-1:0] PC;
+    reg [PCW-1:0] PC;
 
     assign PC_out = PC;
 
