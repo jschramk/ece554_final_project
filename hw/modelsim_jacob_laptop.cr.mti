@@ -1,16 +1,16 @@
-C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv
+C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module SineLUT
+-- Compiling module Divider32_tb
 
 Top level modules:
-	SineLUT
+	Divider32_tb
 
-} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module Divider32
+-- Compiling module Sinusoid_tb
 
 Top level modules:
-	Divider32
+	Sinusoid_tb
 
 } {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
@@ -19,12 +19,19 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	Divider_tb
 
-} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32_tb.sv
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module Divider32_tb
+-- Compiling module Divider
 
 Top level modules:
-	Divider32_tb
+	Divider
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexAdder.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexAdder.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module ComplexAdder
+
+Top level modules:
+	ComplexAdder
 
 } {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SignedDivider.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
@@ -33,6 +40,41 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	SignedDivider
 
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider32.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Divider32
+
+Top level modules:
+	Divider32
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Multiplier_tb
+
+Top level modules:
+	Multiplier_tb
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/SineLUT.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module SineLUT
+
+Top level modules:
+	SineLUT
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Complex_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Complex_tb.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Complex_tb
+
+Top level modules:
+	Complex_tb
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Adder_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Adder_tb.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Adder_tb
+
+Top level modules:
+	Adder_tb
+
 } {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling module Sinusoid
@@ -40,11 +82,22 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	Sinusoid
 
-} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexMultiplier.sv {2 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexMultiplier.sv
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module Divider
+-- Compiling module ComplexMultipler
+** Warning: C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexMultiplier.sv(72): (vlog-2283) Extra semicolon in $unit (global) scope.
+
+** Warning: C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/ComplexMultiplier.sv(72): (vlog-2284) Empty $unit scope found.
+
 
 Top level modules:
-	Divider
+	ComplexMultipler
+
+} {} {}} C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv {1 {vlog -work work -sv -stats=none C:/Users/jschr/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module Multiplier
+
+Top level modules:
+	Multiplier
 
 } {} {}}

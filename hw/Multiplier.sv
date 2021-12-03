@@ -1,16 +1,19 @@
-// saturating 16-bit multiplier
-module Multiplier (
-    input signed [15:0] a,
-    input signed [15:0] b,
-    output signed [15:0] out
+// saturating fixed-point multiplier
+module Multiplier #(
+    parameter SIZE = 16,
+    parameter FRAC_BITS = 8
+)(
+    input [SIZE-1:0] a,
+    input [SIZE-1:0] b,
+    output [SIZE-1:0] out
 );
 
-wire signed [31:0] prod;
+wire signed [2*SIZE-1:0] prod;
 
 assign prod = a * b; // 16 fractional bits
 
-assign out = prod[31] ? 
-    (&prod[31:23] ? prod[23:8] : {8'b10000000, prod[15:8]}) : // negative case
-    (|prod[30:23] ? {8'b01111111, prod[15:8]} : prod[23:8]); // positive case
+assign out = prod[2*SIZE-1] ? // result negative?
+    (&prod[2*SIZE-1 : 2*SIZE-1 - (SIZE - FRAC_BITS)] ? prod[2*SIZE-1 -  FRAC_BITS : FRAC_BITS] : {1'b1, {(SIZE-1){1'b0}}}) : // negative case
+    (|prod[2*SIZE-1 : 2*SIZE-1 - (SIZE - FRAC_BITS)] ? {1'b0, {(SIZE-1){1'b1}}} : prod[2*SIZE - 1 - FRAC_BITS :  FRAC_BITS]); // positive case
 
 endmodule
