@@ -17,9 +17,9 @@ initial begin
         
         @(posedge clk);
 
-        in = {i[0], 10'b0};
+        in = i[10:0];
 
-        $display("sin(%f) = %b", in * 0.0245436926, out);
+        $display("sin(%f) = %b", in, out);
 
     end
 
