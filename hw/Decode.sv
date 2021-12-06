@@ -13,6 +13,8 @@ module Decode
     output halt, alu_op, reg_wr_en_out, mem_wr_en, branch, fft_wr_en, set_en, syn, use_imm, set_freq
   );
 
+  logic [2:0] reg1, reg2;
+
     Decoder #() controller
         (
           .instr(instr),
@@ -25,8 +27,8 @@ module Decode
     Register #(.NUMREGISTERS(NUMREGISTERS), .DATAW(DATAW)) register
         (
           .rd_reg1(reg1), .rd_reg2(reg2), .wr_reg(wr_reg),
-          .wr_reg_en(wr_reg_en_in), .rst_n(rst_n), .clk(clk),
-          .wr_reg_data(wr_reg_data_in), .reg1_data(a), .reg2_data(b)
+          .wr_reg_en(reg_wr_en_in), .rst_n(rst_n), .clk(clk),
+          .wr_reg_data(wr_data), .reg1_data(a), .reg2_data(b)
         );
 
 endmodule
