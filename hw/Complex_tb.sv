@@ -28,11 +28,10 @@ initial begin
     
     for(int i = 0; i < 100; i++) begin
         
-        a_real = $random();
-        b_real = $random();
-        a_complex = $random();
-        b_complex = $random();
-
+        a_real = $random() >> 4;
+        b_real = $random() >> 4;
+        a_complex = $random() >> 4;
+        b_complex = $random() >> 4;
 
         @(posedge clk);
 
