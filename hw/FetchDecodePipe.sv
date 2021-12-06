@@ -1,0 +1,3 @@
+module FetchDecodePipe #() ();
+
+endmodule
