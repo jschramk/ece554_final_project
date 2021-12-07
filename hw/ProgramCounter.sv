@@ -1,6 +1,6 @@
 module ProgramCounter
   #(
-    parameter PCW=32
+    PCW=32
    )
    (
     input rst_n, clk, halt, stall, branch,

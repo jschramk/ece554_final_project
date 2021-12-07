@@ -31,7 +31,12 @@ module Execute_tb #(DATAW=32, PCW=32) ();
                 imm = $urandom();
                 shift_dist = $urandom();
 
-                exp_ex_out = (use_imm) ? imm[7:0] << (shift_dist * (DATAW / 4)) : (alu_op) ? a + 1 : a + b;
+                exp_ex_out = (use_imm) ? (
+                    (shift_dist == 2'b00) ? {a[DATAW-1:DATAW / 4], imm[DATAW / 4 - 1:0]} :
+                    (shift_dist == 2'b01) ? {a[DATAW-1:DATAW / 2], imm[DATAW / 4 - 1:0], a[DATAW/4 - 1:0]} :
+                    (shift_dist == 2'b10) ? {a[DATAW-1: 3 * (DATAW / 4)], imm[DATAW / 4 - 1:0], a[DATAW/2 - 1:0]} :
+                    {imm[DATAW / 4 - 1:0], a[3 * (DATAW / 4) - 1:0]}
+                ) : (alu_op) ? a + 1 : a + b;
                 exp_branch_out = branch_in && p_flag_in;
                 exp_PC_out = PC_in + imm;
                 exp_p_flag_out = (alu_op) ? (a > b) : (a + b > 0);

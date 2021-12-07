@@ -1,0 +1,71 @@
+C:/Users/cj/Desktop/fft-core/bimpy.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/bimpy.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bimpy
+
+Top level modules:
+	bimpy
+
+} {} {}} C:/Users/cj/Desktop/fft-core/butterfly.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/butterfly.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module butterfly
+
+Top level modules:
+	butterfly
+
+} {} {}} C:/Users/cj/Desktop/fft-core/fftmain.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/fftmain.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fftmain
+
+Top level modules:
+	fftmain
+
+} {} {}} C:/Users/cj/Desktop/fft-core/longbimpy.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/longbimpy.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module longbimpy
+
+Top level modules:
+	longbimpy
+
+} {} {}} C:/Users/cj/Desktop/fft-core/convround.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/convround.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module convround
+
+Top level modules:
+	convround
+
+} {} {}} C:/Users/cj/Desktop/fft-core/qtrstage.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/qtrstage.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module qtrstage
+
+Top level modules:
+	qtrstage
+
+} {} {}} C:/Users/cj/Desktop/fft-core/bitreverse.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/bitreverse.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bitreverse
+
+Top level modules:
+	bitreverse
+
+} {} {}} C:/Users/cj/Desktop/fft-core/fftstage.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/fftstage.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fftstage
+
+Top level modules:
+	fftstage
+
+} {} {}} C:/Users/cj/Desktop/fft-core/hwbfly.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/hwbfly.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hwbfly
+
+Top level modules:
+	hwbfly
+
+} {} {}} C:/Users/cj/Desktop/fft-core/laststage.v {1 {vlog -work work -stats=none C:/Users/cj/Desktop/fft-core/laststage.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module laststage
+
+Top level modules:
+	laststage
+
+} {} {}}
