@@ -9,20 +9,24 @@ module fft_test();
 	
 	shortint signed wave [2047:0];
 	int cycle;
-	int amp;
+	longint amp;
 	int outfreq;
+	int signed outreal;
+	int signed outimag;
 
 	fftmain iDUT(.i_clk(clk), .i_reset(reset), .i_ce(ce), .i_sample(sample), .o_result(result), .o_sync(sync)); 
 
 	always #5 clk = ~clk;
 
 	always @(result) begin
-		amp = $sqrt((result[31:16] * result[31:16]) + (result[15:0] * result[15:0]));
+		outreal = {{16{result[31]}}, result[31:16]};
+		outimag = {{16{result[15]}}, result[15:0]};
+		amp = $sqrt((outreal*outreal) + (outimag*outimag));
 	end
 	
 	always @(posedge clk) begin
 		cycle = cycle+1;
-		if (cycle > 7000) begin
+		if (cycle > 6500) begin
 			$stop;
 		end
 		if (outfreq > -1) begin
@@ -39,7 +43,7 @@ module fft_test();
 		outfreq = -1;
 		
 		for (int i = 0; i < 2048; i++) begin
-			wave[i] = 15000 * $sin(2*3.14159*i/1024);
+			wave[i] = 1000 * $sin(2*3.14159*i*25/2048);
 		end
 		
 		for (int j = 0; j < 2048; j++) begin
