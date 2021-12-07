@@ -1,0 +1,250 @@
+# Compile of qtrstage.v was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of fft_test.sv was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.fft_test
+# vsim work.fft_test 
+# Start time: 15:58:31 on Dec 06,2021
+# Loading sv_std.std
+# Loading work.fft_test
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'fftmain'.
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 12
+# Error loading design
+# End time: 15:58:32 on Dec 06,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+# Compile of fft_test.sv was successful.
+vsim work.fft_test
+# vsim work.fft_test 
+# Start time: 15:59:02 on Dec 06,2021
+# Loading sv_std.std
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 12
+# WARNING: No extended dataflow license exists
+run -all
+add wave -position insertpoint  \
+sim:/fft_test/clk \
+sim:/fft_test/reset \
+sim:/fft_test/ce \
+sim:/fft_test/sample \
+sim:/fft_test/result \
+sim:/fft_test/sync \
+sim:/fft_test/wave
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 12
+run -all
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 12
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(35)
+#    Time: 20480 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 35
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 12
+run -all
+# Compile of fft_test.sv was successful.
+vsim work.fft_test
+# End time: 16:17:07 on Dec 06,2021, Elapsed time: 0:18:05
+# Errors: 0, Warnings: 3
+# vsim work.fft_test 
+# Start time: 16:17:07 on Dec 06,2021
+# Loading sv_std.std
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 13
+add wave -position insertpoint  \
+sim:/fft_test/clk \
+sim:/fft_test/reset \
+sim:/fft_test/ce \
+sim:/fft_test/sample \
+sim:/fft_test/result \
+sim:/fft_test/sync \
+sim:/fft_test/wave \
+sim:/fft_test/cycle
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(20)
+#    Time: 55005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 20
+add wave -position insertpoint  \
+sim:/fft_test/iDUT/br_sync \
+sim:/fft_test/iDUT/w_s2048 \
+sim:/fft_test/iDUT/w_s1024 \
+sim:/fft_test/iDUT/w_s512 \
+sim:/fft_test/iDUT/w_s256 \
+sim:/fft_test/iDUT/w_s128 \
+sim:/fft_test/iDUT/w_s64 \
+sim:/fft_test/iDUT/w_s32 \
+sim:/fft_test/iDUT/w_s16 \
+sim:/fft_test/iDUT/w_s8 \
+sim:/fft_test/iDUT/w_s4 \
+sim:/fft_test/iDUT/w_s2
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 13
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(20)
+#    Time: 55005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 20
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 13
+run -all
+# WARNING: No extended dataflow license exists
+# Break key hit
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 45
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 13
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(46)
+#    Time: 42705 ns  Iteration: 2  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 46
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 13
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(20)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 20
+# Compile of fft_test.sv failed with 1 errors.
+# Compile of fft_test.sv was successful.
+run
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(20)
+#    Time: 70015 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 20
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 14
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(25)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 25
+add wave -position insertpoint  \
+sim:/fft_test/amp
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 14
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(25)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 25
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+add wave -position insertpoint  \
+sim:/fft_test/outfreq
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(27)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 27
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
+# Compile of fft_test.sv failed with 3 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
+# Compile of fft_test.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/cj/Desktop/fft-core/fftmain.v(79).
+#    Time: 0 ns  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/cj/Desktop/fft-core/fft_test.sv Line: 15
+run -all
+# ** Note: $stop    : C:/Users/cj/Desktop/fft-core/fft_test.sv(26)
+#    Time: 70005 ns  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/cj/Desktop/fft-core/fft_test.sv line 26
