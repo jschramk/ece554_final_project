@@ -6,6 +6,35 @@ module CPU
       input clk, rst_n, 
   );
 
+    mem_ctrl memory(
+       .clk(clk),
+       .rst_n(~rst),
+       .host_init(go),
+       .host_rd_ready(~dma.empty),
+       .host_wr_ready(~dma.full & ~dma.host_wr_completed),
+       .op(mem_op), // CPU Defined
+       .common_data_bus_read_in(cpu_out), // CPU data word bus, input
+       .common_data_bus_write_out(cpu_in),
+       .host_data_bus_read_in(dma.rd_data),
+       .host_data_bus_write_out(dma.wr_data),
+       .ready(ready), // Usable for the host CPU
+       .tx_done(tx_done), // Again, notifies CPU when ever a read or write is complete
+       .rd_valid(rd_valid), // Notifies CPU whenever the data on the databus is valid
+       .host_re(local_dma_re),
+       .host_we(local_dma_we),
+       .host_rgo(rd_go),
+       .host_wgo(wr_go)
+   );
+
+
+
+
+
+
+
+
+
+
 
     Fetch #() fetch ();
 
@@ -18,7 +47,7 @@ module CPU
         .mem_wr_en(mem_wr_en_decode), .branch(branch_decode), .fft_wr_en(fft_wr_en_decode),
         .set_en(set_en), .syn(syn), .use_imm(use_imm_decode), .set_freq(set_freq));
 
-    DecodeExecutePipe #() decodeExecutePipe(    
+    DecodeExecutePipe #() decodeExecutePipe(
         .clk(clk), .flush(), .stall(stall), .alu_op_in(alu_op_decode), 
         .reg_wr_en_in(reg_wr_en_out_decode),  .mem_wr_en_in(mem_wr_en_decode), 
         .shift_dist_in(shift_dist_decode),  .branch_in(branch_decode), 
