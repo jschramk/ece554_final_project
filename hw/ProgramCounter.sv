@@ -19,7 +19,7 @@ module ProgramCounter
             if (branch) begin
                 PC = PC_branch;
             end else begin
-                PC = (stall | halt) ? PC : PC + 4;
+                PC = (stall | halt) ? PC : PC + 2;
             end
         end
     end

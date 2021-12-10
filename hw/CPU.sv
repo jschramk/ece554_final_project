@@ -1,37 +1,15 @@
 module CPU 
  #(
     NUMREGISTERS=8,
-    DATAW=32
+    DATAW=32,
+    ADDRW=32
   ) (
-      input clk, rst_n, 
+    input clk, rst_n, tx_done, rd_valid, dma_ready,
+    input [DATAW-1:0] common_data_bus_in(cpu_in),
+    output [DATAW-1:0] common_data_bus_out(cpu_out),
+    output [ADDRW-1:0] io_address(cpu_addr),
+    output [1:0] op,
   );
-
-    mem_ctrl memory(
-       .clk(clk),
-       .rst_n(~rst),
-       .host_init(go),
-       .host_rd_ready(~dma.empty),
-       .host_wr_ready(~dma.full & ~dma.host_wr_completed),
-       .op(mem_op), // CPU Defined
-       .common_data_bus_read_in(cpu_out), // CPU data word bus, input
-       .common_data_bus_write_out(cpu_in),
-       .host_data_bus_read_in(dma.rd_data),
-       .host_data_bus_write_out(dma.wr_data),
-       .ready(ready), // Usable for the host CPU
-       .tx_done(tx_done), // Again, notifies CPU when ever a read or write is complete
-       .rd_valid(rd_valid), // Notifies CPU whenever the data on the databus is valid
-       .host_re(local_dma_re),
-       .host_we(local_dma_we),
-       .host_rgo(rd_go),
-       .host_wgo(wr_go)
-   );
-
-
-
-
-
-
-
 
 
 
