@@ -46,7 +46,7 @@
 
     <label>Amplitude</label>
     <br>
-    <input type="text" placeholder="" id="amplitude" value="32768" />
+    <input type="text" placeholder="" id="amplitude" value="32767.0" />
 
     <br><br>
 
@@ -73,7 +73,7 @@
     var inputBits = 10;
     var outputBits = 16;
     var outputFractionBits = 0;
-    var amplitude = 32768;
+    var amplitude = 32767;
 
     inputBitsInput.addEventListener("change", (e) => {
         inputBits = parseInt(e.target.value);
