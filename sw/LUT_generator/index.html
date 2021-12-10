@@ -1,12 +1,59 @@
 <html>
 
 <body>
+    <label>Samples</label>
+    <br>
+    <select id="bitsInput">
+        <option value="8">256</option>
+        <option value="9">512</option>
+        <option value="10" selected>1024</option>
+        <option value="11">2048</option>
+    </select>
 
-    <input type="text" placeholder="input bits" id="bitsInput" />
+    <br><br>
+
+    <label>Output Bits</label>
+    <br>
+    <select id="bitsOutput">
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option selected>16</option>
+    </select>
+
+    <br><br>
+
+    <label>Output Fraction Bits</label>
+    <br>
+    <select id="bitsOutputFraction">
+        <option selected>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+    </select>
+
+    <br><br>
+
+    <label>Amplitude</label>
+    <br>
+    <input type="text" placeholder="" id="amplitude" value="32768" />
+
+    <br><br>
 
     <div>
         <button id="runButton">Write Sine Generator Module</button>
     </div>
+
 
     <div>
         <textarea id="outputArea" readonly style="width: 100%; height: 1000px"></textarea>
@@ -18,13 +65,34 @@
 
     const runButton = document.querySelector("#runButton");
     const inputBitsInput = document.querySelector("#bitsInput");
+    const outputBitsInput = document.querySelector("#bitsOutput");
+    const outputFractionBitsInput = document.querySelector("#bitsOutputFraction");
+    const amplitudeInput = document.querySelector("#amplitude");
     const outputArea = document.querySelector("#outputArea");
 
-    var inputBits = 0;
+    var inputBits = 10;
+    var outputBits = 16;
+    var outputFractionBits = 0;
+    var amplitude = 32768;
 
-    inputBitsInput.addEventListener("input", (e) => {
+    inputBitsInput.addEventListener("change", (e) => {
         inputBits = parseInt(e.target.value);
-        console.log("bits: " + inputBits);
+        console.log("input bits: " + inputBits);
+    });
+
+    outputBitsInput.addEventListener("change", e => {
+        outputBits = parseInt(e.target.value);
+        console.log("output bits: " + outputBits);
+    });
+
+    outputFractionBitsInput.addEventListener("change", e => {
+        outputFractionBits = parseInt(e.target.value);
+        console.log("output fraction bits: " + outputFractionBits);
+    });
+
+    amplitudeInput.addEventListener("input", (e) => {
+        amplitude = parseFloat(e.target.value);
+        console.log("amplitude: " + amplitude);
     });
 
     function radToBinary(rad, bits) {
@@ -74,7 +142,7 @@
             // add 1
             for (let i = 0; i < bits; i++) {
 
-                if(!bitArray[i]) {
+                if (!bitArray[i]) {
                     bitArray[i] = true;
                     break;
                 } else {
@@ -107,9 +175,6 @@
 
         let outputString = "";
 
-        let outputBits = 16;
-        let fractionBits = 8;
-
         outputString += "module SineLUT (\n";
         outputString += `    input [${inputBits - 1}:0] in, // mapping the sine function from [0, 2pi] to [0, ${inputEnd - 1}]\n`;
         outputString += `    output reg [${outputBits - 1}:0] out\n`;
@@ -124,13 +189,13 @@
 
             let radians = binaryToRadians(i, inputBits);
 
-            let value = Math.sin(radians);
+            let value = Math.sin(radians) * amplitude;
 
             //console.log(value);
 
             let inString = toFixedPoint(i, inputBits, 0, false);
 
-            let outString = toFixedPoint(value, outputBits, fractionBits, true);
+            let outString = toFixedPoint(value, outputBits, outputFractionBits, true);
 
             //console.log(outString);
 
