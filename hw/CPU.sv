@@ -1,10 +1,17 @@
 module CPU 
  #(
     NUMREGISTERS=8,
-    DATAW=32
+    DATAW=32,
+    ADDRW=32
   ) (
-      input clk, rst_n, 
+    input clk, rst_n, tx_done, rd_valid, dma_ready,
+    input [DATAW-1:0] common_data_bus_in(cpu_in),
+    output [DATAW-1:0] common_data_bus_out(cpu_out),
+    output [ADDRW-1:0] io_address(cpu_addr),
+    output [1:0] op,
   );
+
+
 
 
     Fetch #() fetch ();
@@ -18,7 +25,7 @@ module CPU
         .mem_wr_en(mem_wr_en_decode), .branch(branch_decode), .fft_wr_en(fft_wr_en_decode),
         .set_en(set_en), .syn(syn), .use_imm(use_imm_decode), .set_freq(set_freq));
 
-    DecodeExecutePipe #() decodeExecutePipe(    
+    DecodeExecutePipe #() decodeExecutePipe(
         .clk(clk), .flush(), .stall(stall), .alu_op_in(alu_op_decode), 
         .reg_wr_en_in(reg_wr_en_out_decode),  .mem_wr_en_in(mem_wr_en_decode), 
         .shift_dist_in(shift_dist_decode),  .branch_in(branch_decode), 
