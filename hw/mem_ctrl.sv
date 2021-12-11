@@ -13,7 +13,7 @@
  */
 module mem_ctrl
 #(
-	parameter WORD_SIZE = 32,
+	parameter WORD_SIZE = 512,
 	parameter CL_SIZE_WIDTH = 512,
 	parameter ADDR_BITCOUNT = 64
 	
@@ -66,7 +66,7 @@ module mem_ctrl
 
 	// State Elements
 	sm_state state;
-	logic [FILL_BITS-1:0] fill_count;
+	logic fill_count;
 	reg [CL_SIZE_WIDTH-1:0] line_buffer;
 
 	logic [WORD_SIZE-1:0] line_out [FILL_COUNT-1:0];
@@ -176,7 +176,7 @@ module mem_ctrl
 
 						if(op_in == WRITE) begin
 							state <= HOSTOP;
-							line_buffer <= {common_data_bus_read_in, line_buffer[CL_SIZE_WIDTH-1:WORD_SIZE]};					
+							line_buffer <= common_data_bus_read_in;
 						end
 						else if(op_in == READ) begin
 							state <= READY;
@@ -186,7 +186,7 @@ module mem_ctrl
 						// If we are writing, fill the line buffer with
 						// data from common data bus read in
 						if(op_in == WRITE) begin
-							line_buffer <= {common_data_bus_read_in, line_buffer[CL_SIZE_WIDTH-1:WORD_SIZE]};					
+							line_buffer <= common_data_bus_read_in;					
 						end
 						fill_count <= fill_count + 1;
 					end

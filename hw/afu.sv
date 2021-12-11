@@ -130,6 +130,16 @@ module afu
        .dma_ready(ready),
    );
 
+  addr_tr_unit atu
+  (
+       .virtual_addr(cpu_addr),
+       .base_address_s0(wr_addr_s0),
+       .base_address_s1(wr_addr_s1),
+       .base_address_s2(wr_addr_s2),
+       .base_address_s3(wr_addr_s3),
+       .corrected_address(final_addr)
+   );
+
    // Memory Controller module
    mem_ctrl
    memory(
@@ -154,12 +164,12 @@ module afu
 
 
    // Assign the starting addresses from the memory map.
-   assign dma.rd_addr = cpu_addr;
-   assign dma.wr_addr = cpu_addr;
+   assign dma.rd_addr = final_addr;
+   assign dma.wr_addr = final_addr;
    
    // Use the size (# of cache lines) specified by the design.
    wire [CL_ADDR_WIDTH:0] size;
-   assign size = 1; // hardcoded for now
+   assign size = 1; // hardcoded for now - probably need to change
 
    assign dma.rd_size = size;
    assign dma.wr_size = size;

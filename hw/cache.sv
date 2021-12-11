@@ -9,6 +9,7 @@ module cache
     input clk, rst_n, write, en, // r_w=0 read, =1 write
     input [DATAW-1:0] data_in, [TAGW-1:0] tag_in,
     output valid, dirty, stall, 
+    output [1:0] mem_op,
     output [DATAW-1:0] data_out, [TAGW-1:0] tag_out,
    );
 
@@ -20,7 +21,7 @@ module cache
 
     logic [INDW-1:0] insert_index, found_index
 
-    CacheCtrl cachectrl #() ();
+    //CacheCtrl cachectrl #() ();
 
     assign valid = status[found_index][0];
     assign dirty = status[found_index][1];
@@ -29,6 +30,8 @@ module cache
 
     always_ff @(posedge clk, negedge rst_n) begin
         found_index = 0;
+        stall = 0;
+        mem_op = 0;
 
         if (~rst_n) begin
             insert_index = 0;
@@ -47,7 +50,10 @@ module cache
 
                 insert_index = insert_index + 1;
             end else begin
-
+                if (tag_out !== tag_in || !valid) begin
+                    stall = 1;
+                    mem_op = 1;
+                end
             end
         end
 
