@@ -43,7 +43,7 @@ always @(posedge clk, negedge rst_n) begin
 
     end else if(wr_en) begin
 
-        values[input_index] = data_in;
+        values[input_index] <= data_in;
 
     end
 
