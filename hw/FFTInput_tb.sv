@@ -17,35 +17,39 @@ FFTInput in(
     .data_out(data_out) // 16 bits
 );
 
-reg [15:0] i;
+int i;
 
 initial begin
 
 clk = 0;
 rst_n = 1;
 wr_en = 0;
-data_in = 512'b0;
+data_in = 512'h001f_001e_001d_001c_001b_001a_0019_0018_0017_0016_0015_0014_0013_0012_0011_0010_000f_000e_000d_000c_000b_000a_0009_0008_0007_0006_0005_0004_0003_0002_0001_0000;
 
 @(posedge clk) rst_n = 0;
 @(posedge clk) rst_n = 1;
 
-for(i = 0; i < 32; i++) begin
-    data_in[16:i+7:16*i] = i[7:0];
-    data_in[16:i+15:16*i+8] = i[15:8];
-end
+@(posedge clk) wr_en = 1;
 
-for(input_index = 0; input_index < 64; input_index++) begin
-    
-    @(posedge clk) wr_en = 1;
-    @(posedge clk) wr_en = 0;
+for(i = 0; i < 64; i++) begin
 
-end
-
-for(output_index = 0; output_index < 2048; output_index++) begin
+    input_index = i;
     
     @(posedge clk);
 
 end
+
+@(posedge clk) wr_en = 0;
+
+for(i = 0; i < 2048; i++) begin
+
+    output_index = i;
+    
+    @(posedge clk);
+
+end
+
+$stop();
 
 
 end
