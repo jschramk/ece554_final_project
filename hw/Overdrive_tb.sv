@@ -56,6 +56,31 @@ module Overdrive_tb();
 			outplot = audio_out[j];
 			@(posedge clk) begin end
 		end
+		next_module_ready = 1'b1;
+		@(posedge clk) begin end
+		for (int i = 0; i < 32; i=i+1) begin
+			inplot = 16'h7FFF * $sin(2*3.14159*i/45056*2376);
+			audio_in[i] = inplot;
+			@(posedge clk) begin end
+		end
+		@(posedge clk) begin end
+		rst_n = 1'b1;
+		@(posedge clk) begin end
+		next_module_ready = 1'b0;
+		magnitude = 4'h3;
+		set_magnitude = 1'b1;
+		@(posedge clk) begin end
+		set_magnitude = 1'b0;
+		prev_module_done = 1'b1;
+		@(posedge clk) begin end
+		en = 1'b1;
+		@(posedge clk) begin end
+		prev_module_done = 1'b0;
+		@(posedge clk) begin end
+		for (int j = 0; j < 32; j=j+1) begin
+			outplot = audio_out[j];
+			@(posedge clk) begin end
+		end
 		$stop;
 	end
 endmodule
