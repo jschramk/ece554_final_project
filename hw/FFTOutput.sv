@@ -52,7 +52,7 @@ end
 
 generate
 for(k = 0; k < SAMPLES_PER_INPUT; k++) begin
-    assign  output_array[k] = values[SAMPLES_PER_INPUT*input_index + k]; 
+    assign  output_array[k] = values[SAMPLES_PER_INPUT*output_index + k]; 
 end
 endgenerate
 

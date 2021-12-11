@@ -1,0 +1,69 @@
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.FFTInput_tb
+# vsim -gui work.FFTInput_tb 
+# Start time: 15:37:22 on Dec 11,2021
+# Loading sv_std.std
+# Loading work.FFTInput_tb
+# Loading work.FFTOutput
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/FFTInput_tb/out/*
+add wave -position insertpoint  \
+sim:/FFTInput_tb/out/clk \
+sim:/FFTInput_tb/out/rst_n \
+sim:/FFTInput_tb/out/data_out \
+sim:/FFTInput_tb/out/output_index \
+sim:/FFTInput_tb/out/input_index \
+sim:/FFTInput_tb/out/wr_en \
+sim:/FFTInput_tb/out/data_in \
+sim:/FFTInput_tb/out/values \
+sim:/FFTInput_tb/out/output_array \
+sim:/FFTInput_tb/out/l
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.FFTOutput
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv(53)
+#    Time: 21155 ps  Iteration: 1  Instance: /FFTInput_tb
+# Break in Module FFTInput_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv line 53
+restart -f
+quit -sim
+# End time: 15:38:44 on Dec 11,2021, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 1
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.FFTOutput_tb
+# vsim -gui work.FFTOutput_tb 
+# Start time: 15:38:57 on Dec 11,2021
+# Loading sv_std.std
+# Loading work.FFTOutput_tb
+# Loading work.FFTOutput
+add wave -position insertpoint  \
+sim:/FFTOutput_tb/out/clk \
+sim:/FFTOutput_tb/out/rst_n \
+sim:/FFTOutput_tb/out/data_out \
+sim:/FFTOutput_tb/out/output_index \
+sim:/FFTOutput_tb/out/input_index \
+sim:/FFTOutput_tb/out/wr_en \
+sim:/FFTOutput_tb/out/data_in \
+sim:/FFTOutput_tb/out/values \
+sim:/FFTOutput_tb/out/output_array
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv(53)
+#    Time: 21155 ps  Iteration: 1  Instance: /FFTOutput_tb
+# Break in Module FFTOutput_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv line 53
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.FFTOutput_tb
+# Loading work.FFTOutput
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv(53)
+#    Time: 21155 ps  Iteration: 1  Instance: /FFTOutput_tb
+# Break in Module FFTOutput_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv line 53

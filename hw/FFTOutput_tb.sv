@@ -1,4 +1,4 @@
-module FFTInput_tb;
+module FFTOutput_tb;
 
 reg clk, rst_n, wr_en;
 
