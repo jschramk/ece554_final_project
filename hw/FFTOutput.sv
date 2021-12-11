@@ -19,6 +19,7 @@ reg [SIZE-1:0] values [SAMPLES-1:0];
 wire [SIZE-1:0] output_array [SAMPLES_PER_INPUT-1:0]; // [4:0], wire converting 512 bits of input to 32 16 bit values
 
 genvar i, j, k;
+int l;
 
 // this is the same as the FFTInput, just backwards
 generate
@@ -37,8 +38,8 @@ always @(posedge clk, negedge rst_n) begin
     
     if(!rst_n) begin
         
-        for(k = 0; k < SAMPLES; k++) begin
-            values[k] <= 0;
+        for(l = 0; l < SAMPLES; l++) begin
+            values[l] <= 0;
         end
 
     end else if(wr_en) begin

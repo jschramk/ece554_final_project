@@ -5,16 +5,16 @@ reg clk, rst_n, wr_en;
 wire [511:0] data_out;
 reg [5:0] output_index;
 reg [10:0] input_index;
-wire [15:0] data_out;
+reg [15:0] data_in;
 
 FFTOutput out(
     .clk(clk),
     .rst_n(rst_n),
-    .data_out(data_out) // 512 bits
+    .data_out(data_out), // 512 bits
     .output_index(output_index), // 6 bits
     .input_index(input_index), // 11 bits
     .wr_en(wr_en),
-    .data_in(data_in), // 16 bits
+    .data_in(data_in) // 16 bits
 );
 
 int i;
