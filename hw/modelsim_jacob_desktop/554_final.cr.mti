@@ -12,34 +12,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Sinusoid
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Sinusoid_tb.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Sinusoid_tb
-
-Top level modules:
-	Sinusoid_tb
-
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Multiplier
-
-Top level modules:
-	Multiplier
-
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Divider
-
-Top level modules:
-	Divider
-
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Multiplier_tb.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Multiplier_tb
-
-Top level modules:
-	Multiplier_tb
-
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Divider_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Divider_tb
