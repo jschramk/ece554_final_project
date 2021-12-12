@@ -1,21 +1,11 @@
-{C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_64.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_64.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_64.hex(15): (vlog-13008) Unsized literal value 100000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd100000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_64.hex(15): near "100000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv}
+{C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module PitchShift
 
 Top level modules:
 	PitchShift
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_128.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_128.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_128.hex(15): (vlog-13008) Unsized literal value 100000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd100000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_128.hex(15): near "100000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v}
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module qtrstage
 
@@ -36,12 +26,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	fftstage
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_32.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_32.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_32.hex(15): (vlog-13008) Unsized literal value 400000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd400000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_32.hex(15): near "400000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v}
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module fftmain
 
@@ -62,27 +47,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	SemitoneLUT
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_2048.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_2048.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Warning: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_2048.hex(15): (vlog-2597) '4000000000' is being treated as 32-bit signed integer and will overflow.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_2048.hex(15): near "4000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {4.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_1024.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_1024.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_1024.hex(15): (vlog-13008) Unsized literal value 10000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd10000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_1024.hex(15): near "10000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_16.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_16.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_16.hex(15): (vlog-13008) Unsized literal value 400000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd400000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_16.hex(15): near "400000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_512.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_512.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_512.hex(15): (vlog-13008) Unsized literal value 40000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd40000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_512.hex(15): near "40000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v}
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module laststage
 
@@ -117,6 +82,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	butterfly
 
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fft_test
+
+Top level modules:
+	fft_test
+
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module FFTOutput_tb
@@ -138,12 +110,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	FFTCounter
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_256.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_256.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_256.hex(15): (vlog-13008) Unsized literal value 40000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd40000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_256.hex(15): near "40000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v}
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module convround
 
@@ -157,9 +124,4 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	PitchShift_tb
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_8.hex} {0 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_8.hex}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_8.hex(15): (vlog-13008) Unsized literal value 1000000000000 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd1000000000000) or reduce the literal value to fit in 32 bits.
-** Error: (vlog-13069) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/cmem_8.hex(15): near "1000000000000": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 5.0} {}}
+} {} {}}
