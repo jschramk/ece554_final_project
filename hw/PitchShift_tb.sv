@@ -1,10 +1,10 @@
 module PitchShift_tb;
 
 reg clk, rst_n, shift_wr_en;
-reg [31:0] data_in;
+reg [43:0] data_in;
 reg [10:0] input_index;
 reg [4:0] shift_semitones;
-wire [31:0] data_out;
+wire [43:0] data_out;
 wire [10:0] output_index;
 
 PitchShift ps(
@@ -25,7 +25,7 @@ initial begin
     clk = 0;
     rst_n = 1;
     shift_wr_en = 0;
-    data_in = 32'h7FFF;
+    data_in = 44'h7FFF;
     shift_semitones = 6;
 
     @(posedge clk) rst_n = 0;
