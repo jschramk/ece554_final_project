@@ -43,7 +43,7 @@ module fft_test();
 		outfreq = -1;
 		
 		for (int i = 0; i < 2048; i++) begin
-			wave[i] = 1000 * $sin(2*3.14159/2048*25*i);
+			wave[i] = 300 * $sin(2*3.14159/2048*25*i);
 		end
 		
 		for (int j = 0; j < 2048; j++) begin

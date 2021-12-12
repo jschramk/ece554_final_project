@@ -743,3 +743,747 @@ run -all
 #    Time: 65005 ps  Iteration: 1  Instance: /fft_test
 # Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
 # A time value could not be extracted from the current line
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of cmem_8.hex failed with 2 errors.
+# Compile of cmem_16.hex failed with 2 errors.
+# Compile of cmem_32.hex failed with 2 errors.
+# Compile of cmem_64.hex failed with 2 errors.
+# Compile of cmem_128.hex failed with 2 errors.
+# Compile of cmem_256.hex failed with 2 errors.
+# Compile of cmem_512.hex failed with 2 errors.
+# Compile of cmem_1024.hex failed with 2 errors.
+# Compile of cmem_2048.hex failed with 1 errors.
+# 27 compiles, 9 failed with 17 errors.
+vsim -gui work.PitchShift_tb
+# End time: 15:06:36 on Dec 12,2021, Elapsed time: 12:55:33
+# Errors: 0, Warnings: 12
+# vsim -gui work.PitchShift_tb 
+# Start time: 15:06:36 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.PitchShift_tb
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'data_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 10
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of cmem_8.hex failed with 2 errors.
+# Compile of cmem_16.hex failed with 2 errors.
+# Compile of cmem_32.hex failed with 2 errors.
+# Compile of cmem_64.hex failed with 2 errors.
+# Compile of cmem_128.hex failed with 2 errors.
+# Compile of cmem_256.hex failed with 2 errors.
+# Compile of cmem_512.hex failed with 2 errors.
+# Compile of cmem_1024.hex failed with 2 errors.
+# Compile of cmem_2048.hex failed with 1 errors.
+# 27 compiles, 9 failed with 17 errors.
+add wave -position insertpoint sim:/PitchShift_tb/ps/*
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(58)
+#    Time: 41015 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 58
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of cmem_8.hex failed with 2 errors.
+# Compile of cmem_16.hex failed with 2 errors.
+# Compile of cmem_32.hex failed with 2 errors.
+# Compile of cmem_64.hex failed with 2 errors.
+# Compile of cmem_128.hex failed with 2 errors.
+# Compile of cmem_256.hex failed with 2 errors.
+# Compile of cmem_512.hex failed with 2 errors.
+# Compile of cmem_1024.hex failed with 2 errors.
+# Compile of cmem_2048.hex failed with 1 errors.
+# 27 compiles, 9 failed with 17 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(58)
+#    Time: 41015 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 58
+vsim -gui work.fft_test
+# End time: 15:22:28 on Dec 12,2021, Elapsed time: 0:15:52
+# Errors: 0, Warnings: 1
+# vsim -gui work.fft_test 
+# Start time: 15:22:28 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv Line: 17
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+add wave -position insertpoint sim:/fft_test/iDUT/*
+add wave -position insertpoint  \
+sim:/fft_test/iDUT/i_clk \
+sim:/fft_test/iDUT/i_reset \
+sim:/fft_test/iDUT/i_ce \
+sim:/fft_test/iDUT/i_sample \
+sim:/fft_test/iDUT/o_result \
+sim:/fft_test/iDUT/o_sync
+add wave -position insertpoint  \
+sim:/fft_test/outfreq \
+sim:/fft_test/outreal \
+sim:/fft_test/outimag
+add wave -position insertpoint  \
+sim:/fft_test/cycle
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65015 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv Line: 17
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+add wave -position insertpoint  \
+sim:/fft_test/amp
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv Line: 17
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv Line: 17
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# ** Error: Acs sdne.
+# 2
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "cmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of cmem_8.hex failed with 2 errors.
+# Compile of cmem_16.hex failed with 2 errors.
+# Compile of cmem_32.hex failed with 2 errors.
+# Compile of cmem_64.hex failed with 2 errors.
+# Compile of cmem_128.hex failed with 2 errors.
+# Compile of cmem_256.hex failed with 2 errors.
+# Compile of cmem_512.hex failed with 2 errors.
+# Compile of cmem_1024.hex failed with 2 errors.
+# Compile of cmem_2048.hex failed with 1 errors.
+# 27 compiles, 9 failed with 17 errors.
+pwd
+# C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv Line: 17
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+# ** Error: Acs sdne.
+# $
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Warning: (vsim-PLI-3406) Too many digits (11) in data on line 15 of file "cmem_1024.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_1024
+# ** Warning: (vsim-PLI-3406) Too many digits (11) in data on line 15 of file "cmem_512.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_512
+# ** Warning: (vsim-PLI-3406) Too many digits (11) in data on line 15 of file "cmem_256.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_256
+# ** Warning: (vsim-PLI-3406) Too many digits (12) in data on line 15 of file "cmem_128.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_128
+# ** Warning: (vsim-PLI-3406) Too many digits (12) in data on line 15 of file "cmem_64.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_64
+# ** Warning: (vsim-PLI-3406) Too many digits (12) in data on line 15 of file "cmem_32.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_32
+# ** Warning: (vsim-PLI-3406) Too many digits (12) in data on line 15 of file "cmem_16.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_16
+# ** Warning: (vsim-PLI-3406) Too many digits (13) in data on line 15 of file "cmem_8.hex". (Max is 10.)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /fft_test/iDUT/stage_8
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# 18 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fft_test
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv(30)
+#    Time: 65005 ps  Iteration: 1  Instance: /fft_test
+# Break in Module fft_test at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv line 30
+# Compile of PitchShift.sv was successful.
+# Compile of AudioProcessor.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of AudioProcessor.sv was successful.
+# Compile of PitchShift.sv failed with 1 errors.
+# Compile of PitchShift_tb.sv failed with 3 errors.
+# Compile of AudioProcessor.sv was successful.
+# 3 compiles, 2 failed with 4 errors.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+# Compile of PitchShift.sv failed with 2 errors.
+# Compile of PitchShift_tb.sv failed with 3 errors.
+# 2 compiles, 2 failed with 5 errors.
+# Compile of PitchShift.sv was successful.
+# Compile of PitchShift_tb.sv failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of PitchShift_tb.sv failed with 3 errors.
+# Compile of PitchShift_tb.sv failed with 1 errors.
+# Compile of PitchShift_tb.sv was successful.
+vsim -gui work.PitchShift_tb
+# End time: 16:58:42 on Dec 12,2021, Elapsed time: 1:36:14
+# Errors: 1, Warnings: 10
+# vsim -gui work.PitchShift_tb 
+# Start time: 16:58:42 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.PitchShift_tb
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+add wave -position insertpoint sim:/PitchShift_tb/ps/*
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(70)
+#    Time: 61495 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 70
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(71)
+#    Time: 61495 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 71
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(72)
+#    Time: 61495 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 72
+# Compile of FFTOutput.sv was successful.
+# Compile of FFTOutput_tb.sv was successful.
+# Compile of FFTCounter.sv was successful.
+# Compile of PitchShift.sv was successful.
+# Compile of SemitoneLUT.sv was successful.
+# Compile of PitchShift_tb.sv was successful.
+# Compile of FFTCounter_tb.sv was successful.
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of fft_test.sv was successful.
+# Compile of fftstage.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# Compile of fftmain.v was successful.
+# Compile of AudioProcessor.sv was successful.
+# 19 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(72)
+#    Time: 61495 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 72
