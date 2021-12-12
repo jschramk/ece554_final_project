@@ -231,50 +231,59 @@ module afu
    wire [31:0] cpu_in;
    wire [31:0] cpu_out; // Todo, parameterize
 
-   CPU cpu
-   (
-       .clk(clk),
-       .rst_n(~rst),
-       .tx_done(tx_done),
-       .rd_valid(rd_valid),
-       .op(mem_op),
-       .io_address(cpu_addr),
-       .common_data_bus_in(cpu_in),
-       .common_data_bus_out(cpu_out),
-       .dma_ready(ready),
-   );
+    CPU cpu
+    (
+        .clk(clk),
+        .rst_n(~rst),
+        .tx_done(tx_done),
+        .rd_valid(rd_valid),
+        .op(mem_op),
+        .io_address(cpu_addr),
+        .common_data_bus_in(cpu_in),
+        .common_data_bus_out(cpu_out),
+        .dma_ready(ready),
+        .instr_write_en(instr_write_en),
+        .cache_stall(cache_stall)
+    );
 
-  addr_tr_unit atu
-  (
-       .virtual_addr(cpu_addr),
-       .base_address_s0(wr_addr_s0),
-       .base_address_s1(wr_addr_s1),
-       .base_address_s2(wr_addr_s2),
-       .base_address_s3(wr_addr_s3),
-       .corrected_address(final_addr)
-   );
+    addr_tr_unit atu
+    (
+        .virtual_addr(cpu_addr),
+        .base_address_s0(wr_addr_s0),
+        .base_address_s1(wr_addr_s1),
+        .base_address_s2(wr_addr_s2),
+        .base_address_s3(wr_addr_s3),
+        .corrected_address(final_addr)
+    );
 
-   // Memory Controller module
-   mem_ctrl
-   memory(
-       .clk(clk),
-       .rst_n(~rst),
-       .host_init(go),
-       .host_rd_ready(~dma.empty),
-       .host_wr_ready(~dma.full & ~dma.host_wr_completed),
-       .op(mem_op), // CPU Defined
-       .common_data_bus_read_in(cpu_out), // CPU data word bus, input
-       .common_data_bus_write_out(cpu_in),
-       .host_data_bus_read_in(dma.rd_data),
-       .host_data_bus_write_out(dma.wr_data),
-       .ready(ready), // Usable for the host CPU
-       .tx_done(tx_done), // Again, notifies CPU when ever a read or write is complete
-       .rd_valid(rd_valid), // Notifies CPU whenever the data on the databus is valid
-       .host_re(local_dma_re),
-       .host_we(local_dma_we),
-       .host_rgo(rd_go),
-       .host_wgo(wr_go)
-   );
+    CacheThief thief
+    (.rd_valid(local_dma_re), .wr_valid(local_dma_we), .en(mem_op !== 0 && tx_done == 0),
+        .cpu_addr_top(cpu_addr[ADDR_BITCOUNT-1:ADDR_BITCOUNT-2]),
+        .data_cache_re(data_cache_re), .instr_cache_re(instr_write_en), 
+        .data_cache_we(data_cache_we), .stall(cache_stall)
+    );
+
+    // Memory Controller module
+    mem_ctrl
+    memory(
+        .clk(clk),
+        .rst_n(~rst),
+        .host_init(go),
+        .host_rd_ready(~dma.empty),
+        .host_wr_ready(~dma.full & ~dma.host_wr_completed),
+        .op(mem_op), // CPU Defined
+        .common_data_bus_read_in(cpu_out), // CPU data word bus, input
+        .common_data_bus_write_out(cpu_in),
+        .host_data_bus_read_in(dma.rd_data),
+        .host_data_bus_write_out(dma.wr_data),
+        .ready(ready), // Usable for the host CPU
+        .tx_done(tx_done), // Again, notifies CPU when ever a read or write is complete
+        .rd_valid(rd_valid), // Notifies CPU whenever the data on the databus is valid
+        .host_re(local_dma_re),
+        .host_we(local_dma_we),
+        .host_rgo(rd_go),
+        .host_wgo(wr_go)
+    );
 
 
    // Assign the starting addresses from the memory map.

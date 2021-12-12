@@ -1,19 +1,24 @@
 module CPU #(
     NUMREGISTERS=8,
     DATAW=32,
-    ADDRW=32
+    ADDRW=32,
+    INW=512
 ) (
-    input clk, rst_n, tx_done, rd_valid, dma_ready,
+    input clk, rst_n, tx_done, rd_valid, dma_ready, instr_write_en, cache_stall,
     input [DATAW-1:0] common_data_bus_in(cpu_in),
     output [DATAW-1:0] common_data_bus_out(cpu_out),
     output [ADDRW-1:0] io_address(cpu_addr),
-    output [1:0] op,
+    output [1:0] op
 );
+
+wire stall;
 
 Fetch #(
 
 ) fetch (
-
+    .clk(clk), .rst_n(rst_n), .halt(halt), .stall(stall), .branch(branch_out_execute),
+    .instr_write_en(instr_write_en), .PC_branch(PC_out_execute), .instr_in(),
+    .valid_out(), .instr_out(), .PC_out()
 );
 
 FetchDecodePipe #(
