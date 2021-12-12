@@ -1,4 +1,5 @@
 module AudioProcessor #(
+    parameter SIZE = 16,
     parameter INPUT_SIZE = 512,
     parameter SAMPLES = 2048
 )(
@@ -28,10 +29,12 @@ localparam INPUTS_TO_FILL = SAMPLES * SIZE / INPUT_SIZE; // 64
 localparam SAMPLES_PER_INPUT = INPUT_SIZE / SIZE; // 32
 
 wire fft_sync;
-wire fft_count;
+wire [$clog2(SAMPLES)-1:0] fft_count;
 reg fft_enable;
 wire [15:0] fft_sample_in;
-wire [43:0] fft_output_full; // 22 real bits, 22 complex bits
+wire [31:0] fft_output_full; // 16 real bits, 16 complex bits
+wire [31:0] pitch_shift_output_full; // 16 real bits, 16 complex bits
+wire [$clog2(SAMPLES)-1:0] pitch_shift_output_index;
 
 reg [$clog2(SAMPLES)-1:0] feed_index; // counter for FFTInput's output select
 reg feeding;
@@ -83,6 +86,17 @@ FFTCounter counter(
     .fft_sync(fft_sync),
     .clr_cnt(),
     .count(fft_count)
+);
+
+PitchShift ps(
+    .clk(clk),
+    .rst_n(rst_n),
+    .data_in(fft_output_full),
+    .data_out(pitch_shift_output_full),
+    .shift_semitones(pitch_shift_semitones),
+    .shift_wr_en(pitch_shift_wr_en),
+    .input_index(fft_count),
+    .output_index()
 );
 
 endmodule
