@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Filename:	fftmain.v
+// Filename:	ifftmain.v
 // {{{
 // Project:	A General Purpose Pipelined FFT Implementation
 //
@@ -25,8 +25,8 @@
 //			the real portion in the high order bits, and the
 //			imaginary portion taking the bottom 16 bits.
 //	o_result	The output result, of the same format as i_sample,
-//			only having 16 bits for each of the real and imaginary
-//			components, leading to 32 bits total.
+//			only having 22 bits for each of the real and imaginary
+//			components, leading to 44 bits total.
 //	o_sync	A one bit output indicating the first sample of the FFT frame.
 //			It also indicates the first valid sample out of the FFT
 //			on the first frame.
@@ -34,7 +34,7 @@
 // Arguments:	This file was computer generated using the following command
 //		line:
 //
-//		% ./fftgen -1 -f 2048 -m 16
+//		% ./fftgen -1 -f 2048 -i
 //
 //	This core will use hardware accelerated multiplies (DSPs)
 //	for 0 of the 11 stages
@@ -75,7 +75,7 @@
 //
 //
 //
-module fftmain(i_clk, i_reset, i_ce,
+module ifftmain(i_clk, i_reset, i_ce,
 		i_sample, o_result, o_sync);
 	// The bit-width of the input, IWIDTH, output, OWIDTH, and the log
 	// of the FFT size.  These are localparams, rather than parameters,
@@ -83,7 +83,7 @@ module fftmain(i_clk, i_reset, i_ce,
 	// changed.  (These values can be adjusted by running the core
 	// generator again.)  The reason is simply that these values have
 	// been hardwired into the core at several places.
-	localparam	IWIDTH=16, OWIDTH=16; // LGWIDTH=11;
+	localparam	IWIDTH=16, OWIDTH=22; // LGWIDTH=11;
 	//
 	input	wire				i_clk, i_reset, i_ce;
 	//
@@ -98,17 +98,17 @@ module fftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s2048;
-	wire	[31:0]	w_d2048;
+	wire	[33:0]	w_d2048;
 	fftstage	#(
 		// {{{
 		.IWIDTH(IWIDTH),
 		.CWIDTH(IWIDTH+4),
-		.OWIDTH(16),
+		.OWIDTH(17),
 		.LGSPAN(10),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_2048.hex")
+		.COEFFILE("icmem_2048.hex")
 		// }}}
 	) stage_2048(
 		// {{{
@@ -124,17 +124,17 @@ module fftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s1024;
-	wire	[31:0]	w_d1024;
+	wire	[35:0]	w_d1024;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(17),
+		.CWIDTH(21),
+		.OWIDTH(18),
 		.LGSPAN(9),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_1024.hex")
+		.COEFFILE("icmem_1024.hex")
 		// }}}
 	) stage_1024(
 		// {{{
@@ -149,17 +149,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s512;
-	wire	[31:0]	w_d512;
+	wire	[35:0]	w_d512;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(18),
+		.CWIDTH(22),
+		.OWIDTH(18),
 		.LGSPAN(8),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_512.hex")
+		.COEFFILE("icmem_512.hex")
 		// }}}
 	) stage_512(
 		// {{{
@@ -174,17 +174,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s256;
-	wire	[31:0]	w_d256;
+	wire	[37:0]	w_d256;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(18),
+		.CWIDTH(22),
+		.OWIDTH(19),
 		.LGSPAN(7),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_256.hex")
+		.COEFFILE("icmem_256.hex")
 		// }}}
 	) stage_256(
 		// {{{
@@ -199,17 +199,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s128;
-	wire	[31:0]	w_d128;
+	wire	[37:0]	w_d128;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(19),
+		.CWIDTH(23),
+		.OWIDTH(19),
 		.LGSPAN(6),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_128.hex")
+		.COEFFILE("icmem_128.hex")
 		// }}}
 	) stage_128(
 		// {{{
@@ -224,17 +224,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s64;
-	wire	[31:0]	w_d64;
+	wire	[39:0]	w_d64;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(19),
+		.CWIDTH(23),
+		.OWIDTH(20),
 		.LGSPAN(5),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_64.hex")
+		.COEFFILE("icmem_64.hex")
 		// }}}
 	) stage_64(
 		// {{{
@@ -249,17 +249,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s32;
-	wire	[31:0]	w_d32;
+	wire	[39:0]	w_d32;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(4),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_32.hex")
+		.COEFFILE("icmem_32.hex")
 		// }}}
 	) stage_32(
 		// {{{
@@ -274,17 +274,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s16;
-	wire	[31:0]	w_d16;
+	wire	[41:0]	w_d16;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(21),
 		.LGSPAN(3),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_16.hex")
+		.COEFFILE("icmem_16.hex")
 		// }}}
 	) stage_16(
 		// {{{
@@ -299,17 +299,17 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s8;
-	wire	[31:0]	w_d8;
+	wire	[41:0]	w_d8;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(21),
+		.CWIDTH(25),
+		.OWIDTH(21),
 		.LGSPAN(2),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
 		.CKPCE(1),
-		.COEFFILE("cmem_8.hex")
+		.COEFFILE("icmem_8.hex")
 		// }}}
 	) stage_8(
 		// {{{
@@ -324,13 +324,13 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s4;
-	wire	[31:0]	w_d4;
+	wire	[43:0]	w_d4;
 	qtrstage	#(
 		// {{{
-		.IWIDTH(16),
-		.OWIDTH(16),
+		.IWIDTH(21),
+		.OWIDTH(22),
 		.LGWIDTH(11),
-		.INVERSE(0),
+		.INVERSE(1),
 		.SHIFT(0)
 		// }}}
 	) stage_4(
@@ -347,11 +347,11 @@ module fftmain(i_clk, i_reset, i_ce,
 	// verilator lint_off UNUSED
 	wire		w_s2;
 	// verilator lint_on  UNUSED
-	wire	[31:0]	w_d2;
+	wire	[43:0]	w_d2;
 	laststage	#(
 		// {{{
-		.IWIDTH(16),
-		.OWIDTH(16),
+		.IWIDTH(22),
+		.OWIDTH(22),
 		.SHIFT(0)
 		// }}}
 	) stage_2(
@@ -380,7 +380,7 @@ module fftmain(i_clk, i_reset, i_ce,
 	// Now for the bit-reversal stage.
 	bitreverse	#(
 		// {{{
-		.LGSIZE(11), .WIDTH(16)
+		.LGSIZE(11), .WIDTH(22)
 		// }}}
 	) revstage (
 		// {{{
