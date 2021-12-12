@@ -1,37 +1,47 @@
 module Tremolo (
     input clk,
     input rst_n,
-    input prev_module_done,
-    input next_module_ready,
+    //input prev_module_done,
+    //input next_module_ready,
     input [31:0] address_in,
     input en,
-    input signed [15:0] audio_in [31:0],
+    input signed [15:0] audio_in,
     output reg [31:0] address_out,
-    output reg signed [15:0] audio_out [31:0],
-    output reg ready_for_data,
-    output reg done
+    output reg signed [15:0] audio_out
+    //output reg ready_for_data,
+    //output reg done
 );
 
-	integer i, j;
-	logic [1:0] state, nxt_state;
-	logic unsigned [7:0] count;
-	logic unsigned [7:0] counter;
+	//integer i, j;
+	//logic [1:0] state, nxt_state;
+	logic unsigned [11:0] count;
+	//logic unsigned [7:0] counter;
 	
-	parameter IDLE = 2'b00;
+	/*parameter IDLE = 2'b00;
 	parameter BEGIN = 2'b01;
-	parameter OUTPUT = 2'b10;
+	parameter OUTPUT = 2'b10;*/
 	
 	always @(posedge clk or negedge rst_n) begin
 		if(!rst_n) begin
-			state <= IDLE;
-			counter <= 8'h00;
+			count <= 12'h000;
 		end else begin
-			state <= nxt_state;
-			counter <= count;
+			if (en) begin
+				if (count[10] == 1'b1) begin
+					audio_out <= audio_in >>> 2;
+				end else begin
+					audio_out <= audio_in;
+				end
+				count <= count + 1'b1;
+			end else begin
+				count <= 12'h000;
+				audio_out <= audio_in;
+			end
 		end
 	end
 	
-	always_comb begin
+	assign address_out = address_in;
+	
+	/*always_comb begin
 		address_out = address_in;
 		case(state)
 			IDLE: begin
