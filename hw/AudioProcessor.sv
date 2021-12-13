@@ -34,7 +34,7 @@ module AudioProcessor #(
     // output wave data (STE instruction)
     output [INPUT_SIZE-1:0] data_out,
     // flag for when data is ready to be read back out
-    output reg done
+    output done
 );
 
 // states for computation
@@ -108,6 +108,8 @@ always @(posedge clk, negedge rst_n) begin
 
 end
 
+assign done = (state == IDLE);
+
 // control logic state machine
 always_comb begin
     
@@ -118,18 +120,18 @@ always_comb begin
     count_en = 0;
     rst_count = 0;
     fft_out_wr_en = 0;
-    done = 0;
+    //done = 0;
 
 
     case (state)
 
         IDLE : begin
 
-            done = 1;
+            //done = 1;
 
             if(start) begin
                 next_state = FEEDING_FFT;
-                done = 0;
+                //done = 0;
             end
 
         end
