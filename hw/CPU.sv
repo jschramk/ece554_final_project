@@ -2,7 +2,11 @@ module CPU #(
     NUMREGISTERS=8,
     DATAW=32,
     ADDRW=32,
-    INW=512
+    PCW=32,
+    INW=512,
+    INSTRW=16,
+    REGW=3,
+    IMMW=11
 ) (
     input clk, rst_n, tx_done, rd_valid, 
             dma_ready, instr_write_en, cache_stall,
@@ -14,7 +18,26 @@ module CPU #(
     output [1:0] op
 );
 
-wire stall;
+
+// TODO: Track down missing write register 
+//      (we have input to Decode written, but no output passed through)
+
+// TODO: Continue writing all bus wires - stopped around decode area
+
+wire stall, instr_valid, fft_wr_en_memory, mem_valid;
+
+wire [1:0]          shift_dist_decode
+
+wire [REGW-1:0]     wr_reg_writeback
+
+wire [IMMW-1:0]     imm_decode
+
+wire [INSTRW-1:0]   instr_fetch, instr_decode
+
+wire [PCW-1:0]      PC_out_execute, PC_out_fetch, PC_decode
+
+wire [DATAW-1:0]    wr_data, a_decode, b_decode
+
 
 assign mem_address  =   (!instr_valid) ? PC_out_fetch :
                         (fft_wr_en_memory && !mem_valid) ? ex_out_memory:
@@ -24,7 +47,9 @@ assign op           =   (!instr_valid) ? 2'b01 :
                         2'b00;
 
 Fetch #(
-
+    .PCW(PCW),
+    .INSTRW(INSTRW),
+    .INW(INW)
 ) fetch (
     .clk(clk), .rst_n(rst_n), .halt(halt), .stall(stall), .branch(branch_out_execute),
     .instr_write_en(instr_write_en), .PC_branch(PC_out_execute), .instr_data_in(common_data_bus_in),
@@ -32,7 +57,8 @@ Fetch #(
 );
 
 FetchDecodePipe #(
-
+    .PCW(PCW),
+    .INSTRW(INSTRW),
 ) fetchDecodePipe (
     // Inputs
     .clk(clk), .flush(), .stall(stall),
@@ -48,16 +74,15 @@ Decode #(
     .NUMREGISTERS(NUMREGISTERS),
     .DATAW(DATAW)
 ) decode (
-    .instr(instr_decode),
-    .reg_wr_en_in(reg_wr_en_in),
-    .rst_n(rst_n),
+    // Inputs
     .clk(clk),
-    .wr_reg(wr_reg),
+    .rst_n(rst_n),
+    .reg_wr_en_in(reg_wr_en_writeback),
+    .wr_reg(wr_reg_writeback),
+    .instr(instr_decode),
     .wr_data(wr_data),
-    .a(a_decode),
-    .b(b_decode),
-    .imm(imm_decode),
-    .shift_dist(shift_dist_decode),
+
+    // Outputs
     .halt(halt),
     .alu_op(alu_op_decode),
     .reg_wr_en_out(reg_wr_en_out_decode),
@@ -67,11 +92,16 @@ Decode #(
     .set_en(set_en),
     .syn(syn),
     .use_imm(use_imm_decode),
-    .set_freq(set_freq)
+    .set_freq(set_freq),
+    .shift_dist(shift_dist_decode),
+    .imm(imm_decode),
+    .a(a_decode),
+    .b(b_decode)
 );
 
 DecodeExecutePipe #(
-
+    DATAW(DATAW),
+    PCW(PCW)
 ) decodeExecutePipe (
     //Inputs
     .clk(clk),
@@ -123,22 +153,24 @@ Execute #(
 );
 
 ExecuteMemoryPipe #(
-
+    .DATAW(DATAW)
 ) executeMemoryPipe(
     // Inputs
     .clk(clk), .flush(), .stall(stall),
-    .ex_data_in(ex_out),
     .fft_wr_en_in(fft_wr_en_execute), 
-    .reg_wr_en_in(reg_wr_en_execute), 
+    .reg_wr_en_in(reg_wr_en_execute),
+    .ex_data_in(ex_out),
 
     // Outputs
-    .ex_data_out(ex_out_memory), 
     .fft_wr_en_out(fft_wr_en_memory),
     .reg_wr_en_out(reg_wr_en_memory),
+    .ex_data_out(ex_out_memory)
 );
 
 Memory #(
-
+    .DATAW(DATAW),
+    .INW(INW),
+    .ADDRW(ADDRW),
 ) memory (
     .clk(clk), .rst_n(rst_n), .write(mem_write_en),
     .data_in(common_data_bus_in),
@@ -148,7 +180,8 @@ Memory #(
 );
 
 MemoryWritebackPipe #(
-
+    .DATAW(DATAW),
+    .ADDRW(ADDRW)
 ) memoryWritebackPipe(
     // Inputs
     .clk(clk), .flush(rst_n), .stall(stall),
@@ -163,9 +196,7 @@ MemoryWritebackPipe #(
     .addr_out(ex_out_writeback),
     .data_out(audio_out),
     .fft_wr_en_out(fft_wr_en_writeback),
-    .reg_wr_en_out(reg_wr_en_writeback),
+    .reg_wr_en_out(reg_wr_en_writeback)
 );
-
-
 
 endmodule
