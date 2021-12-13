@@ -6,7 +6,7 @@ module Fetch
   ) (
     input clk, rst_n, halt, stall, branch, instr_write_en,
     input [PCW-1:0] PC_branch,
-    input [INW-1:0] instr_in,
+    input [INW-1:0] instr_data_in,
     output valid_out,
     output [INSTRW-1:0] instr_out,
     output [PCW-1:0] PC_out
@@ -18,7 +18,7 @@ module Fetch
 
   InstructionCache #() instr_cache 
        (.clk(clk), .rst_n(rst_n), .write(instr_write_en),
-        .data_in(instr_in), .addr_in(PC_out), .base_addr_in(PC_out),
+        .data_in(instr_data_in), .addr_in(PC_out), .base_addr_in(PC_out),
         .valid_out(valid_out), .data_out(instr_out));
 
 endmodule

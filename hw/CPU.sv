@@ -4,27 +4,44 @@ module CPU #(
     ADDRW=32,
     INW=512
 ) (
-    input clk, rst_n, tx_done, rd_valid, dma_ready, instr_write_en, cache_stall,
-    input [DATAW-1:0] common_data_bus_in(cpu_in),
-    output [DATAW-1:0] common_data_bus_out(cpu_out),
-    output [ADDRW-1:0] io_address(cpu_addr),
+    input clk, rst_n, tx_done, rd_valid, 
+            dma_ready, instr_write_en, cache_stall,
+            mem_write_en,
+    input [INW-1:0] common_data_bus_in,
+    output audio_valid,
+    output [INW-1:0] audio_out,
+    output [ADDRW-1:0] mem_address,
     output [1:0] op
 );
 
 wire stall;
 
+assign mem_address  =   (!instr_valid) ? PC_out_fetch :
+                        (fft_wr_en_memory && !mem_valid) ? ex_out_memory:
+                        32'b0;
+assign op           =   (!instr_valid) ? 2'b01 : 
+                        (fft_wr_en_memory && !mem_valid) ? 2'b01 :
+                        2'b00;
+
 Fetch #(
 
 ) fetch (
     .clk(clk), .rst_n(rst_n), .halt(halt), .stall(stall), .branch(branch_out_execute),
-    .instr_write_en(instr_write_en), .PC_branch(PC_out_execute), .instr_in(),
-    .valid_out(), .instr_out(), .PC_out()
+    .instr_write_en(instr_write_en), .PC_branch(PC_out_execute), .instr_data_in(common_data_bus_in),
+    .valid_out(instr_valid), .instr_out(instr_fetch), .PC_out(PC_out_fetch)
 );
 
 FetchDecodePipe #(
 
 ) fetchDecodePipe (
+    // Inputs
+    .clk(clk), .flush(), .stall(stall),
+    .PC_in(PC_out_fetch), 
+    .instr_in(instr_fetch),
 
+    // Outputs
+    .PC_out(PC_decode), 
+    .instr_out(instr_decode)
 );
 
 Decode #(
@@ -56,6 +73,7 @@ Decode #(
 DecodeExecutePipe #(
 
 ) decodeExecutePipe (
+    //Inputs
     .clk(clk),
     .flush(),
     .stall(stall),
@@ -69,10 +87,12 @@ DecodeExecutePipe #(
     .b_in(b_decode), 
     .PC_in(PC_decode),
     .use_imm_in(use_imm_decode),
-    .imm_in(imm_decode), 
+    .imm_in(imm_decode),
+
+    //Outputs
     .alu_op_out(alu_op_execute),
     .reg_wr_en_out(reg_wr_en_execute),
-    .mem_wr_en_out(mem_wr_en_execute),
+    .mem_wr_en_out(mem_wr_en_execute),  // might be unused at this point
     .shift_dist_out(shift_dist_execute),
     .branch_out(branch_in_execute),
     .fft_wr_en_out(fft_wr_en_execute),
@@ -105,19 +125,45 @@ Execute #(
 ExecuteMemoryPipe #(
 
 ) executeMemoryPipe(
+    // Inputs
+    .clk(clk), .flush(), .stall(stall),
+    .ex_data_in(ex_out),
+    .fft_wr_en_in(fft_wr_en_execute), 
+    .reg_wr_en_in(reg_wr_en_execute), 
 
+    // Outputs
+    .ex_data_out(ex_out_memory), 
+    .fft_wr_en_out(fft_wr_en_memory),
+    .reg_wr_en_out(reg_wr_en_memory),
 );
 
 Memory #(
 
 ) memory (
-
+    .clk(clk), .rst_n(rst_n), .write(mem_write_en),
+    .data_in(common_data_bus_in),
+    .addr_in(ex_out_memory),
+    .valid_out(cache_valid_memory),
+    .data_out(data_out_memory)
 );
 
 MemoryWritebackPipe #(
 
 ) memoryWritebackPipe(
+    // Inputs
+    .clk(clk), .flush(rst_n), .stall(stall),
+    .valid_in(cache_valid_memory),
+    .addr_in(ex_out_memory),
+    .data_in(data_out_memory),
+    .fft_wr_en_in(fft_wr_en_memory),
+    .reg_wr_en_in(reg_wr_en_memory),
 
+    // Outputs
+    .valid_out(audio_valid),
+    .addr_out(ex_out_writeback),
+    .data_out(audio_out),
+    .fft_wr_en_out(fft_wr_en_writeback),
+    .reg_wr_en_out(reg_wr_en_writeback),
 );
 
 
