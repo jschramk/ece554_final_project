@@ -90,7 +90,7 @@ initial begin
 			
 		end
 		
-		$writememb("processed.bin", output_array);
+		$writememb("processed.txt", output_array);
 
     $stop();
 
@@ -138,7 +138,7 @@ task init();
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
     data_in = 512'h0;
-		$readmemb("out.bin", input_array);
+		$readmemb("out.txt", input_array);
 endtask
 
 task reset();
