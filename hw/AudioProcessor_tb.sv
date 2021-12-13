@@ -14,6 +14,10 @@ reg [10:0] freq_coeff_index;
 reg [7:0] freq_coeff_in;
 reg tremolo_enable_wr_en;
 reg tremolo_enable_in;
+reg overdrive_enable_wr_en;
+reg overdrive_enable_in;
+reg overdrive_magnitude_wr_en;
+reg [3:0] overdrive_magnitude;
 
 wire [511:0] data_out;
 
@@ -40,10 +44,10 @@ AudioProcessor dj_disco(
     .freq_coeff_wr_en(freq_coeff_wr_en),
     .freq_coeff_index(freq_coeff_index),
     .freq_coeff_in(freq_coeff_in),
-    .overdrive_enable_wr_en(), 
-    .overdrive_enable_in(),
-    .overdrive_magnitude_wr_en(),
-    .overdrive_magnitude(),
+    .overdrive_enable_wr_en(overdrive_enable_wr_en), 
+    .overdrive_enable_in(overdrive_enable_in),
+    .overdrive_magnitude_wr_en(overdrive_magnitude_wr_en),
+    .overdrive_magnitude(overdrive_magnitude),
     .tremolo_enable_wr_en(tremolo_enable_wr_en),
     .tremolo_enable_in(tremolo_enable_in),
     .output_index(output_index),
@@ -147,6 +151,19 @@ task set_tremolo_enable(reg en);
     @(posedge clk) tremolo_enable_wr_en = 0;
 endtask
 
+// turn overdrive on or off
+task set_overdrive_enable(reg en);
+    overdrive_enable_in = en;
+    @(posedge clk) overdrive_enable_wr_en = 1;
+    @(posedge clk) overdrive_enable_wr_en = 0;
+endtask
+
+// set the magnitude of the overdrive
+task set_overdrive_magnitude(reg [3:0] magnitude);
+    overdrive_magnitude = magnitude;
+    @(posedge clk) overdrive_magnitude_wr_en = 1;
+    @(posedge clk) overdrive_magnitude_wr_en = 0;
+endtask
 
 // set the amount of pitch shift
 task set_pitch_shift(reg[4:0] semitones);
