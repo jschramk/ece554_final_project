@@ -1814,3 +1814,188 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
 #    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
 # Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+# Compile of PitchShift.sv was successful.
+# Compile of AudioProcessor.sv was successful.
+# Compile of Equalizer.sv failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of Equalizer.sv failed with 3 errors.
+# Compile of Equalizer.sv failed with 3 errors.
+# Compile of Equalizer.sv failed with 3 errors.
+# Compile of Equalizer.sv failed with 2 errors.
+# Compile of Equalizer.sv failed with 1 errors.
+# Compile of Equalizer.sv was successful.
+# Compile of Execute_tb.sv was successful.
+# Compile of Equalizer_tb.sv was successful.
+vsim -gui work.Equalizer_tb
+# End time: 22:21:38 on Dec 12,2021, Elapsed time: 2:15:25
+# Errors: 0, Warnings: 13
+# vsim -gui work.Equalizer_tb 
+# Start time: 22:21:38 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.Equalizer_tb
+# Loading work.Equalizer
+add wave -position insertpoint sim:/Equalizer_tb/e/*
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(55)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 55
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(57)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 57
+# Compile of Equalizer_tb.sv failed with 1 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of Equalizer_tb.sv failed with 1 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of Equalizer_tb.sv failed with 2 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Compile of Equalizer_tb.sv failed with 3 errors.
+# Compile of Equalizer_tb.sv failed with 1 errors.
+# Compile of Equalizer_tb.sv failed with 1 errors.
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+add wave -position insertpoint  \
+sim:/Equalizer_tb/data_in_real \
+sim:/Equalizer_tb/data_in_complex \
+sim:/Equalizer_tb/data_out_real \
+sim:/Equalizer_tb/data_out_complex
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv failed with 1 errors.
+# ** Error: Acs sdne.
+# $
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer_tb.sv was successful.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+restart
+# Compile of Equalizer_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+add wave -position insertpoint  \
+sim:/Equalizer_tb/e/signed_coeff \
+sim:/Equalizer_tb/e/in_real \
+sim:/Equalizer_tb/e/in_complex \
+sim:/Equalizer_tb/e/mult_real \
+sim:/Equalizer_tb/e/mult_complex \
+sim:/Equalizer_tb/e/real_out \
+sim:/Equalizer_tb/e/complex_out
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
+#    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
+# Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65

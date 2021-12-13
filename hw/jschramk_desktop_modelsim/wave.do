@@ -35,7 +35,7 @@ add wave -noupdate -radix unsigned -radixshowbase 1 /AudioProcessor_tb/dj_disco/
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/fft_enable
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/pitch_shift_enable
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1115 ps} 0}
+WaveRestoreCursors {{Cursor 1} {84205 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 318
 configure wave -valuecolwidth 140
@@ -51,4 +51,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1652 ps}
+WaveRestoreZoom {0 ps} {105709 ps}
