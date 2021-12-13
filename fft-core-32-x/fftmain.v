@@ -25,8 +25,8 @@
 //			the real portion in the high order bits, and the
 //			imaginary portion taking the bottom 16 bits.
 //	o_result	The output result, of the same format as i_sample,
-//			only having 22 bits for each of the real and imaginary
-//			components, leading to 44 bits total.
+//			only having 16 bits for each of the real and imaginary
+//			components, leading to 32 bits total.
 //	o_sync	A one bit output indicating the first sample of the FFT frame.
 //			It also indicates the first valid sample out of the FFT
 //			on the first frame.
@@ -34,7 +34,7 @@
 // Arguments:	This file was computer generated using the following command
 //		line:
 //
-//		% ./fftgen -1 -f 2048 -x 4
+//		% ./fftgen -1 -f 2048 -m 16 -x 4
 //
 //	This core will use hardware accelerated multiplies (DSPs)
 //	for 0 of the 11 stages
@@ -83,7 +83,7 @@ module fftmain(i_clk, i_reset, i_ce,
 	// changed.  (These values can be adjusted by running the core
 	// generator again.)  The reason is simply that these values have
 	// been hardwired into the core at several places.
-	localparam	IWIDTH=16, OWIDTH=22; // LGWIDTH=11;
+	localparam	IWIDTH=16, OWIDTH=16; // LGWIDTH=11;
 	//
 	input	wire				i_clk, i_reset, i_ce;
 	//
@@ -98,12 +98,12 @@ module fftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s2048;
-	wire	[49:0]	w_d2048;
+	wire	[39:0]	w_d2048;
 	fftstage	#(
 		// {{{
 		.IWIDTH(IWIDTH),
 		.CWIDTH(IWIDTH+4),
-		.OWIDTH(25),
+		.OWIDTH(20),
 		.LGSPAN(10),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -124,12 +124,12 @@ module fftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s1024;
-	wire	[51:0]	w_d1024;
+	wire	[39:0]	w_d1024;
 	fftstage	#(
 		// {{{
-		.IWIDTH(25),
-		.CWIDTH(29),
-		.OWIDTH(26),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(9),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -149,12 +149,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s512;
-	wire	[51:0]	w_d512;
+	wire	[39:0]	w_d512;
 	fftstage	#(
 		// {{{
-		.IWIDTH(26),
-		.CWIDTH(30),
-		.OWIDTH(26),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(8),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -174,12 +174,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s256;
-	wire	[53:0]	w_d256;
+	wire	[39:0]	w_d256;
 	fftstage	#(
 		// {{{
-		.IWIDTH(26),
-		.CWIDTH(30),
-		.OWIDTH(27),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(7),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -199,12 +199,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s128;
-	wire	[53:0]	w_d128;
+	wire	[39:0]	w_d128;
 	fftstage	#(
 		// {{{
-		.IWIDTH(27),
-		.CWIDTH(31),
-		.OWIDTH(27),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(6),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -224,12 +224,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s64;
-	wire	[55:0]	w_d64;
+	wire	[39:0]	w_d64;
 	fftstage	#(
 		// {{{
-		.IWIDTH(27),
-		.CWIDTH(31),
-		.OWIDTH(28),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(5),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -249,12 +249,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s32;
-	wire	[55:0]	w_d32;
+	wire	[39:0]	w_d32;
 	fftstage	#(
 		// {{{
-		.IWIDTH(28),
-		.CWIDTH(32),
-		.OWIDTH(28),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(4),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -274,12 +274,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s16;
-	wire	[57:0]	w_d16;
+	wire	[39:0]	w_d16;
 	fftstage	#(
 		// {{{
-		.IWIDTH(28),
-		.CWIDTH(32),
-		.OWIDTH(29),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(3),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -299,12 +299,12 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s8;
-	wire	[57:0]	w_d8;
+	wire	[39:0]	w_d8;
 	fftstage	#(
 		// {{{
-		.IWIDTH(29),
-		.CWIDTH(33),
-		.OWIDTH(29),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(2),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -324,11 +324,11 @@ module fftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s4;
-	wire	[59:0]	w_d4;
+	wire	[39:0]	w_d4;
 	qtrstage	#(
 		// {{{
-		.IWIDTH(29),
-		.OWIDTH(30),
+		.IWIDTH(20),
+		.OWIDTH(20),
 		.LGWIDTH(11),
 		.INVERSE(0),
 		.SHIFT(0)
@@ -347,11 +347,11 @@ module fftmain(i_clk, i_reset, i_ce,
 	// verilator lint_off UNUSED
 	wire		w_s2;
 	// verilator lint_on  UNUSED
-	wire	[43:0]	w_d2;
+	wire	[31:0]	w_d2;
 	laststage	#(
 		// {{{
-		.IWIDTH(30),
-		.OWIDTH(22),
+		.IWIDTH(20),
+		.OWIDTH(16),
 		.SHIFT(0)
 		// }}}
 	) stage_2(
@@ -380,7 +380,7 @@ module fftmain(i_clk, i_reset, i_ce,
 	// Now for the bit-reversal stage.
 	bitreverse	#(
 		// {{{
-		.LGSIZE(11), .WIDTH(22)
+		.LGSIZE(11), .WIDTH(16)
 		// }}}
 	) revstage (
 		// {{{
