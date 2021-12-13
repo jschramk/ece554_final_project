@@ -60,6 +60,8 @@ initial begin
 
     fill_input_data();
 
+    set_pitch_shift(0);
+
     start_process();
 
     repeat(13000) @(posedge clk);
@@ -122,7 +124,7 @@ endtask
 task populate_bus(int index);
     for(int l = 0; l < 32; l++) begin
         input_array[l] = 
-            20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * index));// + 
+            20000 * $cos(2*3.141592653/45056 * 1200 * (l + 32 * index));// + 
             //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end
 endtask

@@ -41,11 +41,11 @@ module AudioProcessor #(
 typedef enum {
     IDLE, // waiting for start, FFTInput can be written to
     FEEDING_FFT, // waiting for all values to be passed into the fft
-    FFT_COMPUTING, // fft had been fed all inputs but has not started to output
+    FFT_COMPUTING, // fft has been fed all inputs but has not started to output
     FFT_OUTPUTTING, // fft is ouputting its values and passing them into pitch shift
     APPLYING_FILTERS, // pitch shift is outputting its values (equalizer too, since it arrives on the same clock)
-    IFFT_COMPUTING,
-    IFFT_OUTPUTTING
+    IFFT_COMPUTING, // ifft has been fed all inputs but has not started to ouput
+    IFFT_OUTPUTTING // ifft is outputting and time domain modules are applying their effects, result saved to fftoutput
 } state_t;
 
 state_t state, next_state;

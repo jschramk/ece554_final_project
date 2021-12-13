@@ -3108,3 +3108,46 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
 #    Time: 130675 ps  Iteration: 1  Instance: /AudioProcessor_tb
 # Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(69)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 69
+# Compile of AudioProcessor.sv was successful.
+# Compile of AudioProcessor_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(69)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 69
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(69)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 69
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(69)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 69
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(69)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 69

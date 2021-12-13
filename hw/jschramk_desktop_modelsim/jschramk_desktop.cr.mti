@@ -5,6 +5,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	laststage
 
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Overdrive
+
+Top level modules:
+	Overdrive
+
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module PitchShift
@@ -32,13 +39,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	bimpy
-
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module AudioProcessor_tb
-
-Top level modules:
-	AudioProcessor_tb
 
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -116,6 +116,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	AudioProcessor
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Tremolo
+
+Top level modules:
+	Tremolo
 
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
