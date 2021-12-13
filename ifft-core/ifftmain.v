@@ -34,7 +34,7 @@
 // Arguments:	This file was computer generated using the following command
 //		line:
 //
-//		% ./fftgen -1 -f 2048 -m 16 -i
+//		% ./fftgen -1 -f 2048 -m 16 -x 4 -i
 //
 //	This core will use hardware accelerated multiplies (DSPs)
 //	for 0 of the 11 stages
@@ -98,12 +98,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s2048;
-	wire	[31:0]	w_d2048;
+	wire	[39:0]	w_d2048;
 	fftstage	#(
 		// {{{
 		.IWIDTH(IWIDTH),
 		.CWIDTH(IWIDTH+4),
-		.OWIDTH(16),
+		.OWIDTH(20),
 		.LGSPAN(10),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -124,12 +124,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 
 
 	wire		w_s1024;
-	wire	[31:0]	w_d1024;
+	wire	[39:0]	w_d1024;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(9),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -149,12 +149,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s512;
-	wire	[31:0]	w_d512;
+	wire	[39:0]	w_d512;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(8),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -174,12 +174,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s256;
-	wire	[31:0]	w_d256;
+	wire	[39:0]	w_d256;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(7),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -199,12 +199,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s128;
-	wire	[31:0]	w_d128;
+	wire	[39:0]	w_d128;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(6),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -224,12 +224,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s64;
-	wire	[31:0]	w_d64;
+	wire	[39:0]	w_d64;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(5),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -249,12 +249,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s32;
-	wire	[31:0]	w_d32;
+	wire	[39:0]	w_d32;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(4),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -274,12 +274,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s16;
-	wire	[31:0]	w_d16;
+	wire	[39:0]	w_d16;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(3),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -299,12 +299,12 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s8;
-	wire	[31:0]	w_d8;
+	wire	[39:0]	w_d8;
 	fftstage	#(
 		// {{{
-		.IWIDTH(16),
-		.CWIDTH(20),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.CWIDTH(24),
+		.OWIDTH(20),
 		.LGSPAN(2),
 		.BFLYSHIFT(0),
 		.OPT_HWMPY(0),
@@ -324,11 +324,11 @@ module ifftmain(i_clk, i_reset, i_ce,
 	);
 
 	wire		w_s4;
-	wire	[31:0]	w_d4;
+	wire	[39:0]	w_d4;
 	qtrstage	#(
 		// {{{
-		.IWIDTH(16),
-		.OWIDTH(16),
+		.IWIDTH(20),
+		.OWIDTH(20),
 		.LGWIDTH(11),
 		.INVERSE(1),
 		.SHIFT(0)
@@ -350,7 +350,7 @@ module ifftmain(i_clk, i_reset, i_ce,
 	wire	[31:0]	w_d2;
 	laststage	#(
 		// {{{
-		.IWIDTH(16),
+		.IWIDTH(20),
 		.OWIDTH(16),
 		.SHIFT(0)
 		// }}}
