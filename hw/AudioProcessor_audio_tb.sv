@@ -21,8 +21,8 @@ reg [3:0] overdrive_magnitude;
 
 wire [511:0] data_out;
 
-reg [511:0] input_array [0:14879];
-reg [511:0] output_array [0:14879];
+reg [7:0] input_array [0:185663];
+reg [15:0] output_array [0:92831];
 
 wire [FFT_BUS_SIZE/2-1:0] fft_real, fft_imag;
 
@@ -74,7 +74,7 @@ initial begin
 			set_freq_coeff(1023-y, 3);
 		end
 
-		repeat (232) begin
+		repeat (44) begin
 			fill_input_data(idx);
 
 			start_process();
@@ -90,14 +90,14 @@ initial begin
 			
 		end
 		
-		$writememb("processed.txt", output_array);
+		$writememh("processed.txt", output_array);
 
     $stop();
 
 end
 
 always begin
-    #5 clk = ~clk;
+    #3 clk = ~clk;
     if(clk) cycle_cnt++;
 end
 
@@ -115,6 +115,12 @@ for(i = 0; i < 14880; i++) begin
 end
 endgenerate*/
 
+genvar q;
+generate
+for (q = 0; q < 64; q++) begin
+			assign data_in[7+(q*8):q*8] = input_array[idx+q];
+		end
+endgenerate
 
 
 
@@ -137,7 +143,7 @@ task init();
 		overdrive_magnitude_wr_en = 0;
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
-    data_in = 512'h0;
+    //data_in = 512'h0;
 		$readmemb("out.txt", input_array);
 endtask
 
@@ -159,7 +165,7 @@ task populate_bus(int index);
             20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * index));// + 
             //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end*/
-		data_in = input_array[index];
+		
 endtask
 
 // fill the module's input with a test wave defined in populate_bus()
