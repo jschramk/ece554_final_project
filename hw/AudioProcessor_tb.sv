@@ -64,7 +64,7 @@ initial begin
 
     data_wr_en = 0;
 
-    pitch_shift_semitones = 6;
+    pitch_shift_semitones = 0;
 
     @(posedge clk) pitch_shift_wr_en = 1;
     @(posedge clk) pitch_shift_wr_en = 0;
@@ -100,11 +100,11 @@ endgenerate
 
 task fill_data(int offset);
 
-for(int l = 0; l < 32; l++) begin
+    for(int l = 0; l < 32; l++) begin
 
-    input_array[l] = 1000 * $sin(2*3.141592653/2048 * 25 * (l + 32 * offset));
+        input_array[l] = 500 * $sin(2*3.141592653/2048 * 25 * (l + 32 * offset));
 
-end
+    end
 
 endtask
 

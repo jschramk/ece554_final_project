@@ -212,12 +212,12 @@ Equalizer eq (
     .data_out(equalizer_output_full)
 );
 
-ifftmain ifft(
+fftmain ifft(
     .i_clk(clk),
     .i_reset(~rst_n),
     .i_ce(ifft_enable),
-	.i_sample(equalizer_output_full),
-    .o_result(ifft_output_full),
+	.i_sample({equalizer_output_full[15:0], equalizer_output_full[31:16]}),
+    .o_result({ifft_output_full[15:0], ifft_output_full[31:16]}),
     .o_sync(ifft_sync)
 );
 
