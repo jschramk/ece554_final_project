@@ -27,23 +27,10 @@ initial begin
     rst_n = 1;
     shift_wr_en = 0;
     data_in = 0;
-    shift_semitones = 6;
+    shift_semitones = -12;
 
     @(posedge clk) rst_n = 0;
     @(posedge clk) rst_n = 1;
-
-    @(posedge clk) shift_wr_en = 1;
-    @(posedge clk) shift_wr_en = 0;
-
-    for(i = 0; i < 2048; i++) begin
-
-        input_index = i;
-
-        @(posedge clk);
-
-    end
-
-    shift_semitones = -6;
 
     @(posedge clk) shift_wr_en = 1;
     @(posedge clk) shift_wr_en = 0;
