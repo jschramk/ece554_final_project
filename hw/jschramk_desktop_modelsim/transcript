@@ -2282,3 +2282,129 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
 #    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
 # Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'o_result'.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 215
+# Compile of AudioProcessor.sv failed with 1 errors.
+# Compile of AudioProcessor.sv was successful.
+vsim -gui work.AudioProcessor_tb
+# vsim -gui work.AudioProcessor_tb 
+# Start time: 23:10:41 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/ifft_output_real
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# Loading work.ifftmain
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/ifft_output_imag
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/ifft_output_combined
+restart
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of PitchShift.sv was successful.
+# Compile of fftmain.v was successful.
+# Compile of AudioProcessor.sv was successful.
+# Compile of Equalizer.sv was successful.
+# Compile of ifftmain.v was successful.
+# 5 compiles, 0 failed with no errors.

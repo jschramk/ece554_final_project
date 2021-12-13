@@ -1,5 +1,5 @@
 module Equalizer #(
-    parameter SIZE = 32,
+    parameter SIZE = 44,
     parameter SAMPLES = 2048,
     parameter COEFF_BITS = 8,
     parameter COEFF_FRACTION_BITS = 5
