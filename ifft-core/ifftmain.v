@@ -21,9 +21,9 @@
 //			will accept one complex input value, and produce
 //			one (possibly empty) complex output value.
 //	i_sample	The complex input sample.  This value is split
-//			into two two's complement numbers, 16 bits each, with
+//			into two two's complement numbers, 22 bits each, with
 //			the real portion in the high order bits, and the
-//			imaginary portion taking the bottom 16 bits.
+//			imaginary portion taking the bottom 22 bits.
 //	o_result	The output result, of the same format as i_sample,
 //			only having 16 bits for each of the real and imaginary
 //			components, leading to 32 bits total.
@@ -34,7 +34,7 @@
 // Arguments:	This file was computer generated using the following command
 //		line:
 //
-//		% ./fftgen -1 -f 2048 -m 16 -x 4 -i
+//		% ./fftgen -1 -f 2048 -n 22 -m 16 -x 4 -i
 //
 //	This core will use hardware accelerated multiplies (DSPs)
 //	for 0 of the 11 stages
@@ -83,7 +83,7 @@ module ifftmain(i_clk, i_reset, i_ce,
 	// changed.  (These values can be adjusted by running the core
 	// generator again.)  The reason is simply that these values have
 	// been hardwired into the core at several places.
-	localparam	IWIDTH=16, OWIDTH=16; // LGWIDTH=11;
+	localparam	IWIDTH=22, OWIDTH=16; // LGWIDTH=11;
 	//
 	input	wire				i_clk, i_reset, i_ce;
 	//
