@@ -14,7 +14,7 @@ public class WaveFile {
     public static void main(String[] args) throws IOException {
 
         File in = new File("src/ghu_unedited.wav");
-        File out = new File("src/out.bin");
+        File out = new File("src/out.txt");
 
         WaveFile w = WaveFile.from(in);
 
@@ -25,7 +25,16 @@ public class WaveFile {
         FileWriter wr = new FileWriter(out);
 
         for (int i = 0; i < w.byteLength(); i++) {
-            wr.write(w.getByte(i));
+            //wr.write(w.getByte(i));
+
+            String bin = String.format(
+                "%8s",
+                Integer.toBinaryString(
+                    w.getByte(i)
+                )
+            ).replace(' ', '0');
+
+            wr.write(bin + "\n");
         }
 
         wr.close();
