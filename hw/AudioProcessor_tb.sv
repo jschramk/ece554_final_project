@@ -71,7 +71,7 @@ initial begin
 
     data_wr_en = 0;
 
-    pitch_shift_semitones = -8;
+    pitch_shift_semitones = -0;
 
     @(posedge clk) pitch_shift_wr_en = 1;
     @(posedge clk) pitch_shift_wr_en = 0;
@@ -123,7 +123,9 @@ task fill_data(int offset);
 
     for(int l = 0; l < 32; l++) begin
 
-        input_array[l] = 20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * offset));
+        input_array[l] = 
+            20000 * $sin(2*3.141592653/2048 * 50 * (l + 32 * offset)) + 
+            10000 * $sin(2*3.141592653/2048 * 2 * (l + 32 * offset));
 
     end
 

@@ -105,7 +105,7 @@ always_comb begin
             count_en = 1;
             fft_enable = 1;
 
-            if(&sample_counter) begin
+            if(sample_counter == SAMPLES-1) begin
                 rst_count = 1;
                 next_state = FFT_COMPUTING;
             end
@@ -130,7 +130,7 @@ always_comb begin
             fft_enable = 1;
             pitch_shift_enable = 1;
 
-            if(&sample_counter) begin
+            if(sample_counter == SAMPLES/2-1) begin
                 rst_count = 1;
                 next_state = APPLYING_FILTERS;
             end
@@ -142,7 +142,7 @@ always_comb begin
             count_en = 1;
             ifft_enable = 1; // feeding output as filters are computed
 
-            if(&sample_counter) begin
+            if(sample_counter == SAMPLES/2-1) begin
                 rst_count = 1;
                 next_state = IFFT_COMPUTING;
             end
@@ -165,7 +165,7 @@ always_comb begin
             count_en = 1;
             ifft_enable = 1;
 
-            if(&sample_counter) begin
+            if(sample_counter == SAMPLES-1) begin
                 rst_count = 1;
                 next_state = IDLE;
             end
@@ -207,7 +207,7 @@ PitchShift ps(
     .output_index(sample_counter)
 );
 
-Equalizer eq (
+Equalizer eq(
     .clk(clk),
     .rst_n(rst_n),
     .input_index(sample_counter),
