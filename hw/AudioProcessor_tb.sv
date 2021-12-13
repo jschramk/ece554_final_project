@@ -102,7 +102,7 @@ task fill_data(int offset);
 
     for(int l = 0; l < 32; l++) begin
 
-        input_array[l] = 500 * $sin(2*3.141592653/2048 * 25 * (l + 32 * offset));
+        input_array[l] = 500 * $sin(2*3.141592653/2048 * 50 * (l + 32 * offset));
 
     end
 

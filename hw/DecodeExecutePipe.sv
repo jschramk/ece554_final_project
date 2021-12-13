@@ -10,13 +10,13 @@ module DecodeExecutePipe
     input [DATAW-1:0] a_in,  b_in, 
     input [PCW-1:0] PC_in, 
     input [10:0] imm_in, 
-    output alu_op_out, use_imm_out,
+    output logic alu_op_out, use_imm_out,
          reg_wr_en_out,  mem_wr_en_out,
          shift_dist_out,  branch_out,
          fft_wr_en_out,
-    output [DATAW-1:0]  a_out,  b_out,
-    output [PCW-1:0]  PC_out,
-    output [10:0]  imm_out
+    output logic [DATAW-1:0]  a_out,  b_out,
+    output logic [PCW-1:0]  PC_out,
+    output logic [10:0]  imm_out
   );
 
     always_ff @(posedge clk) begin
