@@ -40,6 +40,10 @@ AudioProcessor dj_disco(
     .freq_coeff_wr_en(freq_coeff_wr_en),
     .freq_coeff_index(freq_coeff_index),
     .freq_coeff_in(freq_coeff_in),
+    .overdrive_enable_wr_en(), 
+    .overdrive_enable_in(),
+    .overdrive_magnitude_wr_en(),
+    .overdrive_magnitude(),
     .tremolo_enable_wr_en(tremolo_enable_wr_en),
     .tremolo_enable_in(tremolo_enable_in),
     .output_index(output_index),
@@ -50,60 +54,13 @@ AudioProcessor dj_disco(
 
 initial begin
     
-    clk = 0;
-    rst_n = 1;
-    start = 0;
-    data_wr_en = 0;
-    input_index = 0;
-    output_index = 0;
-    pitch_shift_wr_en = 0;
-    freq_coeff_wr_en = 0;
-    tremolo_enable_in = 0;
-    tremolo_enable_wr_en = 0;
-    data_in = 512'h001f_001e_001d_001c_001b_001a_0019_0018_0017_0016_0015_0014_0013_0012_0011_0010_000f_000e_000d_000c_000b_000a_0009_0008_0007_0006_0005_0004_0003_0002_0001_0000;;
+    init();
 
+    reset();
 
-    @(posedge clk) rst_n = 0;
-    @(posedge clk) rst_n = 1;
+    fill_input_data();
 
-    data_wr_en = 1;
-
-    for(int i = 0; i < 64; i++) begin
-
-        input_index = i;
-
-        fill_data(i);
-    
-        @(posedge clk);
-
-    end
-
-    data_wr_en = 0;
-
-    pitch_shift_semitones = 0;
-
-    @(posedge clk) pitch_shift_wr_en = 1;
-    @(posedge clk) pitch_shift_wr_en = 0;
-
-    tremolo_enable_in = 1;
-    @(posedge clk) tremolo_enable_wr_en = 1;
-    @(posedge clk) tremolo_enable_wr_en = 0;
-
-    for(int k = 1024; k < 2048; k++) begin
-
-        freq_coeff_index = k;
-
-        freq_coeff_in = 0;
-
-        @(posedge clk) freq_coeff_wr_en = 1;
-        @(posedge clk) freq_coeff_wr_en = 0;
-
-    end
-
-    
-
-    @(posedge clk) start = 1;
-    @(posedge clk) start = 0;
+    start_process();
 
     repeat(13000) @(posedge clk);
 
@@ -131,16 +88,77 @@ end
 endgenerate
 
 
-task fill_data(int offset);
 
+
+
+// BEGIN TASKS ---------------------------------------------------------------------------------------------
+
+task init();
+    clk = 0;
+    rst_n = 1;
+    start = 0;
+    data_wr_en = 0;
+    input_index = 0;
+    output_index = 0;
+    pitch_shift_wr_en = 0;
+    freq_coeff_wr_en = 0;
+    tremolo_enable_in = 0;
+    tremolo_enable_wr_en = 0;
+    data_in = 512'h0;
+endtask
+
+task reset();
+    @(posedge clk) rst_n = 0;
+    @(posedge clk) rst_n = 1;
+endtask
+
+// starts the processor
+task start_process();
+    @(posedge clk) start = 1;
+    @(posedge clk) start = 0;
+endtask
+
+// fill the input data into the 512 bit bus
+task populate_bus(int index);
     for(int l = 0; l < 32; l++) begin
-
         input_array[l] = 
-            20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * offset));// + 
-            //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * offset));
-
+            20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * index));// + 
+            //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end
+endtask
 
+// fill the module's input with a test wave defined in populate_bus()
+task fill_input_data();
+    data_wr_en = 1;
+    for(int i = 0; i < 64; i++) begin
+        input_index = i;
+        populate_bus(i);
+        @(posedge clk);
+    end
+    data_wr_en = 0;
+endtask
+
+// turn tremolo on or off
+task set_tremolo_enable(reg en);
+    tremolo_enable_in = en;
+    @(posedge clk) tremolo_enable_wr_en = 1;
+    @(posedge clk) tremolo_enable_wr_en = 0;
+endtask
+
+
+// set the amount of pitch shift
+task set_pitch_shift(reg[4:0] semitones);
+    pitch_shift_semitones = semitones;
+    @(posedge clk) pitch_shift_wr_en = 1;
+    @(posedge clk) pitch_shift_wr_en = 0;
+endtask
+
+// set a frequency coefficient for the equalizer
+task set_freq_coeff(reg [10:0] bucket, reg [7:0] coeff);
+    freq_coeff_index = bucket;
+    freq_coeff_in = coeff;
+    @(posedge clk) freq_coeff_wr_en = 1;
+    @(posedge clk) freq_coeff_wr_en = 0;
 endtask
 
 endmodule
