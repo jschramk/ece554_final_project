@@ -4,12 +4,12 @@ module Overdrive_tb();
 	logic rst_n;
 	//logic prev_module_done;
 	//logic next_module_ready;
-	logic [31:0] address_in;
+	//logic [31:0] address_in;
 	logic en;
 	logic [3:0] magnitude;
 	logic set_magnitude;
 	logic signed [15:0] audio_in;
-	logic [31:0] address_out;
+	//logic [31:0] address_out;
 	logic signed [15:0] audio_out;
 	//logic ready_for_data;
 	//logic done;
@@ -18,9 +18,9 @@ module Overdrive_tb();
 	//logic [15:0] outplot;
 	
 	Overdrive iDUT(.clk(clk), .rst_n(rst_n), /*.prev_module_done(prev_module_done),
-			.next_module_ready(next_module_ready),*/ .address_in(address_in),
+			.next_module_ready(next_module_ready), .address_in(address_in),*/
 			.en(en), .magnitude(magnitude), .set_magnitude(set_magnitude),
-			.audio_in(audio_in), .address_out(address_out), .audio_out(audio_out)/*,
+			.audio_in(audio_in), /*.address_out(address_out),*/ .audio_out(audio_out)/*,
 			.ready_for_data(ready_for_data), .done(done)*/);
 			
 	always #4 clk = ~clk;
@@ -30,7 +30,7 @@ module Overdrive_tb();
 		rst_n = 1'b0;
 		@(posedge clk) begin end
 		rst_n = 1'b1;
-		address_in = 32'h00000000;
+		//address_in = 32'h00000000;
 		en = 1'b1;
 		magnitude = 4'h3;
 		set_magnitude = 1'b1;

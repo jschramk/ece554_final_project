@@ -5,10 +5,12 @@ module Overdrive (
     input [3:0] magnitude,
     input set_magnitude,
     input signed [15:0] audio_in,
-    output reg signed [15:0] audio_out
+    output signed [15:0] audio_out
 );
 
 logic signed [15:0] max_amp;
+
+assign audio_out = en ? (audio_in > max_amp ? max_amp : audio_in < (max_amp * -1) ?	(max_amp * -1) : audio_in) : audio_in;
 
 always @(posedge clk or negedge rst_n) begin
 
@@ -42,7 +44,7 @@ always @(posedge clk or negedge rst_n) begin
 
 		end
 
-		if (en) begin
+		/*if (en) begin
 
 			if(audio_in > max_amp) begin
 
@@ -62,7 +64,7 @@ always @(posedge clk or negedge rst_n) begin
 
 			audio_out = audio_in;
 
-		end
+		end*/
 
 	end
 	
