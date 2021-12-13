@@ -1,5 +1,5 @@
 module PitchShift #(
-    parameter SIZE = 32,
+    parameter SIZE = 44,
     parameter SAMPLES = 2048
 ) (
     input clk, rst_n,

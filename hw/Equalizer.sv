@@ -1,5 +1,5 @@
 module Equalizer #(
-    parameter SIZE = 32,
+    parameter SIZE = 44,
     parameter SAMPLES = 2048,
     parameter COEFF_BITS = 8,
     parameter COEFF_FRACTION_BITS = 5
@@ -24,7 +24,7 @@ wire [SIZE/2-1:0] real_out, complex_out;
 assign in_real = data_in[SIZE-1:SIZE/2];
 assign in_complex = data_in[SIZE/2-1:0];
 
-assign signed_coeff = {1'b0, coeffs[coeff_index]};
+assign signed_coeff = {1'b0, coeffs[input_index]};
 
 assign mult_real = in_real * signed_coeff;
 assign mult_complex = in_complex * signed_coeff;
