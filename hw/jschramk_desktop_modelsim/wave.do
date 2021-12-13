@@ -6,7 +6,7 @@ add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_dis
 add wave -noupdate -radix unsigned /AudioProcessor_tb/cycle_cnt
 add wave -noupdate -divider control
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/start
-add wave -noupdate -divider -height 34 inputs
+add wave -noupdate -divider -height 34 INPUTS
 add wave -noupdate -divider {data in}
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/data_wr_en
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/input_index
@@ -21,7 +21,7 @@ add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_dis
 add wave -noupdate -divider {data out}
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/output_index
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/data_out
-add wave -noupdate -divider -height 34 internal
+add wave -noupdate -divider -height 34 INTERNAL
 add wave -noupdate -divider states
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/state
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/next_state
@@ -35,7 +35,7 @@ add wave -noupdate -radix unsigned -radixshowbase 1 /AudioProcessor_tb/dj_disco/
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/fft_enable
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/pitch_shift_enable
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+WaveRestoreCursors {{Cursor 1} {1115 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 318
 configure wave -valuecolwidth 140
@@ -51,4 +51,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {105037 ps}
+WaveRestoreZoom {0 ps} {1652 ps}

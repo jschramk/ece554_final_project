@@ -1,7 +1,8 @@
 module AudioProcessor #(
     parameter SIZE = 16,
     parameter INPUT_SIZE = 512,
-    parameter SAMPLES = 2048
+    parameter SAMPLES = 2048,
+    parameter COEFF_BITS = 8
 )(
     // control inputs
     input clk, rst_n,
@@ -17,11 +18,14 @@ module AudioProcessor #(
     // frequency coefficients (SFC instruction)
     input freq_coeff_wr_en,
     input [$clog2(SAMPLES)-1:0] freq_coeff_index,
-    input [15:0] freq_coeff_in,
+    input [COEFF_BITS-1:0] freq_coeff_in,
     // output select
     input [$clog2(INPUTS_TO_FILL)-1:0] output_index,
     // output wave data (STE instruction)
     output [INPUT_SIZE-1:0] data_out
+
+    // might have to add a done flag for when
+    // the whole process is complete and the CPU can grab the data
 
 );
 
@@ -176,7 +180,7 @@ PitchShift ps(
     .shift_wr_en(pitch_shift_wr_en),
     .en(pitch_shift_enable),
     .input_index(sample_counter),
-    .output_index()
+    .output_index(sample_counter)
 );
 
 endmodule
