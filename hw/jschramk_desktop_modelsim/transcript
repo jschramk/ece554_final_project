@@ -2408,3 +2408,417 @@ run -all
 # Compile of Equalizer.sv was successful.
 # Compile of ifftmain.v was successful.
 # 5 compiles, 0 failed with no errors.
+# Compile of fftmain.v was successful.
+# Compile of ifftmain.v was successful.
+# Compile of ifftstage.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.PitchShift
+# Loading work.Equalizer
+# Loading work.ifftmain
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (44) for port 'o_result'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v(79).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 220
+# Warning in wave window restart: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/ifft_output_combined'. 
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# Compile of AudioProcessor.sv failed with 1 errors.
+# Compile of AudioProcessor_tb.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/fft_real \
+sim:/AudioProcessor_tb/fft_imag
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+# Compile of PitchShift.sv was successful.
+# Compile of AudioProcessor.sv was successful.
+# Compile of Equalizer.sv was successful.
+# Compile of ifftmain.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# Loading work.PitchShift
+# Loading work.Equalizer
+# Loading work.ifftmain
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+vsim -gui work.PitchShift_tb
+# End time: 02:30:42 on Dec 13,2021, Elapsed time: 3:20:01
+# Errors: 0, Warnings: 1
+# vsim -gui work.PitchShift_tb 
+# Start time: 02:30:42 on Dec 13,2021
+# Loading sv_std.std
+# Loading work.PitchShift_tb
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'data_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (32) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+# Compile of PitchShift_tb.sv was successful.
+add wave -position insertpoint sim:/PitchShift_tb/ps/*
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (43) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of PitchShift.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (43) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (43) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (43) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (44) does not match connection size (43) for port 'data_out'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /PitchShift_tb/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv Line: 9
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+# Compile of PitchShift_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.PitchShift_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv(59)
+#    Time: 40995 ps  Iteration: 1  Instance: /PitchShift_tb
+# Break in Module PitchShift_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv line 59
+vsim -gui work.AudioProcessor_tb
+# End time: 03:31:23 on Dec 13,2021, Elapsed time: 1:00:41
+# Errors: 0, Warnings: 1
+# vsim -gui work.AudioProcessor_tb 
+# Start time: 03:31:23 on Dec 13,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.ifftmain
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+do wave.do
+# fixed#5#decimal
+# fixed#5#decimal#signed
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+# ** Error: Acs sdne.
+# $
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(84)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 84
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(92)
+#    Time: 130715 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 92
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of PitchShift.sv was successful.
+# Compile of AudioProcessor_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# Loading work.PitchShift
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (10) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTInput.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/in File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 179
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (10) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 198
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (10) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ps File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 198
+# ** Warning: (vsim-3015) [PCDPC] - Port size (11) does not match connection size (10) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/eq File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 210
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor

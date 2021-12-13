@@ -3,7 +3,8 @@ module AudioProcessor #(
     parameter INPUT_SIZE = 512,
     parameter SAMPLES = 2048,
     parameter COEFF_BITS = 8,
-    parameter FFT_BUS_SIZE = 44
+    parameter FFT_BUS_SIZE = 44,
+    parameter IFFT_BUS_SIZE = 56
 )(
     // control inputs
     input clk, rst_n,
@@ -50,11 +51,11 @@ localparam SAMPLES_PER_INPUT = INPUT_SIZE / SIZE; // 32
 wire fft_sync, ifft_sync;
 wire [15:0] fft_sample_in;
 wire [FFT_BUS_SIZE-1:0] fft_output_full; // 16 real bits, 16 complex bits
-wire [FFT_BUS_SIZE-1:0] ifft_output_full; // 16 real bits, 16 complex bits
+wire [IFFT_BUS_SIZE-1:0] ifft_output_full; // 16 real bits, 16 complex bits
 wire [FFT_BUS_SIZE-1:0] pitch_shift_output_full; // 16 real bits, 16 complex bits
 wire [FFT_BUS_SIZE-1:0] equalizer_output_full; // 16 real bits, 16 complex bits
-wire [FFT_BUS_SIZE/2-1:0] ifft_output_real;
-wire [FFT_BUS_SIZE/2-1:0] ifft_output_imag;
+wire [IFFT_BUS_SIZE/2-1:0] ifft_output_real;
+wire [IFFT_BUS_SIZE/2-1:0] ifft_output_imag;
 
 // control signals from state machine
 reg [$clog2(SAMPLES)-1:0] sample_counter; // counter for different stages
@@ -62,8 +63,8 @@ reg count_en, rst_count;
 reg fft_enable, ifft_enable;
 reg pitch_shift_enable;
 
-assign ifft_output_real = ifft_output_full[31:16];
-assign ifft_output_imag = ifft_output_full[15:0];
+assign ifft_output_real = ifft_output_full[IFFT_BUS_SIZE-1:IFFT_BUS_SIZE/2];
+assign ifft_output_imag = ifft_output_full[IFFT_BUS_SIZE/2:0];
 
 // reset and state progression
 always @(posedge clk, negedge rst_n) begin

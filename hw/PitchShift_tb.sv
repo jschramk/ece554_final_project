@@ -1,10 +1,10 @@
 module PitchShift_tb;
 
 reg clk, rst_n, shift_wr_en, en;
-reg [31:0] data_in;
+reg [43:0] data_in;
 reg [10:0] input_index, output_index;
 reg [4:0] shift_semitones;
-wire [31:0] data_out;
+wire [43:0] data_out;
 
 PitchShift ps(
     .clk(clk),

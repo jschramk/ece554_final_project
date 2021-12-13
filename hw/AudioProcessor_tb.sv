@@ -1,5 +1,7 @@
 module AudioProcessor_tb;
 
+localparam FFT_BUS_SIZE = 44;
+
 reg clk, rst_n;
 reg start;
 reg data_wr_en;
@@ -14,6 +16,11 @@ reg [7:0] freq_coeff_in;
 wire [511:0] data_out;
 
 reg [15:0] input_array [31:0];
+
+wire [FFT_BUS_SIZE/2-1:0] fft_real, fft_imag;
+
+assign fft_real = dj_disco.fft_output_full[FFT_BUS_SIZE-1:FFT_BUS_SIZE/2];
+assign fft_imag = dj_disco.fft_output_full[FFT_BUS_SIZE/2-1:0];
 
 longint cycle_cnt = 0;
 
@@ -64,10 +71,24 @@ initial begin
 
     data_wr_en = 0;
 
-    pitch_shift_semitones = 0;
+    pitch_shift_semitones = -8;
 
     @(posedge clk) pitch_shift_wr_en = 1;
     @(posedge clk) pitch_shift_wr_en = 0;
+
+
+    for(int k = 1024; k < 2048; k++) begin
+
+        freq_coeff_index = k;
+
+        freq_coeff_in = 0;
+
+        @(posedge clk) freq_coeff_wr_en = 1;
+        @(posedge clk) freq_coeff_wr_en = 0;
+
+    end
+
+    
 
     @(posedge clk) start = 1;
     @(posedge clk) start = 0;
@@ -86,7 +107,7 @@ end
 
 genvar i, j;
 generate
-for(i = 0; i < 2028; i++) begin
+for(i = 0; i < 2048; i++) begin
 
     for(j = 0; j < 16; j += 8) begin
         
@@ -102,7 +123,7 @@ task fill_data(int offset);
 
     for(int l = 0; l < 32; l++) begin
 
-        input_array[l] = 500 * $sin(2*3.141592653/2048 * 50 * (l + 32 * offset));
+        input_array[l] = 20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * offset));
 
     end
 
