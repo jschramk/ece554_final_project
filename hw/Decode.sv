@@ -1,12 +1,12 @@
 module Decode 
  #(
-    NUMREGISTERS=8,
     DATAW=32,
     INSTRW=16,
-    REGW=3,
-    IMMW=11
+    IMMW=11,
+    NUMREGISTERS=8,
+    REGW=3
   ) (
-    input reg_wr_en_in, rst_n, clk,
+    input clk, rst_n, reg_wr_en_in,
     input [REGW-1:0] wr_reg,
     input [INSTRW-1:0] instr,
     input [DATAW-1:0] wr_data,
