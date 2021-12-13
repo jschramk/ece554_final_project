@@ -1999,3 +1999,225 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv(65)
 #    Time: 40975 ps  Iteration: 1  Instance: /Equalizer_tb
 # Break in Module Equalizer_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv line 65
+# Compile of AudioProcessor.sv was successful.
+vsim -gui work.AudioProcessor_tb
+# End time: 23:10:41 on Dec 12,2021, Elapsed time: 0:49:03
+# Errors: 0, Warnings: 2
+# vsim -gui work.AudioProcessor_tb 
+# Start time: 23:10:41 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'freq_coeff_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 18
+wave.do
+# couldn't execute ".\wave.do": no such file or directory
+pwd
+# C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim
+do wave.do
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/equalizer_output_full
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'freq_coeff_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 18
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'freq_coeff_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 18
+# Warning in wave window restart: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/pitch_shift_output_index'. 
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+add wave -position insertpoint sim:/AudioProcessor_tb/dj_disco/eq/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'freq_coeff_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 18
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+# Compile of Equalizer.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Equalizer
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'freq_coeff_in'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 18
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(67)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 67
+# Compile of AudioProcessor_tb.sv failed with 1 errors.
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(71)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 71
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(71)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 71
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(72)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 72
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(72)
+#    Time: 100675 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 72
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 100695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+# WARNING: No extended dataflow license exists
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+# Compile of AudioProcessor.sv was successful.
+# Compile of AudioProcessor_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# ** Error: (vsim-3033) Instantiation of 'ifftmain' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 215
+#         Searched libraries:
+#             C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/work
+# Compile of bimpy.v was successful.
+# Compile of bitreverse.v was successful.
+# Compile of butterfly.v was successful.
+# Compile of convround.v was successful.
+# Compile of hwbfly.v was successful.
+# Compile of ifftmain.v was successful.
+# Compile of ifftstage.v was successful.
+# Compile of laststage.v was successful.
+# Compile of longbimpy.v was successful.
+# Compile of qtrstage.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.AudioProcessor_tb
+# vsim -gui work.AudioProcessor_tb 
+# Start time: 23:10:41 on Dec 12,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.ifftmain
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_2048.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_2048
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_1024.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_1024
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_512.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_512
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_256.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_256
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_128.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_128
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_64.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_64
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_32.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_32
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_16.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_16
+# ** Warning: (vsim-7) Failed to open readmem file "icmem_8.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v(131)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco/ifft/stage_8
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/ifft_sync \
+sim:/AudioProcessor_tb/dj_disco/ifft_output_full \
+sim:/AudioProcessor_tb/dj_disco/ifft_enable
+restart
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(77)
+#    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 77

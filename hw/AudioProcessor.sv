@@ -35,7 +35,9 @@ typedef enum {
     FEEDING_FFT, // waiting for all values to be passed into the fft
     FFT_COMPUTING, // fft had been fed all inputs but has not started to output
     FFT_OUTPUTTING, // fft is ouputting its values and passing them into pitch shift
-    PITCH_SHIFT_OUTPUTTING // pitch shift is outputting its values
+    APPLYING_FILTERS, // pitch shift is outputting its values (equalizer too, since it arrives on the same clock)
+    IFFT_COMPUTING,
+    IFFT_OUTPUTTING
 } state_t;
 
 state_t state, next_state;
@@ -44,16 +46,17 @@ localparam INPUTS_TO_FILL = SAMPLES * SIZE / INPUT_SIZE; // 64
 localparam SAMPLES_PER_INPUT = INPUT_SIZE / SIZE; // 32
 
 // module connections
-wire fft_sync;
+wire fft_sync, ifft_sync;
 wire [15:0] fft_sample_in;
 wire [31:0] fft_output_full; // 16 real bits, 16 complex bits
+wire [31:0] ifft_output_full; // 16 real bits, 16 complex bits
 wire [31:0] pitch_shift_output_full; // 16 real bits, 16 complex bits
-wire [$clog2(SAMPLES)-1:0] pitch_shift_output_index;
+wire [31:0] equalizer_output_full; // 16 real bits, 16 complex bits
 
 // control signals from state machine
 reg [$clog2(SAMPLES)-1:0] sample_counter; // counter for different stages
 reg count_en, rst_count;
-reg fft_enable;
+reg fft_enable, ifft_enable;
 reg pitch_shift_enable;
 
 
@@ -76,6 +79,7 @@ always_comb begin
     
     next_state = state;
     fft_enable = 0;
+    ifft_enable = 0;
     pitch_shift_enable = 0;
     count_en = 0;
     rst_count = 0;
@@ -122,14 +126,38 @@ always_comb begin
 
             if(&sample_counter) begin
                 rst_count = 1;
-                next_state = PITCH_SHIFT_OUTPUTTING;
+                next_state = APPLYING_FILTERS;
             end
 
         end
 
-        PITCH_SHIFT_OUTPUTTING : begin
+        APPLYING_FILTERS : begin
 
             count_en = 1;
+            ifft_enable = 1; // feeding output as filters are computed
+
+            if(&sample_counter) begin
+                rst_count = 1;
+                next_state = IFFT_COMPUTING;
+            end
+
+        end
+
+        IFFT_COMPUTING : begin
+
+            ifft_enable = 1;
+
+            if(ifft_sync)begin
+                rst_count = 1;
+                next_state = IFFT_OUTPUTTING;
+            end
+
+        end
+
+        IFFT_OUTPUTTING : begin
+
+            count_en = 1;
+            ifft_enable = 1;
 
             if(&sample_counter) begin
                 rst_count = 1;
@@ -161,16 +189,6 @@ fftmain fft(
     .o_sync(fft_sync)
 );
 
-/*
-FFTCounter counter(
-    .clk(clk),
-    .rst_n(rst_n),
-    .fft_sync(fft_sync),
-    .clr_cnt(),
-    .count(fft_count)
-);
-*/
-
 PitchShift ps(
     .clk(clk),
     .rst_n(rst_n),
@@ -181,6 +199,26 @@ PitchShift ps(
     .en(pitch_shift_enable),
     .input_index(sample_counter),
     .output_index(sample_counter)
+);
+
+Equalizer eq (
+    .clk(clk),
+    .rst_n(rst_n),
+    .input_index(sample_counter),
+    .data_in(pitch_shift_output_full),
+    .coeff_wr_en(freq_coeff_wr_en),
+    .coeff_index(freq_coeff_index),
+    .coeff_in(freq_coeff_in),
+    .data_out(equalizer_output_full)
+);
+
+ifftmain ifft(
+    .i_clk(clk),
+    .i_reset(~rst_n),
+    .i_ce(ifft_enable),
+	.i_sample(equalizer_output_full),
+    .o_result(ifft_output_full),
+    .o_sync(ifft_sync)
 );
 
 endmodule

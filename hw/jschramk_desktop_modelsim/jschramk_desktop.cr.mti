@@ -1,4 +1,32 @@
-{C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv}
+{C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module laststage
+
+Top level modules:
+	laststage
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module longbimpy
+
+Top level modules:
+	longbimpy
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module butterfly
+
+Top level modules:
+	butterfly
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bimpy
+
+Top level modules:
+	bimpy
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module PitchShift
 
@@ -13,6 +41,13 @@ Top level modules:
 	AudioProcessor_tb
 
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/qtrstage.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module qtrstage
+
+Top level modules:
+	qtrstage
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module qtrstage
 
@@ -47,6 +82,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	fftstage
 
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hwbfly
+
+Top level modules:
+	hwbfly
+
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module fftmain
@@ -68,12 +110,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	SemitoneLUT
 
-} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv}
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module AudioProcessor
+-- Compiling module convround
 
 Top level modules:
-	AudioProcessor
+	convround
 
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/laststage.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -138,6 +180,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	bitreverse
 
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module bitreverse
+
+Top level modules:
+	bitreverse
+
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module FFTCounter
@@ -145,12 +194,33 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	FFTCounter
 
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module fftstage
+
+Top level modules:
+	fftstage
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Equalizer
+
+Top level modules:
+	Equalizer
+
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/convround.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module convround
 
 Top level modules:
 	convround
+
+} {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v} {1 {vlog -work work -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ifftmain
+
+Top level modules:
+	ifftmain
 
 } {} {}} {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
