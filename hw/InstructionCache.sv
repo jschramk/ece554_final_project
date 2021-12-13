@@ -1,17 +1,50 @@
-module cache
+module InstructionCache
   #(
-    parameter INDW=16,
-    parameter DATAW=32,
-    parameter TAGW=6,
-    parameter DEPTH= 2 ** INDW,
+    parameter DATAW=16,
+    parameter INW=512,
+    parameter ADDRW=32,
+    parameter NUMINSTRUCTIONS=INW/DATAW
    )
    (
-    input clk, rst_n, write, en, // r_w=0 read, =1 write
-    input [DATAW-1:0] data_in, [TAGW-1:0] tag_in,
-    output valid, dirty, stall, 
-    output [1:0] mem_op,
-    output [DATAW-1:0] data_out, [TAGW-1:0] tag_out,
+    input clk, rst_n, write,
+    input [INW-1:0] data_in,
+    input [ADDRW-1:0] addr_in, base_addr_in,
+    output logic valid_out,
+    output logic [DATAW-1:0] data_out
    );
+
+    reg [INW-1:0] data;
+    reg [ADDRW-1:0] base_addr;
+    reg valid;
+
+    integer index;
+    assign index = (addr_in - base_addr_in) >> 1;
+
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            data = 0;
+            base_addr = 0;
+            valid = 0;
+            valid_out = 0;
+        end else begin
+            if (write) begin
+                data = data_in;
+                base_addr = base_addr_in;
+                valid = 1;
+            end
+
+            if (index >= NUMINSTRUCTIONS || index < 0) begin
+                valid_out = 0;
+            end else begin
+                valid_out = valid;
+                data_out = data[(INW-1) - (index * DATAW) -: DATAW];
+            end
+        end
+    end
+
+
+endmodule
+   /*
 
     reg [DATAW-1:0] data [INDW-1:0];
     reg [TAGW-1:0] tags [INDW-1:0];
@@ -61,3 +94,4 @@ module cache
 
 
 endmodule
+*/
