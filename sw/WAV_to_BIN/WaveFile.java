@@ -30,7 +30,7 @@ public class WaveFile {
             String bin = String.format(
                 "%8s",
                 Integer.toBinaryString(
-                    w.getByte(i)
+                    w.getByte(i) & 0xff
                 )
             ).replace(' ', '0');
 
