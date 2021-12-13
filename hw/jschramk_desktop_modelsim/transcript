@@ -2909,3 +2909,166 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
 #    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
 # Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+add wave -position 30  sim:/AudioProcessor_tb/dj_disco/fft_output_full
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(98)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 98
+# Compile of AudioProcessor.sv was successful.
+# Compile of AudioProcessor_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# ** Error: (vsim-3033) Instantiation of 'Overdrive' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 265
+#         Searched libraries:
+#             C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/work
+# ** Error: (vsim-3033) Instantiation of 'Tremolo' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor.sv Line: 275
+#         Searched libraries:
+#             C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/work
+# Loading work.FFTOutput
+# Compile of Overdrive.sv was successful.
+# Compile of Tremolo.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.AudioProcessor_tb
+# vsim -gui work.AudioProcessor_tb 
+# Start time: 03:31:23 on Dec 13,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.ifftmain
+# Loading work.Overdrive
+# Loading work.Tremolo
+# Loading work.FFTOutput
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 27
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'tremolo_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'tremolo_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(27): [TFMPC] - Missing connection for port 'done'.
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 29
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'tremolo_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(29): [TFMPC] - Missing connection for port 'tremolo_enable_in'.
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/done
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/tremolo_out \
+sim:/AudioProcessor_tb/dj_disco/overdrive_out
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(101)
+#    Time: 151175 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 101
+# Compile of AudioProcessor_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_tb
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(110)
+#    Time: 151195 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 110
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(110)
+#    Time: 151195 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 110
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(110)
+#    Time: 151195 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 110
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(110)
+#    Time: 151195 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 110
+add wave -position insertpoint  \
+sim:/AudioProcessor_tb/dj_disco/fft_out_wr_en
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dj_disco'.  Expected 20, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_tb/dj_disco File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv Line: 31
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_enable_in'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude_wr_en'.
+# ** Warning: (vsim-3722) C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(31): [TFMPC] - Missing connection for port 'overdrive_magnitude'.
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(110)
+#    Time: 151195 ps  Iteration: 1  Instance: /AudioProcessor_tb
+# Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 110

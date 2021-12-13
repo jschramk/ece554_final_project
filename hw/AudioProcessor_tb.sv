@@ -12,12 +12,16 @@ reg [4:0] pitch_shift_semitones;
 reg freq_coeff_wr_en;
 reg [10:0] freq_coeff_index;
 reg [7:0] freq_coeff_in;
+reg tremolo_enable_wr_en;
+reg tremolo_enable_in;
 
 wire [511:0] data_out;
 
 reg [15:0] input_array [31:0];
 
 wire [FFT_BUS_SIZE/2-1:0] fft_real, fft_imag;
+
+wire done;
 
 assign fft_real = dj_disco.fft_output_full[FFT_BUS_SIZE-1:FFT_BUS_SIZE/2];
 assign fft_imag = dj_disco.fft_output_full[FFT_BUS_SIZE/2-1:0];
@@ -36,8 +40,11 @@ AudioProcessor dj_disco(
     .freq_coeff_wr_en(freq_coeff_wr_en),
     .freq_coeff_index(freq_coeff_index),
     .freq_coeff_in(freq_coeff_in),
+    .tremolo_enable_wr_en(tremolo_enable_wr_en),
+    .tremolo_enable_in(tremolo_enable_in),
     .output_index(output_index),
-    .data_out(data_out)
+    .data_out(data_out),
+    .done(done)
 );
 
 
@@ -51,6 +58,8 @@ initial begin
     output_index = 0;
     pitch_shift_wr_en = 0;
     freq_coeff_wr_en = 0;
+    tremolo_enable_in = 0;
+    tremolo_enable_wr_en = 0;
     data_in = 512'h001f_001e_001d_001c_001b_001a_0019_0018_0017_0016_0015_0014_0013_0012_0011_0010_000f_000e_000d_000c_000b_000a_0009_0008_0007_0006_0005_0004_0003_0002_0001_0000;;
 
 
@@ -71,11 +80,14 @@ initial begin
 
     data_wr_en = 0;
 
-    pitch_shift_semitones = -0;
+    pitch_shift_semitones = 0;
 
     @(posedge clk) pitch_shift_wr_en = 1;
     @(posedge clk) pitch_shift_wr_en = 0;
 
+    tremolo_enable_in = 1;
+    @(posedge clk) tremolo_enable_wr_en = 1;
+    @(posedge clk) tremolo_enable_wr_en = 0;
 
     for(int k = 1024; k < 2048; k++) begin
 
@@ -124,8 +136,8 @@ task fill_data(int offset);
     for(int l = 0; l < 32; l++) begin
 
         input_array[l] = 
-            20000 * $sin(2*3.141592653/2048 * 50 * (l + 32 * offset)) + 
-            10000 * $sin(2*3.141592653/2048 * 2 * (l + 32 * offset));
+            20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * offset));// + 
+            //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * offset));
 
     end
 

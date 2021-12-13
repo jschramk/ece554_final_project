@@ -21,14 +21,20 @@ module AudioProcessor #(
     input freq_coeff_wr_en,
     input [$clog2(SAMPLES)-1:0] freq_coeff_index,
     input [COEFF_BITS-1:0] freq_coeff_in,
+    // overdrive
+    input overdrive_enable_wr_en, // write enable for OD enable bus
+    input overdrive_enable_in,
+    input overdrive_magnitude_wr_en,
+    input [3:0] overdrive_magnitude,
+    // tremolo
+    input tremolo_enable_wr_en,
+    input tremolo_enable_in,
     // output select
     input [$clog2(INPUTS_TO_FILL)-1:0] output_index,
     // output wave data (STE instruction)
-    output [INPUT_SIZE-1:0] data_out
-
-    // might have to add a done flag for when
-    // the whole process is complete and the CPU can grab the data
-
+    output [INPUT_SIZE-1:0] data_out,
+    // flag for when data is ready to be read back out
+    output reg done
 );
 
 // states for computation
@@ -57,14 +63,36 @@ wire [FFT_BUS_SIZE-1:0] equalizer_output_full; // 16 real bits, 16 complex bits
 wire [IFFT_BUS_SIZE/2-1:0] ifft_output_real;
 wire [IFFT_BUS_SIZE/2-1:0] ifft_output_imag;
 
+wire [15:0] tremolo_out, overdrive_out;
+
 // control signals from state machine
 reg [$clog2(SAMPLES)-1:0] sample_counter; // counter for different stages
 reg count_en, rst_count;
 reg fft_enable, ifft_enable;
 reg pitch_shift_enable;
+reg tremolo_enable, overdrive_enable;
+reg fft_out_wr_en;
 
 assign ifft_output_real = ifft_output_full[IFFT_BUS_SIZE-1:IFFT_BUS_SIZE/2];
 assign ifft_output_imag = ifft_output_full[IFFT_BUS_SIZE/2:0];
+
+// dff for tremolo enable
+always @(posedge clk, negedge rst_n) begin
+    if(~rst_n) begin
+        tremolo_enable <= 0;
+    end else if(tremolo_enable_wr_en) begin
+        tremolo_enable <= tremolo_enable_in;
+    end
+end
+
+// dff for overdrive enable
+always @(posedge clk, negedge rst_n) begin
+    if(~rst_n) begin
+        overdrive_enable <= 0;
+    end else if(overdrive_enable_wr_en) begin
+        overdrive_enable <= overdrive_enable_in;
+    end
+end
 
 // reset and state progression
 always @(posedge clk, negedge rst_n) begin
@@ -89,13 +117,19 @@ always_comb begin
     pitch_shift_enable = 0;
     count_en = 0;
     rst_count = 0;
+    fft_out_wr_en = 0;
+    done = 0;
+
 
     case (state)
 
         IDLE : begin
 
+            done = 1;
+
             if(start) begin
                 next_state = FEEDING_FFT;
+                done = 0;
             end
 
         end
@@ -155,6 +189,7 @@ always_comb begin
 
             if(ifft_sync)begin
                 rst_count = 1;
+                fft_out_wr_en = 1;
                 next_state = IFFT_OUTPUTTING;
             end
 
@@ -164,9 +199,9 @@ always_comb begin
 
             count_en = 1;
             ifft_enable = 1;
+            fft_out_wr_en = 1;
 
             if(sample_counter == SAMPLES-1) begin
-                rst_count = 1;
                 next_state = IDLE;
             end
 
@@ -225,6 +260,34 @@ ifftmain ifft(
 	.i_sample(equalizer_output_full),
     .o_result(ifft_output_full),
     .o_sync(ifft_sync)
+);
+
+Overdrive od(
+    .clk(clk),
+    .rst_n(rst_n),
+    .en(overdrive_enable),
+    .magnitude(overdrive_magnitude), // 4 bits
+    .set_magnitude(overdrive_magnitude_wr_en),
+    .audio_in(ifft_output_real[15:0]), // <-------------- check this clipped output in case of issues
+    .audio_out(overdrive_out)
+);
+
+Tremolo trem(
+    .clk(clk),
+    .rst_n(rst_n),
+    .en(tremolo_enable),
+    .audio_in(overdrive_out),
+    .audio_out(tremolo_out)
+);
+
+FFTOutput out(
+    .clk(clk),
+    .rst_n(rst_n),
+    .data_out(data_out),
+    .output_index(output_index),
+    .input_index(sample_counter), // 11 bits
+    .wr_en(fft_out_wr_en),
+    .data_in(tremolo_out) // 16 bits
 );
 
 endmodule
