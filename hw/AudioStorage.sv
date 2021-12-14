@@ -1,6 +1,6 @@
 module AudioStorage #(
     parameter SIZE = 8,
-    parameter SAMPLES = 262144,
+    parameter SAMPLES = 1048576,
     parameter INPUT_SIZE = 512
 ) (
     input clk, rst_n,

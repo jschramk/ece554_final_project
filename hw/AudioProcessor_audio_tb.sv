@@ -91,6 +91,12 @@ initial begin
 			set_freq_coeff(1023-y, 3);
 		end*/
 
+        set_overdrive_enable(1);
+
+        set_overdrive_magnitude(10);
+
+        set_pitch_shift(-2);
+
 		repeat (22 * 10) begin
 
 			fill_input_data();

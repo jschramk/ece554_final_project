@@ -89,24 +89,24 @@ R8
 n@audio@processor_tb
 vAudioReader
 R0
-!s110 1639453684
+Z9 !s110 1639480675
 !i10b 1
-!s100 8BV:aC9Wa0@4cHC1zFj2d0
+!s100 1YbgCEM4RFe[m]`:Ndj9i1
 R2
-IY6WKQDNL^eBE;5[VmCCOP0
+IdeNQ`mUPkH5:RfZabij`M0
 R3
 S1
 R4
-w1639453364
+w1639480642
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv
-!i122 705
+!i122 721
 L0 1 48
 R5
 r1
 !s85 0
 31
-!s108 1639453684.000000
+Z10 !s108 1639480675.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv|
 !i113 1
@@ -115,24 +115,24 @@ R8
 n@audio@reader
 vAudioStorage
 R0
-!s110 1639459569
+R9
 !i10b 1
-!s100 W2APAi0SnDJaNV5dES7ze1
+!s100 bSNcTYzV?K_N2RXD@DMiA1
 R2
-I?fAFhMAcD<ec3Sk=DMCYR3
+IDAX[S0aaI4;5hD_daPkKJ2
 R3
 S1
 R4
-w1639457953
+w1639480657
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv
-!i122 707
+!i122 720
 L0 1 52
 R5
 r1
 !s85 0
 31
-!s108 1639459569.000000
+R10
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv|
 !i113 1
@@ -166,14 +166,14 @@ R7
 R8
 n@audio@storage_tb
 vbimpy
-Z9 !s110 1639375667
+Z11 !s110 1639375667
 !i10b 1
 !s100 DSl0Azkl4D1YXEj80@;h:0
 R2
 I^D[KW^M[B5W:5Oe`6gbGW1
 R3
 R4
-Z10 w1639348101
+Z12 w1639348101
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v
 !i122 581
@@ -182,21 +182,21 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1639375667.000000
+Z13 !s108 1639375667.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bimpy.v|
 !i113 1
-Z12 o-work work
+Z14 o-work work
 R8
 vbitreverse
-R9
+R11
 !i10b 1
 !s100 NhC<zHM]>172:C?NB7^^X0
 R2
 IKDS:kb04k3g5o=[;k@b3_2
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v
 !i122 582
@@ -205,21 +205,21 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/bitreverse.v|
 !i113 1
-R12
+R14
 R8
 vbutterfly
-R9
+R11
 !i10b 1
 !s100 UOcBUJaHN4ZzK`7;i@j6c3
 R2
 IzWTl[BmUgGco2_4fd[6oB2
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v
 !i122 583
@@ -228,21 +228,21 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/butterfly.v|
 !i113 1
-R12
+R14
 R8
 vconvround
-R9
+R11
 !i10b 1
 !s100 1D8VoR7EM_Eeg@VT5[f<b3
 R2
 IUm=;H2=KVLVboWXB?5ehV0
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v
 !i122 584
@@ -251,11 +251,11 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/convround.v|
 !i113 1
-R12
+R14
 R8
 vEqualizer
 R0
@@ -271,7 +271,7 @@ w1639422784
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer.sv
 !i122 669
-Z13 L0 1 67
+Z15 L0 1 67
 R5
 r1
 !s85 0
@@ -297,7 +297,7 @@ w1639371113
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Equalizer_tb.sv
 !i122 566
-Z14 L0 1 71
+Z16 L0 1 71
 R5
 r1
 !s85 0
@@ -323,7 +323,7 @@ w1638491511
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Execute_tb.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Execute_tb.sv
 !i122 553
-R14
+R16
 R5
 r1
 !s85 0
@@ -349,12 +349,12 @@ w1639346341
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv
 !i122 536
-Z15 L0 1 60
+Z17 L0 1 60
 R5
 r1
 !s85 0
 31
-Z16 !s108 1639363260.000000
+Z18 !s108 1639363260.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fft_test.sv|
 !i113 1
@@ -362,7 +362,7 @@ R7
 R8
 vFFTCounter
 R0
-Z17 !s110 1639363259
+Z19 !s110 1639363259
 !i10b 1
 !s100 YZKLnKWOTM5MY3g]B<S[j2
 R2
@@ -379,7 +379,7 @@ R5
 r1
 !s85 0
 31
-Z18 !s108 1639363259.000000
+Z20 !s108 1639363259.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter.sv|
 !i113 1
@@ -388,7 +388,7 @@ R8
 n@f@f@t@counter
 vFFTCounter_tb
 R0
-Z19 !s110 1639363260
+Z21 !s110 1639363260
 !i10b 1
 !s100 <fN[GJ7b3jm_OgY<0H_f_3
 R2
@@ -400,12 +400,12 @@ w1639296011
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter_tb.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter_tb.sv
 !i122 531
-Z20 L0 1 37
+Z22 L0 1 37
 R5
 r1
 !s85 0
 31
-R16
+R18
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTCounter_tb.sv|
 !i113 1
@@ -426,7 +426,7 @@ w1639296444
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTInput.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTInput.sv
 !i122 545
-R14
+R16
 R5
 r1
 !s85 0
@@ -449,34 +449,34 @@ R3
 S1
 R4
 w1639257751
-Z21 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv
-Z22 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv
+Z23 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv
+Z24 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv
 !i122 1
-R15
+R17
 R5
 r1
 !s85 0
 31
 !s108 1639258632.000000
-Z23 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv|
-Z24 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv|
+Z25 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv|
+Z26 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/FFTOutput_tb.sv|
 !i113 1
 R7
 R8
 n@f@f@t@input_tb
 vfftmain
-Z25 !s110 1639380438
+Z27 !s110 1639380438
 !i10b 1
 !s100 hNT][<IniMI8P;[KI]AI]0
 R2
 I4oG9;NKiRZiKlBmzkdgz00
 R3
 R4
-Z26 w1639380337
+Z28 w1639380337
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v
 !i122 614
-Z27 L0 78 333
+Z29 L0 78 333
 R5
 r1
 !s85 0
@@ -485,7 +485,7 @@ r1
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/fft-core/fftmain.v|
 !i113 1
-R12
+R14
 R8
 vFFTOutput
 R0
@@ -515,7 +515,7 @@ R8
 n@f@f@t@output
 vFFTOutput_tb
 R0
-R17
+R19
 !i10b 1
 !s100 :UCXY[nZXd2i22:gn48dW1
 R2
@@ -524,30 +524,30 @@ R3
 S1
 R4
 w1639258810
-R21
-R22
+R23
+R24
 !i122 526
-R15
+R17
 R5
 r1
 !s85 0
 31
-R18
-R23
-R24
+R20
+R25
+R26
 !i113 1
 R7
 R8
 n@f@f@t@output_tb
 vfftstage
-R25
+R27
 !i10b 1
 !s100 ef1BVUHWccUjVIb3nQ>Rk2
 R2
 IcGhDzkzB@Y:jP4N20keKR0
 R3
 R4
-R26
+R28
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v
 !i122 616
@@ -560,17 +560,17 @@ r1
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftstage.v|
 !i113 1
-R12
+R14
 R8
 vhwbfly
-R9
+R11
 !i10b 1
 !s100 kl?S>fl5GM5gmOFL7TOV>2
 R2
 IAGczFHEFM6<d8E`EPggYc1
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v
 !i122 585
@@ -579,11 +579,11 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/hwbfly.v|
 !i113 1
-R12
+R14
 R8
 vifftmain
 !s110 1639383446
@@ -597,7 +597,7 @@ w1639383334
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v
 !i122 627
-R27
+R29
 R5
 r1
 !s85 0
@@ -606,17 +606,17 @@ r1
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/ifftmain.v|
 !i113 1
-R12
+R14
 R8
 vlaststage
-Z28 !s110 1639375668
+Z30 !s110 1639375668
 !i10b 1
 !s100 cU7g5?_W2RjhzOON6aaA:2
 R2
 IzbI6ZY8nAM>QP[Q0OBS@e3
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v
 !i122 588
@@ -625,21 +625,21 @@ R5
 r1
 !s85 0
 31
-Z29 !s108 1639375668.000000
+Z31 !s108 1639375668.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/laststage.v|
 !i113 1
-R12
+R14
 R8
 vlongbimpy
-R28
+R30
 !i10b 1
 !s100 cI<zMShZDIGZ@oE7m2Wef2
 R2
 IMDnzDISK1j6LkA`6Sf:Ck0
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v
 !i122 589
@@ -648,15 +648,15 @@ R5
 r1
 !s85 0
 31
-R29
+R31
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/longbimpy.v|
 !i113 1
-R12
+R14
 R8
 vOverdrive
 R0
-Z30 !s110 1639429501
+Z32 !s110 1639429501
 !i10b 1
 !s100 W8Z_;^A5lAmgO0HSbK4mO2
 R2
@@ -664,7 +664,7 @@ I]8?gMiIof2ej?oz8Ne3^i3
 R3
 S1
 R4
-Z31 w1639429496
+Z33 w1639429496
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv
 !i122 685
@@ -673,7 +673,7 @@ R5
 r1
 !s85 0
 31
-Z32 !s108 1639429501.000000
+Z34 !s108 1639429501.000000
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Overdrive.sv|
 !i113 1
@@ -720,7 +720,7 @@ w1639387806
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/PitchShift_tb.sv
 !i122 640
-R13
+R15
 R5
 r1
 !s85 0
@@ -733,14 +733,14 @@ R7
 R8
 n@pitch@shift_tb
 vqtrstage
-R28
+R30
 !i10b 1
 !s100 Y:O@i[jkFa1^8@M>KIA@S2
 R2
 IRnG[?3eSH4XWib5A1EWjT2
 R3
 R4
-R10
+R12
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v
 !i122 590
@@ -749,15 +749,15 @@ R5
 r1
 !s85 0
 31
-R29
+R31
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/ifft-core/qtrstage.v|
 !i113 1
-R12
+R14
 R8
 vSemitoneLUT
 R0
-R19
+R21
 !i10b 1
 !s100 FT5S3;DV>G^1Q1KgcoMDo3
 R2
@@ -769,12 +769,12 @@ w1639286570
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SemitoneLUT.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SemitoneLUT.sv
 !i122 529
-R20
+R22
 R5
 r1
 !s85 0
 31
-R18
+R20
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SemitoneLUT.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/SemitoneLUT.sv|
 !i113 1
@@ -783,7 +783,7 @@ R8
 n@semitone@l@u@t
 vTremolo
 R0
-R30
+R32
 !i10b 1
 !s100 @^ZC9?CWZGKecKJA:MTSM0
 R2
@@ -791,7 +791,7 @@ IKT4De;2]b?h>K5PKhifeV1
 R3
 S1
 R4
-R31
+R33
 8C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv
 FC:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv
 !i122 686
@@ -800,7 +800,7 @@ R5
 r1
 !s85 0
 31
-R32
+R34
 !s107 C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/Tremolo.sv|
 !i113 1
