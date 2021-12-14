@@ -22,7 +22,7 @@ public class WaveFile {
         System.out.println("4: .bin -> Binary .txt");
         System.out.print("> ");
 
-        int option = -1;
+        int option;
         while (true) {
             String input = scanner.nextLine().trim();
             try {
@@ -67,6 +67,7 @@ public class WaveFile {
                             }
                             case "n": {
                                 System.out.println("Operation canceled.");
+                                scanner.close();
                                 return;
                             }
                             default: {
@@ -105,6 +106,7 @@ public class WaveFile {
         }
 
         System.out.println("Operation complete.");
+        scanner.close();
 
     }
 
