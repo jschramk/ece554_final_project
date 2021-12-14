@@ -79,3 +79,5 @@ BP .store
 // at this point, a full frame of data should have been completely processed and written back to RAM
 
 // repeat above process as needed with different or same parameters and a new starting address
+
+HALT
