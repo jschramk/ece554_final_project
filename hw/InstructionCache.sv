@@ -6,7 +6,7 @@ module InstructionCache
     parameter NUMINSTRUCTIONS=INW/DATAW
    )
    (
-    input clk, rst_n, write,
+    input clk, rst_n, write, stall,
     input [INW-1:0] data_in,
     input [ADDRW-1:0] addr_in, base_addr_in,
     output logic valid_out,
@@ -36,12 +36,13 @@ module InstructionCache
             if (index >= NUMINSTRUCTIONS || index < 0) begin
                 valid_out = 0;
             end else begin
-                valid_out = valid;
-                data_out = data[(INW-1) - (index * DATAW) -: DATAW];
+                if (!stall || (stall && !valid_out)) begin
+                    valid_out = valid;
+                    data_out = data[(INW-1) - (index * DATAW) -: DATAW];
+                end
             end
         end
     end
-
 
 endmodule
    /*

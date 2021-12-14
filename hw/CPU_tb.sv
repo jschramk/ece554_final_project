@@ -4,7 +4,8 @@ module CPU_tb
     ADDRW=32,
     DATAW=32,
     IMMW=11,
-    NUMINSTRUCTIONS=INW/DATAW
+    INSTRW=16,
+    NUMINSTRUCTIONS=INW/INSTRW
 ) ();
 
 
@@ -18,11 +19,16 @@ module CPU_tb
     logic [ADDRW-1:0] mem_address;
     logic [1:0] op;
 
-    logic [DATAW-1:0] data [NUMINSTRUCTIONS-1:0];
+    logic [INSTRW-1:0] data_flipped [NUMINSTRUCTIONS-1:0];
+    logic [INSTRW-1:0] data [NUMINSTRUCTIONS-1:0];
 
     generate
         for (genvar i = 0; i < NUMINSTRUCTIONS; i++) begin
-            assign common_data_bus_in[((i+1) * DATAW) - 1: i * DATAW] = data[i];
+            assign common_data_bus_in[((i+1) * INSTRW) - 1: i * INSTRW] = data[i];
+        end
+
+        for (genvar i = 0; i < NUMINSTRUCTIONS; i++) begin
+            assign data[i] = {data_flipped[NUMINSTRUCTIONS-i-1][7:0], data_flipped[NUMINSTRUCTIONS-i-1][15:8]} ;
         end
     endgenerate
 
@@ -30,13 +36,24 @@ module CPU_tb
 
     always #2 assign clk = ~clk;
 
+    integer file, status;
+
     initial begin
         clk = 0;
         rst_n = 0;
 
-        for (int i = 0; i < NUMINSTRUCTIONS; i++) begin
-            data[i] = $urandom();
+        file = $fopen("E:/ECE 554/final/hw/instructions.data", "rb");
+        
+        if (!file) begin
+            $display("Could not open file");
+            $stop();
         end
+        
+        //for (int i = NUMINSTRUCTIONS; i >= 0; i--) begin
+            status = $fread(data_flipped, file);
+            //$display("Read data: %h from file", data);
+        //end
+        
 
 
         @(posedge clk);

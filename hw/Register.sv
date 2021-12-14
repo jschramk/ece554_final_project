@@ -12,8 +12,8 @@ module Register
 
    reg [DATAW-1:0] regs [NUMREGISTERS-1:0];
 
-    assign reg1_data = regs[rd_reg1];
-    assign reg2_data = regs[rd_reg2];
+    assign reg1_data = (wr_reg == rd_reg1 && wr_reg_en) ? wr_reg_data : regs[rd_reg1];
+    assign reg2_data = (wr_reg == rd_reg2 && wr_reg_en) ? wr_reg_data : regs[rd_reg2];
 
     int i;
 
