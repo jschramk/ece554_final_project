@@ -35,7 +35,7 @@ longint cycle_cnt = 0;
 
 int storage_read_index, reader_input_index, out_offset, in_offset;
 
-reg wr_en;
+reg reader_wr_en;
 
 AudioProcessor dj_disco(
     .clk(clk),
@@ -70,7 +70,7 @@ AudioStorage my_data(
 AudioReader your_data(
 	.clk(clk),
 	.rst_n(rst_n),
-	.wr_en(wr_en),
+	.wr_en(reader_wr_en),
 	.data_in(data_out),
 	.input_index(reader_input_index)
 );
@@ -99,17 +99,11 @@ initial begin
 			
 			@(posedge done);
 			
-			for (int x = 0; x < 64; x++) begin
-				output_index = x;
-				reader_input_index = out_offset + x;
-				wr_en = 1;
-				@(posedge clk);
-			end
-			wr_en = 0;
-			out_offset += 64;
+            read_output_data();
+			
 		end
 		
-		$writememh("processed.txt", your_data.values);
+		$writememb("processed.txt", your_data.values);
 
     $stop();
 
@@ -141,7 +135,7 @@ task init();
     overdrive_magnitude_wr_en = 0;
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
-    wr_en = 0;
+    reader_wr_en = 0;
     //data_in = 512'h0;
     $readmemb("out.txt", input_array);
 endtask
@@ -183,14 +177,14 @@ task fill_input_data();
 endtask
 
 task read_output_data();
+    reader_wr_en = 1;
     for (int x = 0; x < 64; x++) begin
         output_index = x;
         reader_input_index = out_offset + x;
-        wr_en = 1;
         @(posedge clk);
     end
     out_offset += 64;
-    wr_en = 0;
+    reader_wr_en = 0;
 endtask
 
 // turn tremolo on or off

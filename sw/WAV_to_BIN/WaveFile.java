@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WaveFile {
@@ -110,6 +111,27 @@ public class WaveFile {
 
     }
 
+    public static void writeTestWaveBIN(File out, float hz, float amp, int samples)
+        throws IOException {
+
+        FileOutputStream fileOutputStream = new FileOutputStream(out);
+
+        for (int i = 0; i < samples; i++) {
+
+            short s = (short)(amp * Math.sin(2*Math.PI/44100 * hz * i));
+
+            ByteBuffer b = ByteBuffer.allocate(2).order(ByteOrder.LITTLE_ENDIAN);
+
+            b.putShort(s);
+
+            fileOutputStream.write(b.array());
+
+        }
+
+        fileOutputStream.close();
+
+    }
+
     public static void BINtoBinaryTxt(File in, File out) throws IOException {
 
         FileWriter fileWriter = new FileWriter(out);
@@ -142,10 +164,19 @@ public class WaveFile {
 
         WaveFile w = fromWAV(in);
 
-        FileWriter wr = new FileWriter(out);
+        FileOutputStream wr = new FileOutputStream(out);
+
+        //System.out.println("writing: ");
 
         for (int i = 0; i < w.byteLength(); i++) {
-            wr.write(w.getByte(i));
+
+            byte b = w.getByte(i);
+
+            /*if(i < 10) {
+                System.out.println(toBinary(b));
+            }*/
+
+            wr.write(b);
         }
 
         wr.close();
@@ -190,6 +221,32 @@ public class WaveFile {
 
     }
 
+    public static void BinaryTxtToBIN(File in, File out) throws IOException {
+
+        Scanner s = new Scanner(in);
+
+        FileOutputStream fileOutputStream = new FileOutputStream(out);
+
+        while (s.hasNextLine()) {
+
+            String line = s.nextLine().replaceAll("//.*", "").trim();
+
+            try {
+
+                byte b = Byte.parseByte(line, 2);
+
+                fileOutputStream.write(b);
+
+            } catch (Exception e) {
+                // skip
+            }
+
+        }
+
+        fileOutputStream.close();
+
+    }
+
     public static WaveFile fromWAV(File f) throws IOException {
 
         FileInputStream fileInputStream = new FileInputStream(f);
@@ -198,10 +255,13 @@ public class WaveFile {
 
         waveFile.header = fileInputStream.readNBytes(44);
 
-        int dataSize =
-            ByteBuffer.wrap(waveFile.header, 40, 4).order(ByteOrder.LITTLE_ENDIAN).getInt();
+        int dataSize = ByteBuffer.wrap(waveFile.header, 40, 4).order(ByteOrder.LITTLE_ENDIAN).getInt();
 
-        waveFile.data = fileInputStream.readNBytes(dataSize);
+        waveFile.data = fileInputStream.readAllBytes();
+
+        //System.out.println("Read data size: " + dataSize);
+        //System.out.println("Actual data size: " + waveFile.data.length);
+
         waveFile.sampleRate =
             ByteBuffer.wrap(waveFile.header, 24, 4).order(ByteOrder.LITTLE_ENDIAN).getInt();
         waveFile.numChannels =
@@ -209,10 +269,36 @@ public class WaveFile {
         waveFile.bitsPerSample =
             ByteBuffer.wrap(waveFile.header, 34, 2).order(ByteOrder.LITTLE_ENDIAN).getShort();
 
+        short fmtType = ByteBuffer.wrap(waveFile.header, 20, 2).order(ByteOrder.LITTLE_ENDIAN).getShort();
+
+        int mult1 = ByteBuffer.wrap(waveFile.header, 28, 4).order(ByteOrder.LITTLE_ENDIAN).getInt();
+
+        int mult2 = ByteBuffer.wrap(waveFile.header, 32, 2).order(ByteOrder.LITTLE_ENDIAN).getShort();
+
         fileInputStream.close();
+
+        /*System.out.println("Sample Rate: " + waveFile.sampleRate);
+        System.out.println("Bits Per Sample: " + waveFile.bitsPerSample);
+        System.out.println("Channel Count: " + waveFile.numChannels);
+        System.out.println("Format Type: " + fmtType);
+        System.out.println("Mult 1: " + mult1);
+        System.out.println("Mult 2: " + mult2);*/
+
+        /*for (int i = 0; i < 10; i++) {
+
+            byte b = waveFile.data[i];
+
+            System.out.println(toBinary(b));
+
+        }*/
+
 
         return waveFile;
 
+    }
+
+    static String toBinary(byte b) {
+        return String.format("%8s", Integer.toBinaryString(b & 0xff)).replace(' ', '0');
     }
 
     public static void writeWAV(File out, byte[] data) throws IOException {
@@ -228,13 +314,14 @@ public class WaveFile {
         b.put("WAVE".getBytes());
         b.put("fmt ".getBytes());
         b.putInt(16); // format length
-        b.putShort((short) 1); // format type
+        b.putShort((short) 1); // format type (PCM)
         b.putShort((short) 1); // number of channels
         b.putInt(44100); // sample rate
         b.putInt(sampleRate * bitsPerSample * numChannels / 8);
         b.putShort((short) (bitsPerSample * numChannels / 8));
         b.putShort((short) bitsPerSample);
         b.put("data".getBytes());
+        b.putInt(data.length);
         b.put(data);
 
         byte[] outBytes = b.array();
