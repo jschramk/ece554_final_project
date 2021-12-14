@@ -56,9 +56,20 @@ Fetch #(
     .INSTRW(INSTRW),
     .INW(INW)
 ) fetch (
-    .clk(clk), .rst_n(rst_n), .halt(halt), .stall(stall), .branch(branch_out_execute),
-    .instr_write_en(instr_write_en), .PC_branch(PC_out_execute), .instr_data_in(common_data_bus_in),
-    .valid_out(instr_valid), .instr_out(instr_fetch), .PC_out(PC_out_fetch)
+    // Inputs
+    .clk(clk),
+    .rst_n(rst_n),
+    .halt(halt),
+    .stall(stall),
+    .branch(branch_out_execute),
+    .instr_write_en(instr_write_en),
+    .PC_branch(PC_out_execute),
+    .instr_data_in(common_data_bus_in),
+    
+    // Outputs
+    .valid_out(instr_valid),
+    .instr_out(instr_fetch),
+    .PC_out(PC_out_fetch)
 );
 
 FetchDecodePipe #(
@@ -66,7 +77,7 @@ FetchDecodePipe #(
     .INSTRW(INSTRW)
 ) fetchDecodePipe (
     // Inputs
-    .clk(clk), .flush(~rst_n), .stall(stall),
+    .clk(clk), .flush(~rst_n | branch_out_execute), .stall(stall),
     .PC_in(PC_out_fetch), 
     .instr_in(instr_fetch),
 
@@ -112,7 +123,7 @@ DecodeExecutePipe #(
 ) decodeExecutePipe (
     //Inputs
     .clk(clk),
-    .flush(~rst_n),
+    .flush(~rst_n | branch_out_execute),
     .stall(stall),
     .alu_op_in(alu_op_decode), 
     .reg_wr_en_in(reg_wr_en_out_decode),
