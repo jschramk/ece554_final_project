@@ -231,14 +231,17 @@ public class WaveFile {
 
             String line = s.nextLine().replaceAll("//.*", "").trim();
 
+            if(line.isEmpty()) continue;
+
             try {
 
-                byte b = Byte.parseByte(line, 2);
+                byte b = (byte) Integer.parseInt(line, 2);
 
                 fileOutputStream.write(b);
 
             } catch (Exception e) {
                 // skip
+                e.printStackTrace();
             }
 
         }

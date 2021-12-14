@@ -3434,3 +3434,42 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
 #    Time: 220815 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
 # Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 220815 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/data_out
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/tremolo_out
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/fft_real \
+sim:/AudioProcessor_audio_tb/fft_imag
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/overdrive_out
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/ifft_output_real \
+sim:/AudioProcessor_audio_tb/dj_disco/ifft_output_imag
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 220815 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/fft_real \
+sim:/AudioProcessor_audio_tb/fft_imag
+add wave -position end  sim:/AudioProcessor_audio_tb/dj_disco/state
