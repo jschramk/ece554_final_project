@@ -9,7 +9,7 @@ module Decoder
     output [10:0] imm
  );
 
-    assign halt = instr[15:11] == 5'b00000;
+    assign halt = instr[15:11] == 5'b00001;
     assign alu_op = instr[15:11] == 5'b01010;
     assign reg_wr_en = instr[15:13] == 3'b001 || instr[15:11] == 5'b01010;
     assign mem_wr_en = instr[15:11] == 5'b01001;
