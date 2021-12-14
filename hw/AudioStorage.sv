@@ -8,8 +8,8 @@ module AudioStorage #(
     input [$clog2(INPUTS_TO_FILL)-1:0] output_index // 0 to 4095
 );
 
-localparam INPUTS_TO_FILL = SAMPLES * SIZE / INPUT_SIZE; // 64
-localparam SAMPLES_PER_INPUT = INPUT_SIZE / SIZE; // 32
+localparam INPUTS_TO_FILL = SAMPLES * SIZE / INPUT_SIZE; // 4096
+localparam SAMPLES_PER_INPUT = INPUT_SIZE / SIZE; // 64
 
 reg [SIZE-1:0] values [SAMPLES-1:0];
 
