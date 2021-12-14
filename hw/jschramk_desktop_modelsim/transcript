@@ -3170,3 +3170,47 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv(73)
 #    Time: 130695 ps  Iteration: 1  Instance: /AudioProcessor_tb
 # Break in Module AudioProcessor_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_tb.sv line 73
+# Compile of AudioStorage.sv was successful.
+# Compile of AudioStorage.sv was successful.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/wave.do}
+# Compile of AudioStorage_tb.sv was successful.
+vsim -gui work.AudioStorage_tb
+# End time: 21:09:48 on Dec 13,2021, Elapsed time: 17:38:25
+# Errors: 0, Warnings: 8
+# vsim -gui work.AudioStorage_tb 
+# Start time: 21:09:48 on Dec 13,2021
+# Loading sv_std.std
+# Loading work.AudioStorage_tb
+# Loading work.AudioStorage
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (18) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioStorage_tb/store File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv Line: 7
+add wave -position insertpoint sim:/AudioStorage_tb/*
+# Compile of AudioStorage_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioStorage_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (18) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioStorage_tb/store File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv Line: 7
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "out.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(22)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioStorage_tb/store
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv(30)
+#    Time: 40975 ps  Iteration: 1  Instance: /AudioStorage_tb
+# Break in Module AudioStorage_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv line 30
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (18) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioStorage_tb/store File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv Line: 7
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv(30)
+#    Time: 40975 ps  Iteration: 1  Instance: /AudioStorage_tb
+# Break in Module AudioStorage_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv line 30
+# Compile of AudioStorage_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioStorage_tb
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv(30)
+#    Time: 40975 ps  Iteration: 1  Instance: /AudioStorage_tb
+# Break in Module AudioStorage_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv line 30

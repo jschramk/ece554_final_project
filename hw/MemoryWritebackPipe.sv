@@ -1,18 +1,22 @@
 module MemoryWritebackPipe
 #(
+    INW=512,
     DATAW=16,
-    ADDRW=32
+    ADDRW=32,
+    REGW=3
  ) (
     // Input
     input clk, flush, stall,
     input valid_in, fft_wr_en_in, reg_wr_en_in,
+    input [REGW-1:0] wr_reg_in,
     input [ADDRW-1:0] addr_in,
-    input [DATAW-1:0] data_in,
+    input [INW-1:0] data_in,
 
     // Outputs
     output logic valid_out, fft_wr_en_out, reg_wr_en_out,
+    output logic [REGW-1:0] wr_reg_out,
     output logic [ADDRW-1:0] addr_out,
-    output logic [DATAW-1:0] data_out
+    output logic [INW-1:0] data_out
  );
 
     always_ff @(posedge clk) begin
@@ -20,6 +24,7 @@ module MemoryWritebackPipe
             valid_out = 0;
             fft_wr_en_out = 0;
             reg_wr_en_out = 0;
+            wr_reg_out = 0;
             addr_out = 0;
             data_out = 0;
         end else begin
@@ -27,6 +32,7 @@ module MemoryWritebackPipe
                 valid_out = valid_in;
                 fft_wr_en_out = fft_wr_en_in;
                 reg_wr_en_out = reg_wr_en_in;
+                wr_reg_out = wr_reg_in;
                 addr_out = addr_in;
                 data_out = data_in;
             end

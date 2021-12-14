@@ -5,7 +5,8 @@ module Decoder
     input [15:0]instr,
     output halt, alu_op, reg_wr_en, mem_wr_en, branch, fft_wr_en, set_en, syn, use_imm, set_freq,
     output [1:0] shift_dist,
-    output [2:0] reg1, reg2
+    output [2:0] reg1, reg2,
+    output [10:0] imm
  );
 
     assign halt = instr[15:11] == 5'b00000;
@@ -21,4 +22,5 @@ module Decoder
     assign shift_dist = instr[12:11];
     assign reg1 = instr[10:8];
     assign reg2 = instr[7:5];
+    assign imm = instr[10:0];
 endmodule;

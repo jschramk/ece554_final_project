@@ -18,7 +18,7 @@ module InstructionCache
     reg valid;
 
     integer index;
-    assign index = (addr_in - base_addr_in) >> 1;
+    assign index = (addr_in - base_addr) >> 1;
 
     always_ff @(posedge clk) begin
         if (!rst_n) begin

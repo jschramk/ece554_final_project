@@ -1,13 +1,11 @@
 module Memory 
 #(
-    DATAW=16,
     INW=512,
-    ADDRW=32,
-    NUMINSTRUCTIONS=INW/DATAW
+    ADDRW=32
  ) (
     input clk, rst_n, write,
-    input [INW-1:0] data_in,
     input [ADDRW-1:0] addr_in,
+    input [INW-1:0] data_in,
     output valid_out,
     output [INW-1:0] data_out
  );
