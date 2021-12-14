@@ -21,8 +21,8 @@ reg [3:0] overdrive_magnitude;
 
 wire [511:0] data_out;
 
-reg [511:0] input_array [0:14879];
-reg [511:0] output_array [0:14879];
+reg [7:0] input_array [0:185663];
+reg [15:0] output_array [0:92831];
 
 wire [FFT_BUS_SIZE/2-1:0] fft_real, fft_imag;
 
@@ -65,39 +65,41 @@ initial begin
 
     reset();
 		
-		set_pitch_shift(-2);
+		/*set_pitch_shift(-2);
 		set_overdrive_enable(1'b1);
 		set_overdrive_magnitude(4'h5);
 		set_tremolo_enable(1'b1);
 		for (int y = 0; y < 256; y++) begin
 			set_freq_coeff(y, 3);
 			set_freq_coeff(1023-y, 3);
-		end
+		end*/
 
-		repeat (232) begin
+		repeat (22) begin
 			fill_input_data(idx);
 
 			start_process();
 			
 			@(posedge done);
 			
-			for (int x = idx; x < idx + 64; x++) begin
+			for (int x = 0; x < 64; x++) begin
 				output_index = x;
-				output_array[x] = data_out;
+				for (int y = 0; y < 32; y++) begin
+					output_array[idx/2+y] = data_out[16*y+:16];
+				end
 			end
 			
 			idx += 64;
 			
 		end
 		
-		$writememb("processed.txt", output_array);
+		$writememh("processed.txt", output_array);
 
     $stop();
 
 end
 
 always begin
-    #5 clk = ~clk;
+    #3 clk = ~clk;
     if(clk) cycle_cnt++;
 end
 
@@ -115,7 +117,18 @@ for(i = 0; i < 14880; i++) begin
 end
 endgenerate*/
 
+/*genvar q,r;
+generate
+	for (q = 0; q < 64; q++) begin
+		assign data_in[7+(q*8):q*8] = input_array[idx+q];
+	end
+endgenerate*/
 
+/*always @(posedge done) begin
+	for (int r = 0; r < 32; r++) begin
+		output_array[idx+r] = data_out[r*16+15-:15];
+	end
+end*/
 
 
 
@@ -137,7 +150,7 @@ task init();
 		overdrive_magnitude_wr_en = 0;
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
-    data_in = 512'h0;
+    //data_in = 512'h0;
 		$readmemb("out.txt", input_array);
 endtask
 
@@ -159,13 +172,15 @@ task populate_bus(int index);
             20000 * $cos(2*3.141592653/2048 * 50 * (l + 32 * index));// + 
             //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end*/
-		data_in = input_array[index];
+		for (int q = 0; q < 64; q++) begin
+			data_in[q*8+:8] = input_array[index+idx+q];
+		end
 endtask
 
 // fill the module's input with a test wave defined in populate_bus()
 task fill_input_data(reg index);
     data_wr_en = 1;
-    for(int i = index; i < index + 64; i++) begin
+    for(int i = 0; i < 64; i++) begin
         input_index = i;
         populate_bus(i);
         @(posedge clk);
