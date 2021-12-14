@@ -33,7 +33,9 @@ assign fft_imag = dj_disco.fft_output_full[FFT_BUS_SIZE/2-1:0];
 
 longint cycle_cnt = 0;
 
-int idx, out_idx;
+int idx, out_idx, out_offset, in_offset;
+
+reg wr_en;
 
 AudioProcessor dj_disco(
     .clk(clk),
@@ -56,6 +58,21 @@ AudioProcessor dj_disco(
     .output_index(output_index),
     .data_out(data_out),
     .done(done)
+);
+
+AudioStorage my_data(
+	.clk(clk),
+	.rst_n(rst_n),
+	.data_out(data_in),
+	.output_index(idx)
+);
+
+AudioReader your_data(
+	.clk(clk),
+	.rst_n(rst_n),
+	.wr_en(wr_en),
+	.data_in(data_out),
+	.input_index(out_idx)
 );
 
 
@@ -83,16 +100,15 @@ initial begin
 			
 			for (int x = 0; x < 64; x++) begin
 				output_index = x;
-				for (int y = 0; y < 32; y++) begin
-					output_array[out_idx+x+y*64] = data_out[16*y+:16];
-				end
+				out_idx = out_offset + x;
+				wr_en = 1;
 				@(posedge clk);
 			end
-		
-			out_idx += 2048;
+			wr_en = 0;
+			out_offset += 2048;
 		end
 		
-		$writememh("processed.txt", output_array);
+		$writememh("processed.txt", your_data.values);
 
     $stop();
 
@@ -137,6 +153,8 @@ end*/
 task init();
 		idx = 0;
 		out_idx = 0;
+		in_offset = 0;
+		out_offset = 0;
     clk = 0;
     rst_n = 1;
     start = 0;
@@ -151,6 +169,7 @@ task init();
 		overdrive_magnitude_wr_en = 0;
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
+		wr_en = 0;
     //data_in = 512'h0;
 		$readmemb("out.txt", input_array);
 endtask
@@ -183,11 +202,10 @@ endtask
 task fill_input_data(reg index);
     data_wr_en = 1;
     for(int i = 0; i < 64; i++) begin
-        input_index = i;
-        populate_bus(i);
+        idx = in_offset + i;
         @(posedge clk);
     end
-		idx += 4096;
+		in_offset += 64;
     data_wr_en = 0;
 endtask
 
