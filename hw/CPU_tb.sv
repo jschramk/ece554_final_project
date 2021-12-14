@@ -2,16 +2,18 @@ module CPU_tb
 #(
     INW=512,
     ADDRW=32,
-    DATAW=16,
+    DATAW=32,
+    IMMW=11,
     NUMINSTRUCTIONS=INW/DATAW
 ) ();
 
 
     logic clk, rst_n, tx_done, rd_valid, 
             dma_ready, instr_write_en, cache_stall,
-            mem_write_en;
+            mem_write_en, syn, set_en, set_freq;
     logic [INW-1:0] common_data_bus_in;
     logic audio_valid;
+    logic [IMMW-1:0] imm;
     logic [INW-1:0] audio_out;
     logic [ADDRW-1:0] mem_address;
     logic [1:0] op;
