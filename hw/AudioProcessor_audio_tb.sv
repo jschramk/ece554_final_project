@@ -91,7 +91,7 @@ initial begin
 			set_freq_coeff(1023-y, 3);
 		end*/
 
-		repeat (22) begin
+		repeat (4) begin
 			fill_input_data(idx);
 
 			start_process();
@@ -105,7 +105,7 @@ initial begin
 				@(posedge clk);
 			end
 			wr_en = 0;
-			out_offset += 2048;
+			out_offset += 64;
 		end
 		
 		$writememh("processed.txt", your_data.values);
