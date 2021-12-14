@@ -1,17 +1,18 @@
 module Execute
  #(
     DATAW=32,
-    PCW=32
+    PCW=32,
+    IMMW=11
  )
  (
     input alu_op, branch_in, use_imm, p_flag_in,
     input [1:0] shift_dist,
-    input [DATAW-1:0] a, b,
+    input [IMMW-1:0] imm,
     input [PCW-1:0] PC_in,
-    input [10:0] imm,
-    output [DATAW-1:0] ex_out,
+    input [DATAW-1:0] a, b,
+    output branch_out, p_flag_out,
     output [PCW-1:0] PC_out,
-    output branch_out, p_flag_out
+    output [DATAW-1:0] ex_out
  );
 
    logic [DATAW-1:0] alu_out, a_imm, a_temp;
