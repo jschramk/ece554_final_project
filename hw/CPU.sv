@@ -38,7 +38,7 @@ wire [PCW-1:0]      PC_out_execute, PC_out_fetch, PC_decode,
                     PC_in_execute;
 
 wire [DATAW-1:0]    a_decode, b_decode, a_execute,
-                    b_execute, ex_out, ex_out_memory, ex_out_writeback;
+                    b_execute, ex_out_execute, ex_out_memory, ex_out_writeback;
 
 wire [INW-1:0]      data_out_memory;
 
@@ -93,10 +93,10 @@ Decode #(
     // Inputs
     .clk(clk),
     .rst_n(rst_n),
-    .reg_wr_en_in(reg_wr_en_writeback),
-    .wr_reg(wr_reg_out_writeback),
+    .reg_wr_en_in(reg_wr_en_execute),
+    .wr_reg(wr_reg_out_execute),
     .instr(instr_decode),
-    .wr_data(ex_out_writeback),
+    .wr_data(ex_out_execute),
 
     // Outputs
     .halt(halt),
@@ -179,7 +179,7 @@ Execute #(
     .branch_out(branch_out_execute),
     .p_flag_out(p_flag_execute),
     .PC_out(PC_out_execute),
-    .ex_out(ex_out)
+    .ex_out(ex_out_execute)
 );
 
 ExecuteMemoryPipe #(
@@ -197,7 +197,7 @@ ExecuteMemoryPipe #(
     .set_freq_in(set_freq_execute),
     .wr_reg_in(wr_reg_out_execute),
     .imm_in(imm_execute),
-    .ex_data_in(ex_out),
+    .ex_data_in(ex_out_execute),
 
     // Outputs
     .fft_wr_en_out(fft_wr_en_memory),
