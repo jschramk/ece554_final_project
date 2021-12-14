@@ -3473,3 +3473,112 @@ add wave -position insertpoint  \
 sim:/AudioProcessor_audio_tb/fft_real \
 sim:/AudioProcessor_audio_tb/fft_imag
 add wave -position end  sim:/AudioProcessor_audio_tb/dj_disco/state
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/jschramk_desktop_modelsim/jschramk_desktop.mpf).  File can not be renamed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 262145 of file "out.txt". (Current address [262144], address range [0:262143])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(22)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(140)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 220815 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of AudioProcessor.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 262145 of file "out.txt". (Current address [262144], address range [0:262143])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(22)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(140)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 284049 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of AudioProcessor_audio_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_audio_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 262145 of file "out.txt". (Current address [262144], address range [0:262143])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(22)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(140)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 1562229 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 262145 of file "out.txt". (Current address [262144], address range [0:262143])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(22)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(140)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 1562229 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 1562229 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of AudioProcessor_audio_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_audio_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 4686669 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of PitchShift.sv was successful.
+# Compile of AudioProcessor.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor
+# Loading work.PitchShift
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+# Compile of AudioProcessor_audio_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_audio_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
+#    Time: 1562229 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of AudioProcessor_audio_tb.sv was successful.
