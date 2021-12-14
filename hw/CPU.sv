@@ -12,7 +12,8 @@ module CPU #(
             dma_ready, instr_write_en, cache_stall,
             mem_write_en,
     input [INW-1:0] common_data_bus_in,
-    output audio_valid,
+    output audio_valid, syn, set_en, set_freq,
+    output [IMMW-1:0] imm,
     output [INW-1:0] audio_out,
     output [ADDRW-1:0] mem_address,
     output [1:0] op
@@ -29,7 +30,7 @@ wire [1:0]          shift_dist_decode, shift_dist_execute;
 wire [REGW-1:0]     wr_reg_out_writeback, wr_reg_out_decode,
                     wr_reg_out_execute, wr_reg_out_memory;
 
-wire [IMMW-1:0]     imm_decode, imm_execute;
+wire [IMMW-1:0]     imm_decode, imm_execute, imm_memory;
 
 wire [INSTRW-1:0]   instr_fetch, instr_decode;
 
@@ -93,10 +94,10 @@ Decode #(
     .mem_wr_en(mem_wr_en_decode),
     .branch(branch_decode),
     .fft_wr_en(fft_wr_en_decode),
-    .set_en(set_en),
-    .syn(syn),
+    .set_en(set_en_decode),
+    .syn(syn_decode),
     .use_imm(use_imm_decode),
-    .set_freq(set_freq),
+    .set_freq(set_freq_decode),
     .shift_dist(shift_dist_decode),
     .wr_reg_out(wr_reg_out_decode),
     .imm(imm_decode),
@@ -117,7 +118,10 @@ DecodeExecutePipe #(
     .reg_wr_en_in(reg_wr_en_out_decode),
     .mem_wr_en_in(mem_wr_en_decode), 
     .branch_in(branch_decode), 
-    .fft_wr_en_in(fft_wr_en_decode), 
+    .fft_wr_en_in(fft_wr_en_decode),
+    .syn_in(syn_decode),
+    .set_en_in(set_en_decode),
+    .set_freq_in(set_freq_decode),
     .use_imm_in(use_imm_decode),
     .shift_dist_in(shift_dist_decode),
     .wr_reg_in(wr_reg_out_decode),
@@ -133,6 +137,9 @@ DecodeExecutePipe #(
     .mem_wr_en_out(mem_wr_en_execute),  // might be unused at this point
     .branch_out(branch_in_execute),
     .fft_wr_en_out(fft_wr_en_execute),
+    .syn_out(syn_execute),
+    .set_en_out(set_en_execute),
+    .set_freq_out(set_freq_execute),
     .shift_dist_out(shift_dist_execute),
     .wr_reg_out(wr_reg_out_execute),
     .imm_out(imm_execute),
@@ -165,21 +172,31 @@ Execute #(
 );
 
 ExecuteMemoryPipe #(
-    .DATAW(DATAW)
+    .DATAW(DATAW),
+    .IMMW(IMMW),
+    .REGW(REGW)
 ) executeMemoryPipe(
     // Inputs
     .clk(clk), .flush(~rst_n), .stall(stall),
     .fft_wr_en_in(fft_wr_en_execute), 
     .reg_wr_en_in(reg_wr_en_execute),
     .p_flag_in(p_flag_execute),
+    .syn_in(syn_execute),
+    .set_en_in(set_en_execute),
+    .set_freq_in(set_freq_execute),
     .wr_reg_in(wr_reg_out_execute),
+    .imm_in(imm_execute),
     .ex_data_in(ex_out),
 
     // Outputs
     .fft_wr_en_out(fft_wr_en_memory),
     .reg_wr_en_out(reg_wr_en_memory),
     .p_flag_out(p_flag_memory),
+    .syn_out(syn_memory),
+    .set_en_out(set_en_memory),
+    .set_freq_out(set_freq_memory),
     .wr_reg_out(wr_reg_out_memory),
+    .imm_out(imm_memory),
     .ex_data_out(ex_out_memory)
 );
 
@@ -196,16 +213,21 @@ Memory #(
 
 MemoryWritebackPipe #(
     .INW(INW),
-    .DATAW(DATAW),
     .ADDRW(ADDRW),
+    .DATAW(DATAW),
+    .IMMW(IMMW),
     .REGW(REGW)
 ) memoryWritebackPipe(
     // Inputs
     .clk(clk), .flush(~rst_n), .stall(stall),
     .valid_in(mem_valid),
+    .syn_in(syn_memory),
+    .set_en_in(set_en_memory),
+    .set_freq_in(set_freq_memory),
     .fft_wr_en_in(fft_wr_en_memory),
     .reg_wr_en_in(reg_wr_en_memory),
     .wr_reg_in(wr_reg_out_memory),
+    .imm_in(imm_memory),
     .addr_in(ex_out_memory),
     .data_in(data_out_memory),
 
@@ -213,7 +235,11 @@ MemoryWritebackPipe #(
     .valid_out(audio_valid),
     .fft_wr_en_out(fft_wr_en_writeback),
     .reg_wr_en_out(reg_wr_en_writeback),
+    .syn_out(syn),
+    .set_en_out(set_en),
+    .set_freq_out(set_freq),
     .wr_reg_out(wr_reg_out_writeback),
+    .imm_out(imm),
     .addr_out(ex_out_writeback),
     .data_out(audio_out)
 );
