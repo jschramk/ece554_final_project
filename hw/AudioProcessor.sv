@@ -72,6 +72,7 @@ reg fft_enable, ifft_enable;
 reg pitch_shift_enable;
 reg tremolo_enable, overdrive_enable;
 reg fft_out_wr_en;
+reg fft_rst, ifft_rst;
 
 assign ifft_output_real = ifft_output_full[IFFT_BUS_SIZE-1:IFFT_BUS_SIZE/2];
 assign ifft_output_imag = ifft_output_full[IFFT_BUS_SIZE/2:0];
@@ -120,6 +121,8 @@ always_comb begin
     count_en = 0;
     rst_count = 0;
     fft_out_wr_en = 0;
+    fft_rst = 0;
+    ifft_rst = 0;
     //done = 0;
 
 
@@ -128,6 +131,9 @@ always_comb begin
         IDLE : begin
 
             //done = 1;
+
+            fft_rst = 1;
+            ifft_rst = 1;
 
             if(start) begin
                 next_state = FEEDING_FFT;
@@ -225,7 +231,7 @@ FFTInput in(
 
 fftmain fft(
     .i_clk(clk),
-    .i_reset(~rst_n),
+    .i_reset(~rst_n | fft_rst),
     .i_ce(fft_enable),
 	.i_sample({fft_sample_in, 16'b0}), // feed samples with zeroed complex bits
     .o_result(fft_output_full),
@@ -257,7 +263,7 @@ Equalizer eq(
 
 ifftmain ifft(
     .i_clk(clk),
-    .i_reset(~rst_n),
+    .i_reset(~rst_n | ifft_rst),
     .i_ce(ifft_enable),
 	.i_sample(equalizer_output_full),
     .o_result(ifft_output_full),

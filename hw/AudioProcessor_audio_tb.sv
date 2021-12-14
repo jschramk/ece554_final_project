@@ -91,7 +91,7 @@ initial begin
 			set_freq_coeff(1023-y, 3);
 		end*/
 
-		repeat (4) begin
+		repeat (22) begin
 
 			fill_input_data();
 
