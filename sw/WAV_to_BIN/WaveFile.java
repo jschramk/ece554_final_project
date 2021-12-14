@@ -20,7 +20,8 @@ public class WaveFile {
         System.out.println("1: .wav -> .bin");
         System.out.println("2: .bin -> .wav");
         System.out.println("3: Hex .txt -> .bin");
-        System.out.println("4: .bin -> Binary .txt");
+        System.out.println("4: Binary .txt -> .bin");
+        System.out.println("5: .bin -> Binary .txt");
         System.out.print("> ");
 
         int option;
@@ -28,7 +29,7 @@ public class WaveFile {
             String input = scanner.nextLine().trim();
             try {
                 option = Integer.parseInt(input);
-                if(option < 1 || option > 4) throw new Exception();
+                if(option < 1 || option > 5) throw new Exception();
                 break;
             } catch (Exception e) {
                 System.out.print("Please enter a number from the list:\n> ");
@@ -101,6 +102,10 @@ public class WaveFile {
                 break;
             }
             case 4: {
+                BinaryTxtToBIN(in, out);
+                break;
+            }
+            case 5: {
                 BINtoBinaryTxt(in, out);
                 break;
             }
