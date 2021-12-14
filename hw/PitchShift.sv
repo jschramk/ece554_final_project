@@ -3,6 +3,7 @@ module PitchShift #(
     parameter SAMPLES = 2048
 ) (
     input clk, rst_n,
+    input clr_buckets,
     input [SIZE-1:0] data_in, // input value from fft
     output [SIZE-1:0] data_out, // output value from fft, pretty much a passthru for convenience
     input [4:0] shift_semitones, // -12 to 12
@@ -61,6 +62,8 @@ always @(posedge clk, negedge rst_n) begin
             $signed(values[write_index][SIZE-1:SIZE/2]) + $signed(data_in[SIZE-1:SIZE/2]),
             $signed(values[write_index][SIZE/2-1:0]) + $signed(data_in[SIZE/2-1:0])
         };
+
+        if(clr_buckets) for(int i = 0; i < SAMPLES; i++) values[i] <= 0;
 
     end
 

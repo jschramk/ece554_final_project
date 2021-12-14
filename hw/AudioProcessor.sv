@@ -73,6 +73,7 @@ reg pitch_shift_enable;
 reg tremolo_enable, overdrive_enable;
 reg fft_out_wr_en;
 reg fft_rst, ifft_rst;
+reg clr_buckets;
 
 assign ifft_output_real = ifft_output_full[IFFT_BUS_SIZE-1:IFFT_BUS_SIZE/2];
 assign ifft_output_imag = ifft_output_full[IFFT_BUS_SIZE/2:0];
@@ -123,6 +124,7 @@ always_comb begin
     fft_out_wr_en = 0;
     fft_rst = 0;
     ifft_rst = 0;
+    clr_buckets = 0;
     //done = 0;
 
 
@@ -134,6 +136,7 @@ always_comb begin
 
             fft_rst = 1;
             ifft_rst = 1;
+            clr_buckets = 1;
 
             if(start) begin
                 next_state = FEEDING_FFT;
@@ -241,6 +244,7 @@ fftmain fft(
 PitchShift ps(
     .clk(clk),
     .rst_n(rst_n),
+    .clr_buckets(clr_buckets),
     .data_in(fft_output_full),
     .data_out(pitch_shift_output_full),
     .shift_semitones(pitch_shift_semitones),
