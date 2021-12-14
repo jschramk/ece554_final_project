@@ -8,6 +8,7 @@ add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_dis
 add wave -noupdate -radix unsigned /AudioProcessor_tb/cycle_cnt
 add wave -noupdate -divider control
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/start
+add wave -noupdate /AudioProcessor_tb/done
 add wave -noupdate -divider -height 34 INPUTS
 add wave -noupdate -divider {data in}
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/data_wr_en
@@ -30,8 +31,8 @@ add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_dis
 add wave -noupdate -divider control
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/fft_sync
 add wave -noupdate -format Analog-Step -height 74 -max 29999.999999999996 -min -30000.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/fft_sample_in
-add wave -noupdate -format Analog-Step -height 74 -max 640000.0 -min -3.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/fft_real
-add wave -noupdate -format Analog-Step -height 74 -max 70.0 -radix decimal /AudioProcessor_tb/fft_imag
+add wave -noupdate -format Analog-Step -height 74 -max 367838.0 -min -140524.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/fft_real
+add wave -noupdate -format Analog-Step -height 74 -max 157389.99999999997 -min -429176.0 -radix decimal /AudioProcessor_tb/fft_imag
 add wave -noupdate -divider {freq domain}
 add wave -noupdate -radix unsigned -radixshowbase 1 /AudioProcessor_tb/dj_disco/sample_counter
 add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/fft_output_full
@@ -43,16 +44,15 @@ add wave -noupdate -radix hexadecimal -radixshowbase 1 /AudioProcessor_tb/dj_dis
 add wave -noupdate /AudioProcessor_tb/dj_disco/ifft_sync
 add wave -noupdate -format Analog-Step -height 74 -max 21474800000000.0 -min -20344200000000.0 -radix decimal /AudioProcessor_tb/dj_disco/ifft_output_full
 add wave -noupdate /AudioProcessor_tb/dj_disco/ifft_enable
-add wave -noupdate /AudioProcessor_tb/done
-add wave -noupdate -format Analog-Step -height 74 -max 20000.0 -min -20000.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/ifft_output_real
-add wave -noupdate -format Analog-Step -height 74 -max 20000.0 -min -20000.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/overdrive_out
-add wave -noupdate -format Analog-Step -height 74 -max 19998.999999999996 -min -20000.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/tremolo_out
+add wave -noupdate -format Analog-Step -height 74 -max 30208.999999999938 -min -1090560.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/ifft_output_real
+add wave -noupdate -format Analog-Step -height 74 -max 30209.000000000004 -min -24325.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/overdrive_out
+add wave -noupdate -format Analog-Step -height 74 -max 30209.000000000004 -min -24325.0 -radix decimal -radixshowbase 1 /AudioProcessor_tb/dj_disco/tremolo_out
 add wave -noupdate /AudioProcessor_tb/dj_disco/fft_out_wr_en
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {57891 ps} 0}
+WaveRestoreCursors {{Cursor 1} {98453 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 318
-configure wave -valuecolwidth 162
+configure wave -valuecolwidth 125
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -65,4 +65,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {158755 ps}
+WaveRestoreZoom {0 ps} {137230 ps}

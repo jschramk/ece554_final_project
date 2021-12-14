@@ -84,11 +84,11 @@ initial begin
 			for (int x = 0; x < 64; x++) begin
 				output_index = x;
 				for (int y = 0; y < 32; y++) begin
-					output_array[out_idx+x+y] = data_out[16*y+:16];
+					output_array[out_idx+x+y*64] = data_out[16*y+:16];
 				end
+				@(posedge clk);
 			end
-			
-			idx += 4096;
+		
 			out_idx += 2048;
 		end
 		
@@ -136,6 +136,7 @@ end*/
 
 task init();
 		idx = 0;
+		out_idx = 0;
     clk = 0;
     rst_n = 1;
     start = 0;
@@ -174,6 +175,7 @@ task populate_bus(int index);
     end*/
 		for (int q = 0; q < 64; q++) begin
 			data_in[q*8+:8] = input_array[index*64+idx+q];
+			$display("%b", data_in[q*8+:8]);
 		end
 endtask
 
@@ -185,6 +187,7 @@ task fill_input_data(reg index);
         populate_bus(i);
         @(posedge clk);
     end
+		idx += 4096;
     data_wr_en = 0;
 endtask
 
