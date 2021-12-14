@@ -14,16 +14,16 @@ module CPU #(
     input [INW-1:0] common_data_bus_in,
     output audio_valid, syn, set_en, set_freq,
     output [IMMW-1:0] imm,
-    output [INW-1:0] audio_out,
+    output [1:0] op,
     output [ADDRW-1:0] mem_address,
-    output [1:0] op
+    output [INW-1:0] audio_out
 );
 
 
 // TODO: Track down missing write register 
 //      (we have input to Decode written, but no output passed through)
 
-wire stall, instr_valid, fft_wr_en_memory, mem_valid;
+logic stall, instr_valid, fft_wr_en_memory, mem_valid, mem_valid_writeback, fft_wr_en_writeback;
 
 wire [1:0]          shift_dist_decode, shift_dist_execute;
 
@@ -50,6 +50,12 @@ assign op           =   (!instr_valid) ? 2'b01 :
                         2'b00;
 
 assign stall = !instr_valid || (fft_wr_en_memory && !mem_valid);
+
+assign audio_valid = mem_valid_writeback && fft_wr_en_writeback;
+
+// always_ff @(posedge clk) begin
+//     stall = !instr_valid || (fft_wr_en_memory && !mem_valid);
+// end
 
 Fetch #(
     .PCW(PCW),
@@ -243,7 +249,7 @@ MemoryWritebackPipe #(
     .data_in(data_out_memory),
 
     // Outputs
-    .valid_out(audio_valid),
+    .valid_out(mem_valid_writeback),
     .fft_wr_en_out(fft_wr_en_writeback),
     .reg_wr_en_out(reg_wr_en_writeback),
     .syn_out(syn),

@@ -73,6 +73,18 @@ module CPU_tb
             @(negedge clk);
         end
 
+        mem_write_en = 1;
+
+        @(posedge clk);
+        @(negedge clk);
+
+        mem_write_en = 0;
+        
+        repeat (20) begin
+            @(posedge clk);
+            @(negedge clk);
+        end
+
         $stop();
     end
 

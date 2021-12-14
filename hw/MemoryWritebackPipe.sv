@@ -37,7 +37,7 @@ module MemoryWritebackPipe
             data_out = 0;
         end else begin
             if (!stall) begin
-                valid_out = valid_in;
+                valid_out = (valid_out) ? 0 : valid_in;
                 fft_wr_en_out = fft_wr_en_in;
                 reg_wr_en_out = reg_wr_en_in;
                 syn_out = syn_in;
