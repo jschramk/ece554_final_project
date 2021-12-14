@@ -1,0 +1,83 @@
+// start input data address: 0x40000000 (1 GB into memory)
+// 2048 samples, 512 bits per read, 64 bytes, 32 elements, 64 reads for 2048 samples 
+
+// START
+// fill R0 with starting address of waveform data
+SR0 R0, 0x00
+SR1 R0, 0x00
+SR2 R0, 0x00
+SR3 R0, 0x40
+
+// fill R1 with starting index (0, max of 63) of FFT input section
+SR0 R1, 0x00
+SR1 R1, 0x00
+SR2 R1, 0x00
+SR3 R1, 0x00
+
+// fill R2 with 64 to compare with index held in R1
+SR0 R2, 0x40
+SR1 R2, 0x00
+SR2 R2, 0x00
+SR3 R2, 0x00
+
+// load next batch of wave elements (fetch_addr = start_addr + 64 * index)
+.load
+LDE R1, R0
+
+// increment index and set positive condition code based on end_index - current_index (R2 - R1)
+INCC R1, R2
+
+// loop back to load more elements if end_index - current_index is > 0
+BP .load
+
+// at this point, one full frame of data should have been loaded
+
+// now set up R3 to be used as the index of the frequency bucket for setting frequency coefficients
+SR0 R3, 0x00
+SR1 R3, 0x00
+SR2 R3, 0x00
+SR3 R3, 0x00
+
+// set each frequency coefficient to the desired value (SFC and INCC instructions executed 2048 times)
+SFC R3, 0x01 // bucket 0
+INCC R3, R3 // comparing R3 to itself, positive condition code is always false, doesn't really matter
+
+SFC R3, 0x01 // bucket 2047
+INCC R3, R3 // last INCC is unnecessary but will likely be there in generated code
+
+// write the global pitch multiplier into R4 (uncertain of the format of this, just integer 1 right now)
+SR0 R4, 0x01
+SR1 R4, 0x00
+SR2 R4, 0x00
+SR3 R4, 0x00
+
+// probably set module enables here
+
+// with all parameters set and data loaded, we can synthesize the audio frame
+SYN
+
+// now we have to write the output data back to RAM
+
+// fill R1 with starting index (0, max of 63) of FFT output section, R2 still holds end index of 64
+SR0 R1, 0x00
+SR1 R1, 0x00
+SR2 R1, 0x00
+SR3 R1, 0x00
+
+// store wave elements in the same way they were loaded
+// in this case we are writing them back to the same location as well
+// to update the output location, we would edit R0 (starting address register)
+.store
+STE R1, R0
+
+// increment index and set positive condition code based on end_index - current_index (R2 - R1)
+INCC R1, R2
+
+// loop back to store more elements if end_index - current_index is > 0
+BP .store
+
+// at this point, a full frame of data should have been completely processed and written back to RAM
+
+// repeat above process as needed with different or same parameters and a new starting address
+
+HALT
