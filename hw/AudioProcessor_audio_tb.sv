@@ -33,7 +33,7 @@ assign fft_imag = dj_disco.fft_output_full[FFT_BUS_SIZE/2-1:0];
 
 longint cycle_cnt = 0;
 
-int idx, out_idx, out_offset, in_offset;
+int storage_read_index, reader_input_index, out_offset, in_offset;
 
 reg wr_en;
 
@@ -64,7 +64,7 @@ AudioStorage my_data(
 	.clk(clk),
 	.rst_n(rst_n),
 	.data_out(data_in),
-	.output_index(idx)
+	.output_index(storage_read_index)
 );
 
 AudioReader your_data(
@@ -72,7 +72,7 @@ AudioReader your_data(
 	.rst_n(rst_n),
 	.wr_en(wr_en),
 	.data_in(data_out),
-	.input_index(out_idx)
+	.input_index(reader_input_index)
 );
 
 
@@ -92,7 +92,8 @@ initial begin
 		end*/
 
 		repeat (4) begin
-			fill_input_data(idx);
+
+			fill_input_data();
 
 			start_process();
 			
@@ -100,7 +101,7 @@ initial begin
 			
 			for (int x = 0; x < 64; x++) begin
 				output_index = x;
-				out_idx = out_offset + x;
+				reader_input_index = out_offset + x;
 				wr_en = 1;
 				@(posedge clk);
 			end
@@ -119,42 +120,13 @@ always begin
     if(clk) cycle_cnt++;
 end
 
-
-/*genvar i, j;
-generate
-for(i = 0; i < 14880; i++) begin
-
-    for(j = 0; j < 16; j += 8) begin
-        
-        assign data_in[16*i+j+7 : 16*i+j] = input_array[i][j+7:j];
-
-    end
-
-end
-endgenerate*/
-
-/*genvar q,r;
-generate
-	for (q = 0; q < 64; q++) begin
-		assign data_in[7+(q*8):q*8] = input_array[idx+q];
-	end
-endgenerate*/
-
-/*always @(posedge done) begin
-	for (int r = 0; r < 32; r++) begin
-		output_array[idx+r] = data_out[r*16+15-:15];
-	end
-end*/
-
-
-
 // BEGIN TASKS ---------------------------------------------------------------------------------------------
 
 task init();
-		idx = 0;
-		out_idx = 0;
-		in_offset = 0;
-		out_offset = 0;
+    storage_read_index = 0;
+    reader_input_index = 0;
+    in_offset = 0;
+    out_offset = 0;
     clk = 0;
     rst_n = 1;
     start = 0;
@@ -163,15 +135,15 @@ task init();
     output_index = 0;
     pitch_shift_wr_en = 0;
     freq_coeff_wr_en = 0;
-		overdrive_enable_in = 0;
-		overdrive_enable_wr_en = 0;
-		overdrive_magnitude = 0;
-		overdrive_magnitude_wr_en = 0;
+    overdrive_enable_in = 0;
+    overdrive_enable_wr_en = 0;
+    overdrive_magnitude = 0;
+    overdrive_magnitude_wr_en = 0;
     tremolo_enable_in = 0;
     tremolo_enable_wr_en = 0;
-		wr_en = 0;
+    wr_en = 0;
     //data_in = 512'h0;
-		$readmemb("out.txt", input_array);
+    $readmemb("out.txt", input_array);
 endtask
 
 task reset();
@@ -193,20 +165,32 @@ task populate_bus(int index);
             //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end*/
 		for (int q = 0; q < 64; q++) begin
-			data_in[q*8+:8] = input_array[index*64+idx+q];
+			data_in[q*8+:8] = input_array[index*64+storage_read_index+q];
 			$display("%b", data_in[q*8+:8]);
 		end
 endtask
 
 // fill the module's input with a test wave defined in populate_bus()
-task fill_input_data(reg index);
+task fill_input_data();
     data_wr_en = 1;
     for(int i = 0; i < 64; i++) begin
-        idx = in_offset + i;
+        input_index = i;
+        storage_read_index = in_offset + i;
         @(posedge clk);
     end
-		in_offset += 64;
+	in_offset += 64;
     data_wr_en = 0;
+endtask
+
+task read_output_data();
+    for (int x = 0; x < 64; x++) begin
+        output_index = x;
+        reader_input_index = out_offset + x;
+        wr_en = 1;
+        @(posedge clk);
+    end
+    out_offset += 64;
+    wr_en = 0;
 endtask
 
 // turn tremolo on or off

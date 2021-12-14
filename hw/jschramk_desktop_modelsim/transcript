@@ -3252,3 +3252,151 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv(47)
 #    Time: 40975 ps  Iteration: 1  Instance: /AudioStorage_tb
 # Break in Module AudioStorage_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage_tb.sv line 47
+# Compile of AudioStorage.sv was successful.
+# Compile of AudioProcessor_audio_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.AudioProcessor_audio_tb
+# End time: 23:26:24 on Dec 13,2021, Elapsed time: 2:16:36
+# Errors: 0, Warnings: 3
+# vsim -gui work.AudioProcessor_audio_tb 
+# Start time: 23:26:24 on Dec 13,2021
+# Loading sv_std.std
+# Loading work.AudioProcessor_audio_tb
+# Loading work.AudioProcessor
+# Loading work.FFTInput
+# Loading work.fftmain
+# Loading work.fftstage
+# Loading work.qtrstage
+# Loading work.convround
+# Loading work.laststage
+# Loading work.bitreverse
+# Loading work.PitchShift
+# Loading work.SemitoneLUT
+# Loading work.Equalizer
+# Loading work.ifftmain
+# Loading work.Overdrive
+# Loading work.Tremolo
+# Loading work.FFTOutput
+# Loading work.AudioStorage
+# Loading work.AudioReader
+# Loading work.butterfly
+# Loading work.longbimpy
+# Loading work.bimpy
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+do wave.do
+# fixed#5#decimal
+# fixed#5#decimal#signed
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/rst_n'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/cycle_cnt'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/start'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/done'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/data_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/input_index'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/data_in'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/pitch_shift_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/pitch_shift_semitones'.
+# Executing ONERROR command at macro ./wave.do line 19
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/freq_coeff_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 21
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/freq_coeff_index'.
+# Executing ONERROR command at macro ./wave.do line 22
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/freq_coeff_in'.
+# Executing ONERROR command at macro ./wave.do line 23
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/output_index'.
+# Executing ONERROR command at macro ./wave.do line 25
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/data_out'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/state'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/next_state'.
+# Executing ONERROR command at macro ./wave.do line 30
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/fft_sync'.
+# Executing ONERROR command at macro ./wave.do line 32
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/fft_sample_in'.
+# Executing ONERROR command at macro ./wave.do line 33
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/fft_real'.
+# Executing ONERROR command at macro ./wave.do line 34
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/fft_imag'.
+# Executing ONERROR command at macro ./wave.do line 35
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/sample_counter'.
+# Executing ONERROR command at macro ./wave.do line 37
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/fft_output_full'.
+# Executing ONERROR command at macro ./wave.do line 38
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/pitch_shift_output_full'.
+# Executing ONERROR command at macro ./wave.do line 39
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/equalizer_output_full'.
+# Executing ONERROR command at macro ./wave.do line 40
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/fft_enable'.
+# Executing ONERROR command at macro ./wave.do line 42
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/pitch_shift_enable'.
+# Executing ONERROR command at macro ./wave.do line 43
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/ifft_sync'.
+# Executing ONERROR command at macro ./wave.do line 44
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/ifft_output_full'.
+# Executing ONERROR command at macro ./wave.do line 45
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/ifft_enable'.
+# Executing ONERROR command at macro ./wave.do line 46
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/ifft_output_real'.
+# Executing ONERROR command at macro ./wave.do line 47
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/overdrive_out'.
+# Executing ONERROR command at macro ./wave.do line 48
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/tremolo_out'.
+# Executing ONERROR command at macro ./wave.do line 49
+# ** UI-Msg: (vish-4014) No objects found matching '/AudioProcessor_tb/dj_disco/fft_out_wr_en'.
+# Executing ONERROR command at macro ./wave.do line 50
+add wave -position insertpoint sim:/AudioProcessor_audio_tb/dj_disco/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/fft_sample_in
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/dj_disco/fft_sample_in
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(174)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(113)
+#    Time: 220815 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 113
+# Compile of AudioProcessor_audio_tb.sv failed with 1 errors.
+# Compile of AudioProcessor_audio_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_audio_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(175)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
