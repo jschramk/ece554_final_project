@@ -33,7 +33,7 @@ assign fft_imag = dj_disco.fft_output_full[FFT_BUS_SIZE/2-1:0];
 
 longint cycle_cnt = 0;
 
-int idx;
+int idx, out_idx;
 
 AudioProcessor dj_disco(
     .clk(clk),
@@ -84,12 +84,12 @@ initial begin
 			for (int x = 0; x < 64; x++) begin
 				output_index = x;
 				for (int y = 0; y < 32; y++) begin
-					output_array[idx/2+y] = data_out[16*y+:16];
+					output_array[out_idx+x+y] = data_out[16*y+:16];
 				end
 			end
 			
-			idx += 64;
-			
+			idx += 4096;
+			out_idx += 2048;
 		end
 		
 		$writememh("processed.txt", output_array);
@@ -173,7 +173,7 @@ task populate_bus(int index);
             //10000 * $cos(2*3.141592653/2048 * 3 * (l + 32 * index));
     end*/
 		for (int q = 0; q < 64; q++) begin
-			data_in[q*8+:8] = input_array[index+idx+q];
+			data_in[q*8+:8] = input_array[index*64+idx+q];
 		end
 endtask
 
