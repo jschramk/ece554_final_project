@@ -13,10 +13,98 @@ public class WaveFile {
 
     public static void main(String[] args) throws IOException {
 
-        File in = new File("src/out.bin");
-        File out = new File("src/out.binary.txt");
+        Scanner scanner = new Scanner(System.in);
 
-        BINtoBinaryTxt(in, out);
+        System.out.println("Choose a conversion:");
+        System.out.println("1: .wav -> .bin");
+        System.out.println("2: .bin -> .wav");
+        System.out.println("3: Hex .txt -> .bin");
+        System.out.println("4: .bin -> Binary .txt");
+        System.out.print("> ");
+
+        int option = -1;
+        while (true) {
+            String input = scanner.nextLine().trim();
+            try {
+                option = Integer.parseInt(input);
+                if(option < 1 || option > 4) throw new Exception();
+                break;
+            } catch (Exception e) {
+                System.out.print("Please enter a number from the list:\n> ");
+            }
+        }
+
+        File in, out;
+        while (true) {
+            System.out.print("Enter the path of the input file:\n> ");
+            String path = scanner.nextLine().trim();
+            try {
+                in = new File(path);
+                if(!in.exists()) throw new Exception();
+                break;
+            } catch (Exception e) {
+                System.out.println("Error: could not open that file.");
+            }
+        }
+
+        while (true) {
+            System.out.print("Enter the path of the output file:\n> ");
+            String path = scanner.nextLine().trim();
+            try {
+                out = new File(path);
+
+
+                if(out.exists()) {
+                    System.out.print("Overwrite " + out.getName() + "? [y/n]\n> ");
+
+                    boolean loop = true;
+                    while (loop) {
+                        String input = scanner.nextLine().trim().toLowerCase();
+                        switch (input) {
+                            case "y": {
+                                loop = false;
+                                break;
+                            }
+                            case "n": {
+                                System.out.println("Operation canceled.");
+                                return;
+                            }
+                            default: {
+                                System.out.print("Please reply with y for yes or n for no:\n> ");
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+
+                break;
+            } catch (Exception e) {
+                System.out.println("Error: could not open that file.");
+            }
+        }
+
+        switch (option) {
+            case 1: {
+                WAVtoBIN(in, out);
+                break;
+            }
+            case 2: {
+                BINtoWAV(in, out);
+                break;
+            }
+            case 3: {
+                HexTxtToBIN(in, out);
+                break;
+            }
+            case 4: {
+                BINtoBinaryTxt(in, out);
+                break;
+            }
+        }
+
+        System.out.println("Operation complete.");
 
     }
 
