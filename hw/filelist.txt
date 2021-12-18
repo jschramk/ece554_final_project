@@ -1,7 +1,5 @@
 afu.json
-ccip_std_afu.sv
 memory_map.sv
-cci_dma.sv
 afu.sv
 ALU.sv
 AudioProcessor.sv
