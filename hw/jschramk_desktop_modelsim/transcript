@@ -3611,3 +3611,21 @@ run -all
 # ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(108)
 #    Time: 15622209 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
 # Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 108
+# Compile of AudioProcessor_audio_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.AudioProcessor_audio_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (32) for port 'output_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioStorage.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/my_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 63
+# ** Warning: (vsim-3015) [PCDPC] - Port size (14) does not match connection size (32) for port 'input_index'. The port definition is at: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioReader.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb/your_data File: C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv Line: 70
+add wave -position insertpoint  \
+sim:/AudioProcessor_audio_tb/cycle_cnt
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 185665 of file "out.txt". (Current address [185664], address range [0:185663])    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(146)
+#    Time: 0 ps  Iteration: 0  Instance: /AudioProcessor_audio_tb
+# ** Note: $stop    : C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv(114)
+#    Time: 15622245 ps  Iteration: 1  Instance: /AudioProcessor_audio_tb
+# Break in Module AudioProcessor_audio_tb at C:/Users/Jacob Schramkowski/OneDrive/School/ECE554/ece554_final_project/hw/AudioProcessor_audio_tb.sv line 114
+# End time: 16:40:43 on Dec 16,2021, Elapsed time: 65:14:19
+# Errors: 0, Warnings: 4
