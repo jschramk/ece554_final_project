@@ -1,4 +1,7 @@
 afu.json
+ccip_std_afu.sv
+memory_map.sv
+cci_dma.sv
 Adder.sv
 afu.sv
 ALU.sv

@@ -3,7 +3,8 @@ module Decoder
 
  ) (
     input [15:0]instr,
-    output halt, alu_op, reg_wr_en, mem_wr_en, branch, fft_wr_en, set_en, syn, use_imm, set_freq,
+    output halt, alu_op, reg_wr_en, mem_wr_en, branch,
+         fft_wr_en, set_en, syn, use_imm, set_freq,
     output [1:0] shift_dist,
     output [2:0] reg1, reg2,
     output [10:0] imm

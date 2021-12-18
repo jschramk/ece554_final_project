@@ -8,7 +8,7 @@ module InstructionCache
    (
     input clk, rst_n, write, stall,
     input [INW-1:0] data_in,
-    input [ADDRW-1:0] addr_in, base_addr_in,
+    input [ADDRW-1:0] addr_in,
     output logic valid_out,
     output logic [DATAW-1:0] data_out
    );
@@ -29,7 +29,7 @@ module InstructionCache
         end else begin
             if (write) begin
                 data = data_in;
-                base_addr = base_addr_in;
+                base_addr = addr_in;
                 valid = 1;
             end
 
